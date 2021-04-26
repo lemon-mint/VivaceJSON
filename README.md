@@ -1,2 +1,2 @@
 # VivaceJSON
-Fast and reliable JSON parser generator
+<del>Fast</del> and <del>reliable</del> JSON parser <del>generator</del>
