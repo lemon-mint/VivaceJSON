@@ -49,6 +49,8 @@ func main() {
 		fmt.Println(els[i].CursorPos1, els[i].CursorPos2)
 		fmt.Println(string(RefDoc[els[i].CursorPos1:els[i].CursorPos2]))
 	}
+	ProcessNumber(els, RefDoc)
+	GetKeyType(els, RefDoc)
 }
 
 func Parse(input []byte) []*Element {
@@ -157,7 +159,7 @@ func Parse(input []byte) []*Element {
 					} else if BoolLast == JSON_Bool_U {
 						if input[Cursor] == JSON_Bool_E {
 							fmt.Print(" <Bool>true</Bool> ")
-							output = append(output, NewElement(vJSON_Bool_True, BoolPos1, Cursor))
+							output = append(output, NewElement(vJSON_Bool_True, BoolPos1, Cursor+1))
 						} else {
 							isBool = false
 						}
@@ -184,7 +186,7 @@ func Parse(input []byte) []*Element {
 					} else if BoolLast == JSON_Bool_S {
 						if input[Cursor] == JSON_Bool_E {
 							fmt.Print(" <Bool>false</Bool> ")
-							output = append(output, NewElement(vJSON_Bool_False, BoolPos1, Cursor))
+							output = append(output, NewElement(vJSON_Bool_False, BoolPos1, Cursor+1))
 						} else {
 							isBool = false
 						}
@@ -205,7 +207,7 @@ func Parse(input []byte) []*Element {
 					} else if BoolLast == JSON_Bool_L {
 						if input[Cursor] == JSON_Bool_L {
 							fmt.Print(" <Null>null</Null> ")
-							output = append(output, NewElement(vJSON_Null, BoolPos1, Cursor))
+							output = append(output, NewElement(vJSON_Null, BoolPos1, Cursor+1))
 						} else {
 							isBool = false
 						}
