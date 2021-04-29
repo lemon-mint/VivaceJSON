@@ -66,12 +66,28 @@ func ProcessNumber(input []*Element, rawData []byte) {
 func GetKeyType(input []*Element, rawData []byte) {
 	var ObjectCount int
 	var lenInput int = len(input)
+
+	var KeyPath [][]byte
+	push := func(key []byte) {
+		KeyPath = append(KeyPath, key)
+	}
+	pop := func() []byte {
+		lenCursorStack := len(KeyPath)
+		if lenCursorStack == 0 {
+			return nil
+		}
+		val := KeyPath[lenCursorStack-1]
+		KeyPath = KeyPath[:lenCursorStack-1]
+		return val
+	}
+	var output []*field
 	for i := 0; i < lenInput; i++ {
 		switch input[i].Type {
 		case vJSON_Object_Begin:
 			ObjectCount++
 		case vJSON_Object_End:
 			ObjectCount--
+			pop()
 		}
 		if ObjectCount > 0 {
 			if input[i].Type == vJSON_KeyValue_Separator {
@@ -79,15 +95,25 @@ func GetKeyType(input []*Element, rawData []byte) {
 				value := input[i+1]
 				fmt.Print(strings.Repeat("  ", ObjectCount))
 				if value.Type == vJSON_Object_Begin {
-					fmt.Println(string(rawData[key.CursorPos1:key.CursorPos2]), ":")
+					push(rawData[key.CursorPos1:key.CursorPos2])
+					fmt.Println(string(rawData[key.CursorPos1:key.CursorPos2]), ":", KeyPath)
 					continue
 				}
+
 				fmt.Println(string(rawData[key.CursorPos1:key.CursorPos2]), ":", string(rawData[value.CursorPos1:value.CursorPos2]))
+				output = append(output, &field{
+					Key:       rawData[key.CursorPos1:key.CursorPos2],
+					ValueType: value.Type,
+					KeyPath:   KeyPath,
+				})
 				i++
 			}
 		}
 	}
 	if ObjectCount != 0 {
 		log.Fatalln("GetKeyType: invalid syntax", ObjectCount)
+	}
+	for i := range output {
+		fmt.Println(output[i])
 	}
 }

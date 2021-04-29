@@ -45,10 +45,6 @@ func main() {
 		log.Fatalln(err)
 	}
 	els := Parse(RefDoc)
-	for i := range els {
-		fmt.Println(els[i].CursorPos1, els[i].CursorPos2)
-		fmt.Println(string(RefDoc[els[i].CursorPos1:els[i].CursorPos2]))
-	}
 	ProcessNumber(els, RefDoc)
 	GetKeyType(els, RefDoc)
 }
