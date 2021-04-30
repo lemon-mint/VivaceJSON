@@ -82,7 +82,7 @@ func Parse(input []byte) ([]*Element, error) {
 	pop := func() (int, error) {
 		lenCursorStack := len(CursorStack)
 		if lenCursorStack == 0 {
-			return 0, errors.New("Parsing Error (Stack crash)")
+			return 0, errors.New("parsing Error (Stack crash)")
 		}
 		val := CursorStack[lenCursorStack-1]
 		CursorStack = CursorStack[:lenCursorStack-1]
