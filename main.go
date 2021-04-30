@@ -46,7 +46,12 @@ func main() {
 	}
 	els := Parse(RefDoc)
 	ProcessNumber(els, RefDoc)
-	GetKeyType(els, RefDoc)
+	fields := GetKeyType(els, RefDoc)
+	for i := range fields {
+		fmt.Println(fields[i])
+	}
+	GenName(fields)
+	genStruct(fields)
 }
 
 func Parse(input []byte) []*Element {

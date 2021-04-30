@@ -5,22 +5,13 @@ import (
 	"fmt"
 )
 
-type jsonNode struct {
-	KeyPath [][]byte
-	Key     []byte
-	Type    int
-
-	Children []*jsonNode
-}
-
-func (x *jsonNode) Add(KeyPath [][]byte, Key []byte) {
-
-}
-
 type field struct {
 	Key       []byte
 	ValueType int
 	KeyPath   [][]byte
+	GoName    string
+	GoType    string
+	RawName   string
 }
 
 func (f *field) String() string {
@@ -31,5 +22,18 @@ func (f *field) String() string {
 		}
 		fmt.Fprint(buf, string(f.KeyPath[i]))
 	}
-	return fmt.Sprintf("Field(KeyPath=[%v], Key=[%v])", string(buf.Bytes()), string(f.Key))
+	var Type string
+	switch f.ValueType {
+	case vJSON_Bool_True:
+		Type = "Bool"
+	case vJSON_Bool_False:
+		Type = "Bool"
+	case vJSON_String:
+		Type = "String"
+	case vJSON_Number_Float:
+		Type = "Float"
+	case vJSON_Number_Int:
+		Type = "Int"
+	}
+	return fmt.Sprintf("Field(KeyPath=[%v], Key=[%v], Type=[%v])", buf.String(), string(f.Key), Type)
 }

@@ -63,7 +63,7 @@ func ProcessNumber(input []*Element, rawData []byte) {
 	}
 }
 
-func GetKeyType(input []*Element, rawData []byte) {
+func GetKeyType(input []*Element, rawData []byte) []*field {
 	var ObjectCount int
 	var lenInput int = len(input)
 
@@ -113,7 +113,5 @@ func GetKeyType(input []*Element, rawData []byte) {
 	if ObjectCount != 0 {
 		log.Fatalln("GetKeyType: invalid syntax", ObjectCount)
 	}
-	for i := range output {
-		fmt.Println(output[i])
-	}
+	return output
 }
