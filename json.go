@@ -34,6 +34,8 @@ func (f *field) String() string {
 		Type = "Float"
 	case vJSON_Number_Int:
 		Type = "Int"
+	case 1000:
+		Type = "Object"
 	}
 	return fmt.Sprintf("Field(KeyPath=[%v], Key=[%v], Type=[%v])", buf.String(), string(f.Key), Type)
 }

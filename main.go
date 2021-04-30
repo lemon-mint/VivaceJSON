@@ -51,7 +51,7 @@ func main() {
 		fmt.Println(fields[i])
 	}
 	GenName(fields)
-	fmt.Println(string(genStruct(GetName([]byte(*inputFileName), nil), fields)))
+	fmt.Println(string(genMixedStruct(GetName([]byte(*inputFileName), nil), fields)))
 }
 
 func Parse(input []byte) []*Element {
