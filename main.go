@@ -40,7 +40,7 @@ func main() {
 	inputFileName := flag.String("if", "", "input file")
 	flag.Parse()
 	_ = inputFileName
-	RefDoc, err := ioutil.ReadFile("ref.json")
+	RefDoc, err := ioutil.ReadFile(*inputFileName)
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -51,7 +51,7 @@ func main() {
 		fmt.Println(fields[i])
 	}
 	GenName(fields)
-	genStruct(fields)
+	genStruct(GetName([]byte(*inputFileName), nil), fields)
 }
 
 func Parse(input []byte) []*Element {

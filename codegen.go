@@ -55,10 +55,10 @@ func GenName(fields []*field) {
 
 var tpl = template.Must(template.ParseGlob("templates/*"))
 
-func genStruct(fields []*field) {
+func genStruct(StructName string, fields []*field) {
 	buf := bytes.NewBuffer(nil)
 	fmt.Println(tpl.ExecuteTemplate(buf, "genstruct.rs", map[string]interface{}{
-		"StructName":   "a",
+		"StructName":   StructName,
 		"StructFields": fields,
 	}))
 	fmt.Println(buf.String())
