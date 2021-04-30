@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"encoding/base32"
-	"fmt"
+	"os/exec"
 	"regexp"
 	"strings"
 	"text/template"
@@ -55,11 +55,23 @@ func GenName(fields []*field) {
 
 var tpl = template.Must(template.ParseGlob("templates/*"))
 
-func genStruct(StructName string, fields []*field) {
+func genStruct(StructName string, fields []*field) []byte {
 	buf := bytes.NewBuffer(nil)
-	fmt.Println(tpl.ExecuteTemplate(buf, "genstruct.rs", map[string]interface{}{
+
+	tpl.ExecuteTemplate(buf, "genstruct.gotemplate", map[string]interface{}{
 		"StructName":   StructName,
 		"StructFields": fields,
-	}))
-	fmt.Println(buf.String())
+	})
+	return CleanCode(buf.Bytes())
+}
+
+func CleanCode(in []byte) []byte {
+	buf := bytes.NewBuffer(in)
+	outbuf := bytes.NewBuffer(nil)
+	gfmt := exec.Command("gofmt")
+	gfmt.Stdin = buf
+	gfmt.Stdout = outbuf
+	gfmt.Start()
+	gfmt.Wait()
+	return outbuf.Bytes()
 }
