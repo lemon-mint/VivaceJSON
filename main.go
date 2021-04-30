@@ -79,14 +79,14 @@ func Parse(input []byte) ([]*Element, error) {
 	push := func(pos1 int) {
 		CursorStack = append(CursorStack, pos1)
 	}
-	pop := func() int {
+	pop := func() (int, error) {
 		lenCursorStack := len(CursorStack)
 		if lenCursorStack == 0 {
-			log.Fatalln("Parsing Error (Stack crash)")
+			return 0, errors.New("Parsing Error (Stack crash)")
 		}
 		val := CursorStack[lenCursorStack-1]
 		CursorStack = CursorStack[:lenCursorStack-1]
-		return val
+		return val, nil
 	}
 
 	for ; Cursor < lenIN; Cursor++ {
@@ -94,7 +94,11 @@ func Parse(input []byte) ([]*Element, error) {
 			if input[Cursor] == JSON_DoubleQuote && !isEscape(input, Cursor) {
 				fmt.Print("</String> ")
 				stateString--
-				output = append(output, NewElement(vJSON_String, pop()+1, Cursor))
+				cur2, err := pop()
+				if err != nil {
+					return nil, err
+				}
+				output = append(output, NewElement(vJSON_String, cur2+1, Cursor))
 				continue
 			} else {
 				fmt.Print(string(rune(input[Cursor])))
@@ -108,7 +112,11 @@ func Parse(input []byte) ([]*Element, error) {
 				if input[Cursor] == JSON_ObjectEnd && !isEscape(input, Cursor) {
 					stateObject--
 					fmt.Print("</Object> ")
-					output = append(output, NewElement(vJSON_Object_End, pop()+1, Cursor))
+					cur2, err := pop()
+					if err != nil {
+						return nil, err
+					}
+					output = append(output, NewElement(vJSON_Object_End, cur2+1, Cursor))
 				}
 			}
 			if isNumberChar(input[Cursor]) {
@@ -122,7 +130,11 @@ func Parse(input []byte) ([]*Element, error) {
 				if isNumber {
 					fmt.Print("</Number> ")
 					isNumber = false
-					output = append(output, NewElement(vJSON_Number, pop(), Cursor))
+					cur2, err := pop()
+					if err != nil {
+						return nil, err
+					}
+					output = append(output, NewElement(vJSON_Number, cur2, Cursor))
 				}
 			}
 			if !isBool {
