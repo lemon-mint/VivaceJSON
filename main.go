@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -44,7 +45,10 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	els := Parse(RefDoc)
+	els, err := Parse(RefDoc)
+	if err != nil {
+		log.Fatalln(err)
+	}
 	ProcessNumber(els, RefDoc)
 	fields := GetKeyType(els, RefDoc)
 	for i := range fields {
@@ -54,7 +58,7 @@ func main() {
 	fmt.Println(string(genMixedStruct(GetName([]byte(*inputFileName), nil), fields)))
 }
 
-func Parse(input []byte) []*Element {
+func Parse(input []byte) ([]*Element, error) {
 	var stateObject, stateString int
 
 	var Cursor int
@@ -231,9 +235,9 @@ func Parse(input []byte) []*Element {
 	fmt.Println()
 	fmt.Println(stateObject, stateString, Cursor, lenIN, objCount, stringCount)
 	if stateObject|stateString != 0x00 {
-		log.Fatalln("JSON: Invaild Syntax")
+		return nil, errors.New("JSON: Invaild Syntax")
 	}
-	return output
+	return output, nil
 }
 
 func isEscape(input []byte, Cursor int) bool {
