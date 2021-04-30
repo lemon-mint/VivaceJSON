@@ -231,7 +231,7 @@ func Parse(input []byte) []*Element {
 	fmt.Println()
 	fmt.Println(stateObject, stateString, Cursor, lenIN, objCount, stringCount)
 	if stateObject|stateString != 0x00 {
-		log.Fatalln("JSON: Invaild Syntex")
+		log.Fatalln("JSON: Invaild Syntax")
 	}
 	return output
 }
