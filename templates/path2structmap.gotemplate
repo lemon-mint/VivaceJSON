@@ -1,0 +1,77 @@
+// {{.}}
+
+// KeyPaths
+
+// IntKeys
+{{range .IntDepth}}
+// {{.KeyPaths}}
+{{range .Varinfo}}
+var {{.GoName}} []byte = []byte{ {{range .Bytes}}{{.}} ,{{end}} }{{end}}{{end}}
+
+// FloatKeys
+{{range .FloatDepth}}
+// {{.KeyPaths}}
+{{range .Varinfo}}
+var {{.GoName}} []byte = []byte{ {{range .Bytes}}{{.}} ,{{end}} }{{end}}{{end}}
+
+// StringKeys
+{{range .StringDepth}}
+// {{.KeyPaths}}
+{{range .Varinfo}}
+var {{.GoName}} []byte = []byte{ {{range .Bytes}}{{.}} ,{{end}} }{{end}}{{end}}
+
+// BoolKeys
+{{range .BoolDepth}}
+// {{.KeyPaths}}
+{{range .Varinfo}}
+var {{.GoName}} []byte = []byte{ {{range .Bytes}}{{.}} ,{{end}} }{{end}}{{end}}
+
+// Set Functions
+
+func (obj *{{.ObjectName}}){{.IntName}}_SetInt(KeyPath [][]byte, RawKey []byte, value int) {
+    KeyPathlen := len(KeyPath)
+{{range .IntDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp" . }}
+{{end}}
+        return
+    }
+{{end}}
+}
+
+func (obj *{{.ObjectName}}){{.FloatName}}_SetFloat(KeyPath [][]byte, RawKey []byte, value float64) {
+    KeyPathlen := len(KeyPath)
+{{range .FloatDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp" . }}
+{{end}}
+        return
+    }
+{{end}}
+}
+
+func (obj *{{.ObjectName}}){{.StringName}}_SetString(KeyPath [][]byte, RawKey []byte, value string) {
+    KeyPathlen := len(KeyPath)
+{{range .StringDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp" . }}
+{{end}}
+        return
+    }
+{{end}}
+}
+
+func (obj *{{.ObjectName}}){{.BoolName}}_SetBool(KeyPath [][]byte, RawKey []byte, value bool) {
+    KeyPathlen := len(KeyPath)
+{{range .BoolDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp" . }}
+{{end}}
+        return
+    }
+{{end}}
+}
