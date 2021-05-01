@@ -1,0 +1,23 @@
+{
+    "abcde": "fg",
+    "lemon": "mint",
+    "mint": {
+        "choco": "delicious",
+        "Drink": "delicious",
+        "foo": {
+            "bar": "foo",
+            "floatTest": 3.14,
+            "intTest": 1024,
+            "bool": true,
+            "aa": {
+                "abc": false,
+                "intt2": 15
+            }
+        }
+    },
+    "escape_test": "a\"\\\\\"aa",
+    "alpha": {
+        "a": "b",
+        "c": "d"
+    }
+}
