@@ -104,7 +104,7 @@ func GetKeyType(input []*Element, rawData []byte) []*field {
 				output = append(output, &field{
 					Key:       rawData[key.CursorPos1:key.CursorPos2],
 					ValueType: value.Type,
-					KeyPath:   KeyPath,
+					KeyPath:   CopyKeyPath(KeyPath),
 				})
 				i++
 			}
@@ -114,4 +114,13 @@ func GetKeyType(input []*Element, rawData []byte) []*field {
 		log.Fatalln("GetKeyType: invalid syntax", ObjectCount)
 	}
 	return output
+}
+
+func CopyKeyPath(path [][]byte) [][]byte {
+	newpath := make([][]byte, len(path))
+	for i := range path {
+		newpath[i] = make([]byte, len(path[i]))
+		copy(newpath[i], path[i])
+	}
+	return newpath
 }
