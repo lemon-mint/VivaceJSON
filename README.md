@@ -9,3 +9,4 @@
 - [ ] generate (keypath+key) to struct Value Mapping Function (Get)
 - [ ] generate struct Value to (keypath+key) Mapping Function
 - [ ] generate struct to JSON Marshalling Function
+- [ ] generate struct to JSON UnMarshalling Function

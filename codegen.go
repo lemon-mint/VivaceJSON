@@ -81,7 +81,7 @@ func (ts *TempStruct) Add(keyPaths map[string][]*field, depth int) {
 		keydepth := len(keyPaths[key][0].KeyPath)
 		if keydepth == depth {
 			if LastDepthEq(ts.RawKeyName, keyPaths[key][0].KeyPath, depth) {
-				ts.Locals = keyPaths[key]
+				ts.Locals = append(ts.Locals, keyPaths[key]...)
 				found = key
 			}
 		} else if keydepth > depth && LastDepthEq(ts.RawKeyName, keyPaths[key][0].KeyPath, depth) {
