@@ -123,7 +123,7 @@ func genMixedStruct(StructName string, fields []*field) []byte {
 	for key := range keyPaths {
 		if len(keyPaths[key][0].KeyPath) == 0 {
 			todel = key
-			RootElement.Locals = keyPaths[key]
+			RootElement.Locals = append(RootElement.Locals, keyPaths[key]...)
 		} else if ctr.AssertOnce(keyPaths[key][0].KeyPath[0]) {
 			RootElement.Children = append(RootElement.Children, &TempStruct{
 				StructName: GetName(keyPaths[key][0].KeyPath[0], nil, "structName"),
@@ -183,6 +183,13 @@ func genStruct(StructName string, fields []*field) []byte {
 	for i := range fields {
 		StructTexts[i] = fields[i].String()
 	}
+	/* debug
+	fmt.Println("//GenStruct", StructName)
+	for i := range fields {
+		fmt.Println(fields[i])
+	}
+	fmt.Println("//End GenStruct", StructName)
+	*/
 	tpl.ExecuteTemplate(buf, "genstruct.gotemplate", map[string]interface{}{
 		"StructName":   StructName,
 		"StructFields": fields,

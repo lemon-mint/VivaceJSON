@@ -41,7 +41,9 @@ func main() {
 	inputFileName := flag.String("if", "", "input file")
 	flag.Parse()
 	_ = inputFileName
-	RefDoc, err := ioutil.ReadFile(*inputFileName)
+	fileName := *inputFileName
+	//fileName = "ref.json"
+	RefDoc, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		log.Fatalln(err)
 	}
