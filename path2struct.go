@@ -38,6 +38,7 @@ type keydepthPath struct {
 }
 
 func generatePath2StructMap(RootElement *TempStruct, fields []*field) []byte {
+	keyvarOnce := new(onceCounterString)
 	fieldTypes := make(map[string][]*field)
 	fieldTypes["string"] = nil
 	fieldTypes["int"] = nil
@@ -71,7 +72,7 @@ func generatePath2StructMap(RootElement *TempStruct, fields []*field) []byte {
 			depthclass[pathlen] = append(depthclass[pathlen], fieldTypes[key][i])
 		}
 		for i := range depthclass {
-			kp, varinfo := cvtDepthKeyPath(depthclass[i])
+			kp, varinfo := cvtDepthKeyPath(depthclass[i], keyvarOnce)
 			keypatharr[key] = append(keypatharr[key],
 				keydepthPath{
 					Depth:    i,
@@ -97,7 +98,7 @@ func generatePath2StructMap(RootElement *TempStruct, fields []*field) []byte {
 	return CleanCode(buf.Bytes())
 }
 
-func cvtDepthKeyPath(f []*field) ([]DepthKeyPath, []struct {
+func cvtDepthKeyPath(f []*field, c *onceCounterString) ([]DepthKeyPath, []struct {
 	Bytes  []byte
 	GoName string
 }) {
@@ -109,18 +110,21 @@ func cvtDepthKeyPath(f []*field) ([]DepthKeyPath, []struct {
 	for i := range arr {
 		NewKeyPath := []PathName{}
 		for j := range f[i].KeyPath {
+			VarGoName := "rawKeyPath" + GetName(f[i].KeyPath[j], f[i].KeyPath, "keypathvar")
 			NewKeyPath = append(NewKeyPath, PathName{
 				Idx:  j,
-				Path: GetName(f[i].KeyPath[j], f[i].KeyPath, "keypathvar"),
+				Path: VarGoName,
 			})
-			retstruct = append(retstruct,
-				struct {
-					Bytes  []byte
-					GoName string
-				}{
-					Bytes:  f[i].KeyPath[j],
-					GoName: GetName(f[i].KeyPath[j], f[i].KeyPath, "keypathvar"),
-				})
+			if c.AssertOnce(VarGoName) {
+				retstruct = append(retstruct,
+					struct {
+						Bytes  []byte
+						GoName string
+					}{
+						Bytes:  f[i].KeyPath[j],
+						GoName: VarGoName,
+					})
+			}
 		}
 		var gokeypath string
 		if len(f[i].KeyPath) > 0 {
@@ -128,19 +132,22 @@ func cvtDepthKeyPath(f []*field) ([]DepthKeyPath, []struct {
 				gokeypath += "." + GetName(f[i].KeyPath[j], f[i].KeyPath[:j])
 			}
 		}
-		retstruct = append(retstruct,
-			struct {
-				Bytes  []byte
-				GoName string
-			}{
-				Bytes:  f[i].Key,
-				GoName: GetName(f[i].Key, f[i].KeyPath, "keyvar"),
-			})
+		VarGoName := "rawKey" + GetName(f[i].Key, f[i].KeyPath, "keyvar")
+		if c.AssertOnce(VarGoName) {
+			retstruct = append(retstruct,
+				struct {
+					Bytes  []byte
+					GoName string
+				}{
+					Bytes:  f[i].Key,
+					GoName: VarGoName,
+				})
+		}
 		arr[i] = DepthKeyPath{
 			Paths:     NewKeyPath,
 			GoKeyPath: gokeypath,
 			GoKeyName: GetName(f[i].Key, f[i].KeyPath),
-			Key:       GetName(f[i].Key, f[i].KeyPath, "keyvar"),
+			Key:       VarGoName,
 		}
 	}
 	return arr, retstruct

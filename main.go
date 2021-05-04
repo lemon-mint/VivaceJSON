@@ -39,7 +39,10 @@ const JSON_Bool_N byte = 'n'
 
 func main() {
 	inputFileName := flag.String("if", "", "input file")
+	pkgname := flag.String("pkg", "main", "package Name")
 	flag.Parse()
+	fmt.Println("package", *pkgname)
+	fmt.Println("/*")
 	_ = inputFileName
 	fileName := *inputFileName
 	//fileName = "ref.json"
@@ -56,6 +59,7 @@ func main() {
 	for i := range fields {
 		fmt.Println(fields[i])
 	}
+	fmt.Println("*/")
 	GenName(fields)
 	fmt.Println(string(genMixedStruct(GetName([]byte(*inputFileName), nil), fields)))
 }
