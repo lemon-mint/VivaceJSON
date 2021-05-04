@@ -75,3 +75,57 @@ func (obj *{{.ObjectName}}){{.BoolName}}_SetBool(KeyPath [][]byte, RawKey []byte
     }
 {{end}}
 }
+
+// Get Functions
+
+func (obj *{{.ObjectName}}){{.IntName}}_GetInt(KeyPath [][]byte, RawKey []byte) int {
+    KeyPathlen := len(KeyPath)
+{{range .IntDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp_get" . }}
+{{end}}
+        return 0
+    }
+{{end}}
+    return 0
+}
+
+func (obj *{{.ObjectName}}){{.FloatName}}_GetFloat(KeyPath [][]byte, RawKey []byte) float64 {
+    KeyPathlen := len(KeyPath)
+{{range .FloatDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp_get" . }}
+{{end}}
+        return 0
+    }
+{{end}}
+    return 0
+}
+
+func (obj *{{.ObjectName}}){{.StringName}}_GetString(KeyPath [][]byte, RawKey []byte) string {
+    KeyPathlen := len(KeyPath)
+{{range .StringDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp_get" . }}
+{{end}}
+        return ""
+    }
+{{end}}
+    return ""
+}
+
+func (obj *{{.ObjectName}}){{.BoolName}}_GetBool(KeyPath [][]byte, RawKey []byte) bool {
+    KeyPathlen := len(KeyPath)
+{{range .BoolDepth}}
+    if KeyPathlen == {{.Depth}} {
+{{range .KeyPaths}}
+{{ template "keypath_cmp_get" . }}
+{{end}}
+        return false
+    }
+{{end}}
+    return false
+}

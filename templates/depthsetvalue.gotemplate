@@ -5,3 +5,10 @@
         return
     }
 {{end}}
+
+{{define "keypath_cmp_get"}}
+    // {{.}}
+    if {{range .Paths}}bytes.Equal({{.Path}}, KeyPath[{{.Idx}}]) && {{end}}bytes.Equal({{.Key}}, RawKey) {
+        return obj{{.GoKeyPath}}.{{.GoKeyName}}
+    }
+{{end}}
