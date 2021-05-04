@@ -26,5 +26,5 @@ jobs:
           git config --global user.email "55233766+lemon-mint@users.noreply.github.com"
           git config --global user.name "lemon-mint"
           git add .
-          git commit -m "Generate `date`"
+          git commit -m "Generate ref.json `date`"
           git push 
