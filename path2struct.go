@@ -110,7 +110,7 @@ func cvtDepthKeyPath(f []*field, c *onceCounterString) ([]DepthKeyPath, []struct
 	for i := range arr {
 		NewKeyPath := []PathName{}
 		for j := range f[i].KeyPath {
-			VarGoName := "rawKeyPath" + GetName(f[i].KeyPath[j], f[i].KeyPath, "keypathvar")
+			VarGoName := "rawKeyPath" + GetName(f[i].KeyPath[j], f[i].KeyPath, "keypathvar", "rawKeyPath")
 			NewKeyPath = append(NewKeyPath, PathName{
 				Idx:  j,
 				Path: VarGoName,
@@ -132,7 +132,7 @@ func cvtDepthKeyPath(f []*field, c *onceCounterString) ([]DepthKeyPath, []struct
 				gokeypath += "." + GetName(f[i].KeyPath[j], f[i].KeyPath[:j])
 			}
 		}
-		VarGoName := "rawKey" + GetName(f[i].Key, f[i].KeyPath, "keyvar")
+		VarGoName := "rawKey" + GetName(f[i].Key, f[i].KeyPath, "keyvar", "rawKey")
 		if c.AssertOnce(VarGoName) {
 			retstruct = append(retstruct,
 				struct {

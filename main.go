@@ -41,7 +41,12 @@ func main() {
 	inputFileName := flag.String("if", "", "input file")
 	pkgname := flag.String("pkg", "main", "package Name")
 	flag.Parse()
+	fmt.Println(CodeHeader)
 	fmt.Println("package", *pkgname)
+	fmt.Println()
+	fmt.Println("import (")
+	fmt.Println(`    "bytes"`)
+	fmt.Println(")")
 	fmt.Println("/*")
 	_ = inputFileName
 	fileName := *inputFileName
