@@ -1,3 +1,20 @@
+var JSON_TOKEN_OPEN = []byte("{")
+var JSON_TOKEN_CLOSE = []byte("}")
+var JSON_TOKEN_SEP = []byte(", ")
+var JSON_TOKEN_KVSEP = []byte(": ")
+var JSON_TOKEN_STRING = []byte(`"`)
+
+var JSON_BOOL_TRUE = []byte("true")
+var JSON_BOOL_FALSE = []byte("FALSE")
+
+func escapeStr(w io.Writer, a string) {
+	io.WriteString(w, a)
+}
+
+func writeStr(w io.Writer, a string) {
+	io.WriteString(w, a)
+}
+
 // {{.}}
 
 // KeyPaths

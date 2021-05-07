@@ -46,6 +46,9 @@ func main() {
 	fmt.Println()
 	fmt.Println("import (")
 	fmt.Println(`    "bytes"`)
+	fmt.Println(`    "io"`)
+	fmt.Println(`    "fmt"`)
+	fmt.Println(`    "strconv"`)
 	fmt.Println(")")
 	fmt.Println("/*")
 	_ = inputFileName

@@ -152,7 +152,14 @@ func genMixedStruct(StructName string, fields []*field) []byte {
 }
 
 func (ts *TempStruct) Print(w io.Writer) {
+	if len(ts.Locals) > 0 {
+		ts.Locals[len(ts.Locals)-1].IsLast = true
+	}
+	buf := bytes.NewBuffer(nil)
+	tpl.ExecuteTemplate(buf, "marshal.gotemplate", *ts)
+	w.Write(CleanCode(buf.Bytes()))
 	w.Write(genStruct(ts.StructName, ts.Locals))
+
 	for i := range ts.Children {
 		ts.Children[i].Print(w)
 	}

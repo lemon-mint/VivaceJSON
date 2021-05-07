@@ -12,6 +12,7 @@ type field struct {
 	GoName    string
 	GoType    string
 	RawName   string
+	IsLast    bool
 }
 
 func (f *field) String() string {

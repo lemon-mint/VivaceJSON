@@ -1,0 +1,38 @@
+{{define "write_field"}}
+    // {{.}}
+    w.Write(JSON_TOKEN_STRING)
+    w.Write([]byte{ {{range .Key}}{{.}} ,{{end}} }) //{{.RawName}}
+    w.Write(JSON_TOKEN_STRING)
+    w.Write(JSON_TOKEN_KVSEP)
+    {{if eq .GoType "string"}}
+        w.Write(JSON_TOKEN_STRING)
+        escapeStr(w, obj.{{.GoName}})
+        w.Write(JSON_TOKEN_STRING)
+    {{else if eq .GoType "int"}}
+        {{.GoName}}_s := strconv.Itoa(obj.{{.GoName}})
+        writeStr(w, {{.GoName}}_s)
+    {{else if eq .GoType "bool"}}
+        if obj.{{.GoName}} {
+            w.Write(JSON_BOOL_TRUE)
+        } else {
+            w.Write(JSON_BOOL_FALSE)
+        }
+    {{else if eq .GoType "float64"}}
+        fmt.Fprintf(w, "%f", obj.{{.GoName}})
+    {{else}}
+        obj.{{.GoName}}.pack(w)
+    {{end}}
+
+    {{if .IsLast}}{{else}}w.Write(JSON_TOKEN_SEP){{end}}
+{{end}}
+
+
+func (obj *{{ .StructName }})pack(w io.Writer) {
+    w.Write(JSON_TOKEN_OPEN)
+    {{range .Locals}}
+    {{ template "write_field" . }}
+    {{end}}
+    w.Write(JSON_TOKEN_CLOSE)
+}
+
+
