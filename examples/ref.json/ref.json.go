@@ -11,7 +11,7 @@ import (
 )
 /*
  <Object> <String>abcde</String> :: <String>fg</String>  <String>lemon</String> :: <String>mint</String>  <String>mint</String> :: <Object> <String>choco</String> :: <String>delicious</String>  <String>Drink</String> :: <String>delicious</String>  <String>foo</String> :: <Object> <String>bar</String> :: <String>foo</String>  <String>floatTest</String> :: <Number>3.14</Number>  <String>intTest</String> :: <Number>1024</Number>  <String>bool</String> :: <Bool>true</Bool>  <String>aa</String> :: <Object> <String>abc</String> :: <Bool>false</Bool>  <String>intt2</String> :: <Number>15</Number> </Object> </Object> </Object>  <String>escape_test</String> :: <String>a\"\\\\\"aa</String>  <String>alpha</String> :: <Object> <String>a</String> :: <String>b</String>  <String>c</String> :: <String>d</String> </Object> </Object> 
-0 0 469 469 0 0
+0 0 446 446 0 0
   abcde : fg
   lemon : mint
   mint : [[109 105 110 116]]
@@ -126,6 +126,16 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 func (obj *MintDKBZPDCQ) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
+	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	w.Write([]byte{102, 111, 111}) //foo
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Foo7WMB5NDO.pack(w)
+
+	w.Write(JSON_TOKEN_SEP)
+
 	// Field(KeyPath=[mint], Key=[choco], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
 	w.Write([]byte{99, 104, 111, 99, 111}) //choco
@@ -148,28 +158,18 @@ func (obj *MintDKBZPDCQ) pack(w io.Writer) {
 	escapeStr(w, obj.DrinkX4GHDGGP)
 	w.Write(JSON_TOKEN_STRING)
 
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 111, 111}) //foo
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.Foo7WMB5NDO.pack(w)
-
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
 
 type MintDKBZPDCQ struct {
+	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
 	// Field(KeyPath=[mint], Key=[choco], Type=[String])
 	// Field(KeyPath=[mint], Key=[Drink], Type=[String])
-	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
 
+	Foo7WMB5NDO   Foo6V47CVXY `json:"foo"`
 	ChocoKGDKVVTW string      `json:"choco"`
 	DrinkX4GHDGGP string      `json:"Drink"`
-	Foo7WMB5NDO   Foo6V47CVXY `json:"foo"`
 }
 
 
