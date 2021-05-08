@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"strconv"
+	"unsafe"
 )
 
 func gencalc(a []*field) int {
@@ -48,4 +50,21 @@ func calcBool(a bool) int {
 
 func calcFloat(a float64) int {
 	return len(fmt.Sprintf("%f", a))
+}
+
+func UnsafeWriteStr(w io.Writer, a string) {
+	stringHead := (*struct {
+		Data uintptr
+		Len  int
+	})(unsafe.Pointer(&a))
+	sliceHead := &struct {
+		Data uintptr
+		Len  int
+		Cap  int
+	}{
+		Data: stringHead.Data,
+		Len:  stringHead.Len,
+		Cap:  stringHead.Len,
+	}
+	w.Write(*(*[]byte)(unsafe.Pointer(sliceHead)))
 }

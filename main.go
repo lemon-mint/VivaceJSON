@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"errors"
 	"flag"
 	"fmt"
@@ -40,6 +41,7 @@ const JSON_Bool_N byte = 'n'
 func main() {
 	inputFileName := flag.String("if", "", "input file")
 	pkgname := flag.String("pkg", "main", "package Name")
+	UseUnsafe := flag.Bool("unsafe", false, "USE unsafe string ops")
 	flag.Parse()
 	fmt.Println(CodeHeader)
 	fmt.Println("package", *pkgname)
@@ -49,6 +51,9 @@ func main() {
 	fmt.Println(`    "io"`)
 	fmt.Println(`    "fmt"`)
 	fmt.Println(`    "strconv"`)
+	if *UseUnsafe {
+		fmt.Println(`    "unsafe"`)
+	}
 	fmt.Println(")")
 	fmt.Println("/*")
 	_ = inputFileName
@@ -70,6 +75,12 @@ func main() {
 	fmt.Println("*/")
 	GenName(fields)
 	fmt.Println(string(genMixedStruct(GetName([]byte(*inputFileName), nil), fields)))
+	buf := bytes.NewBuffer(nil)
+	tpl.ExecuteTemplate(buf, "string.gotemplate", map[string]bool{
+		"UseUnsafe": *UseUnsafe,
+	})
+	genUnicodeEscape(buf)
+	fmt.Println(buf.String())
 }
 
 func Parse(input []byte) ([]*Element, error) {

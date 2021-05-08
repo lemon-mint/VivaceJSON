@@ -1,0 +1,118 @@
+{{define "string_escape"}}
+for i := range a {
+		switch {
+		case a[i] == '"':
+			// => \"
+            w.Write(json_double_quote)
+		case a[i] == '\\':
+			// => \\
+            w.Write(json_backslash)
+		case a[i] == '\n':
+			// => \n
+            w.Write(json_newline)
+		case a[i] == '\t':
+			// => \t
+            w.Write(json_tab)
+		case a[i] == '\r':
+			// => \r
+            w.Write(json_return)
+		case a[i] < 32:
+			// => \u00XX
+			w.Write(jsonUnicodeEscapeChar[a[i]])
+		default:
+            w.Write([]byte{a[i]})
+		}
+	}
+{{end}}
+
+
+var JSON_TOKEN_OPEN = []byte("{")
+var JSON_TOKEN_CLOSE = []byte("}")
+var JSON_TOKEN_SEP = []byte(", ")
+var JSON_TOKEN_KVSEP = []byte(": ")
+var JSON_TOKEN_STRING = []byte(`"`)
+
+var JSON_BOOL_TRUE = []byte("true")
+var JSON_BOOL_FALSE = []byte("true")
+
+var json_double_quote = []byte(`\"`)
+var json_backslash = []byte(`\\`)
+var json_newline = []byte(`\n`)
+var json_tab = []byte(`\t`)
+var json_return = []byte(`\r`)
+var json_unicode = []byte(`\u00`)
+
+func calcString(a []byte) int {
+	c := 0
+
+	for i := range a {
+		switch {
+		case a[i] == '"':
+			c += 2 // => \"
+		case a[i] == '\\':
+			c += 2 // => \\
+		case a[i] == '\n':
+			c += 2 // => \n
+		case a[i] == '\t':
+			c += 2 // => \t
+		case a[i] == '\r':
+			c += 2 // => \r
+		case a[i] < 32:
+			c += 6 // => \u00XX
+		default:
+			c += 1
+		}
+	}
+
+	return c
+}
+
+{{if .UseUnsafe}}
+
+func escapeStr(w io.Writer, input string) {
+    stringHead := (*struct {
+		Data uintptr
+		Len  int
+	})(unsafe.Pointer(&input))
+	sliceHead := &struct {
+		Data uintptr
+		Len  int
+		Cap  int
+	}{
+		Data: stringHead.Data,
+		Len:  stringHead.Len,
+		Cap:  stringHead.Len,
+	}
+	a := *(*[]byte)(unsafe.Pointer(sliceHead))
+	{{template "string_escape"}}
+}
+
+func writeStr(w io.Writer, a string) {
+	stringHead := (*struct {
+		Data uintptr
+		Len  int
+	})(unsafe.Pointer(&a))
+	sliceHead := &struct {
+		Data uintptr
+		Len  int
+		Cap  int
+	}{
+		Data: stringHead.Data,
+		Len:  stringHead.Len,
+		Cap:  stringHead.Len,
+	}
+	w.Write(*(*[]byte)(unsafe.Pointer(sliceHead)))
+}
+
+{{else}}
+
+func escapeStr(w io.Writer, input string) {
+    a := []byte(input)
+    {{template "string_escape"}}
+}
+
+func writeStr(w io.Writer, a string) {
+	io.WriteString(w, a)
+}
+
+{{end}}
