@@ -1,23 +1,56 @@
 {
-    "abcde": "fg",
-    "lemon": "mint",
-    "mint": {
-        "choco": "delicious",
-        "Drink": "delicious",
-        "foo": {
-            "bar": "foo",
-            "floatTest": 3.14,
-            "intTest": 1024,
-            "bool": true,
-            "aa": {
-                "abc": false,
-                "intt2": 15
-            }
-        }
+    "string_t": "this is string",
+    "int_t": 1024,
+    "float_t": 3.14,
+    "bool_t": true,
+    "obj_t": {
+        "foo": "bar",
+        "obj_t0": {},
+        "obj_t2": {
+            "abc": "def",
+            "lemon": "mint"
+        },
+        "obj_t3": {
+            "int_t0": 2048,
+            "float_t0": 0.1
+        },
+        "bool_t2": true,
+        "obj_t4": {
+            "alpha": "beta",
+            "beta": {
+                "delta": "alpha",
+                "int_t1": 256
+            },
+            "escape_string_t": "\n\n\n\"\"a\taa\""
+        },
+        "bool_t1": true,
+        "obj_t5": {}
     },
-    "escape_test": "a\"\\\\\"aa",
-    "alpha": {
-        "a": "b",
-        "c": "d"
-    }
+    "bool_t0": false,
+    "foo": "bar",
+    "obj_t0": {},
+    "obj_t2": {
+        "abc": "def",
+        "lemon": "mint"
+    },
+    "obj_t3": {
+        "int_t0": 2048,
+        "float_t0": 0.1
+    },
+    "bool_t2": true,
+    "obj_t4": {
+        "alpha": "beta",
+        "beta": {
+            "delta": "alpha",
+            "int_t1": 256
+        },
+        "escape_string_t": "\n\n\n\"\"a\taa\""
+    },
+    "bool_t1": true,
+    "alpha": "beta",
+    "beta": {
+        "delta": "alpha",
+        "int_t1": 256
+    },
+    "escape_string_t": "\n\n\n\"\"a\taa\""
 }
