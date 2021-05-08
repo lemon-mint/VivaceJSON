@@ -18,7 +18,8 @@ jobs:
 
     - name: Generate
       run: |
-          go run . -if ./examples/ref.json/ref.json -unsafe=true > ./examples/ref.json/ref.json.go
+          go run . -if ./examples/ref.json/ref.json -unsafe=true > ./examples/ref.json/unsafe/ref.json.go
+          go run . -if ./examples/ref.json/ref.json > ./examples/ref.json/ref.json.go
           cat ./examples/ref.json/ref.json.go
 
     - name: commit and push
