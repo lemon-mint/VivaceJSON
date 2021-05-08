@@ -12,8 +12,8 @@ type Arr2DGenInfo struct {
 }
 
 func genUnicodeEscape(w io.Writer) {
-	r := make([][]byte, 32)
-	for i := 0; i < 32; i++ {
+	r := make([][]byte, 256)
+	for i := 0; i < 256; i++ {
 		r[i] = []byte(fmt.Sprintf(`\u%04x`, i))
 	}
 	err := tpl.ExecuteTemplate(w, "2darr.gotemplate", Arr2DGenInfo{
