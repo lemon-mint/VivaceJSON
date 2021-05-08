@@ -47,7 +47,7 @@ Field(KeyPath=[alpha], Key=[c], Type=[String])
 
 
 
-func (obj *ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
+func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
 	// Field(KeyPath=[], Key=[abcde], Type=[String])
@@ -107,7 +107,7 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj *ExamplesrefjsonrefjsonOOGNTX2B) Marshal() []byte {
+func (obj ExamplesrefjsonrefjsonOOGNTX2B) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
@@ -128,7 +128,7 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 
 
 
-func (obj *MintDKBZPDCQ) pack(w io.Writer) {
+func (obj MintDKBZPDCQ) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
 	// Field(KeyPath=[mint], Key=[choco], Type=[String])
@@ -166,7 +166,7 @@ func (obj *MintDKBZPDCQ) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj *MintDKBZPDCQ) Marshal() []byte {
+func (obj MintDKBZPDCQ) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
@@ -183,7 +183,7 @@ type MintDKBZPDCQ struct {
 
 
 
-func (obj *Foo6V47CVXY) pack(w io.Writer) {
+func (obj Foo6V47CVXY) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
 	// Field(KeyPath=[mint > foo], Key=[bar], Type=[String])
@@ -244,7 +244,7 @@ func (obj *Foo6V47CVXY) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj *Foo6V47CVXY) Marshal() []byte {
+func (obj Foo6V47CVXY) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
@@ -265,7 +265,7 @@ type Foo6V47CVXY struct {
 
 
 
-func (obj *Aa6UOHQXT6) pack(w io.Writer) {
+func (obj Aa6UOHQXT6) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
 	// Field(KeyPath=[mint > foo > aa], Key=[abc], Type=[Bool])
@@ -294,7 +294,7 @@ func (obj *Aa6UOHQXT6) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj *Aa6UOHQXT6) Marshal() []byte {
+func (obj Aa6UOHQXT6) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
@@ -309,7 +309,7 @@ type Aa6UOHQXT6 struct {
 
 
 
-func (obj *AlphaCMSVNBNU) pack(w io.Writer) {
+func (obj AlphaCMSVNBNU) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
 	// Field(KeyPath=[alpha], Key=[a], Type=[String])
@@ -337,7 +337,7 @@ func (obj *AlphaCMSVNBNU) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj *AlphaCMSVNBNU) Marshal() []byte {
+func (obj AlphaCMSVNBNU) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
@@ -350,7 +350,7 @@ type AlphaCMSVNBNU struct {
 	CE3G3NIX4 string `json:"c"`
 }
 
-// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}] [{[105 110 116 84 101 115 116] rawKeyIntTest6EL7Z26T}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}] [{[109 105 110 116] rawKeyPathMintRB2TD3EA} {[102 111 111] rawKeyPathFooNMWRXXHG} {[97 97] rawKeyPathAaC4C5NY6G} {[105 110 116 116 50] rawKeyIntt6RBFR6FA}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO FloatTest6PH2QOTM rawKeyFloatTest6HBUR6Y4}] [{[102 108 111 97 116 84 101 115 116] rawKeyFloatTest6HBUR6Y4}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO Bool5GMNVIFN rawKeyBoolWFAMSTIB}] [{[98 111 111 108] rawKeyBoolWFAMSTIB}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y AbcV366M2TD rawKeyAbcKIHD2Z2I}] [{[97 98 99] rawKeyAbcKIHD2Z2I}]}] [{0 [{[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ} {[]  Lemon6RSNPVY4 rawKeyLemonOOQMMOLL} {[]  EscapetestFCG3PUHP rawKeyEscapetestJJG6R4JP}] [{[97 98 99 100 101] rawKeyAbcdeBKDYOUYQ} {[108 101 109 111 110] rawKeyLemonOOQMMOLL} {[101 115 99 97 112 101 95 116 101 115 116] rawKeyEscapetestJJG6R4JP}]} {1 [{[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M ChocoKGDKVVTW rawKeyChocoWRJ3KBCN} {[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M DrinkX4GHDGGP rawKeyDrinkN2MSLU22} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI AFGS2DQZF rawKeyALG3VE3OW} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI CE3G3NIX4 rawKeyCL6SSH2Y4}] [{[109 105 110 116] rawKeyPathMintVCB2BUTA} {[99 104 111 99 111] rawKeyChocoWRJ3KBCN} {[68 114 105 110 107] rawKeyDrinkN2MSLU22} {[97 108 112 104 97] rawKeyPathAlphaPRCRSEA2} {[97] rawKeyALG3VE3OW} {[99] rawKeyCL6SSH2Y4}]} {2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}] [{[109 105 110 116] rawKeyPathMint5D4JJ2ZC} {[102 111 111] rawKeyPathFooGHVBMOPI} {[98 97 114] rawKeyBarJ5QX3LJC}]}]}
+// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}] [{[109 105 110 116] rawKeyPathMint5D4JJ2ZC} {[102 111 111] rawKeyPathFooGHVBMOPI} {[105 110 116 84 101 115 116] rawKeyIntTest6EL7Z26T}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}] [{[109 105 110 116] rawKeyPathMintRB2TD3EA} {[102 111 111] rawKeyPathFooNMWRXXHG} {[97 97] rawKeyPathAaC4C5NY6G} {[105 110 116 116 50] rawKeyIntt6RBFR6FA}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO FloatTest6PH2QOTM rawKeyFloatTest6HBUR6Y4}] [{[102 108 111 97 116 84 101 115 116] rawKeyFloatTest6HBUR6Y4}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO Bool5GMNVIFN rawKeyBoolWFAMSTIB}] [{[98 111 111 108] rawKeyBoolWFAMSTIB}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y AbcV366M2TD rawKeyAbcKIHD2Z2I}] [{[97 98 99] rawKeyAbcKIHD2Z2I}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}] [{[98 97 114] rawKeyBarJ5QX3LJC}]} {0 [{[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ} {[]  Lemon6RSNPVY4 rawKeyLemonOOQMMOLL} {[]  EscapetestFCG3PUHP rawKeyEscapetestJJG6R4JP}] [{[97 98 99 100 101] rawKeyAbcdeBKDYOUYQ} {[108 101 109 111 110] rawKeyLemonOOQMMOLL} {[101 115 99 97 112 101 95 116 101 115 116] rawKeyEscapetestJJG6R4JP}]} {1 [{[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M ChocoKGDKVVTW rawKeyChocoWRJ3KBCN} {[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M DrinkX4GHDGGP rawKeyDrinkN2MSLU22} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI AFGS2DQZF rawKeyALG3VE3OW} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI CE3G3NIX4 rawKeyCL6SSH2Y4}] [{[109 105 110 116] rawKeyPathMintVCB2BUTA} {[99 104 111 99 111] rawKeyChocoWRJ3KBCN} {[68 114 105 110 107] rawKeyDrinkN2MSLU22} {[97 108 112 104 97] rawKeyPathAlphaPRCRSEA2} {[97] rawKeyALG3VE3OW} {[99] rawKeyCL6SSH2Y4}]}]}
 
 // KeyPaths
 
@@ -358,6 +358,8 @@ type AlphaCMSVNBNU struct {
 
 // [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}]
 
+var rawKeyPathMint5D4JJ2ZC []byte = []byte{109, 105, 110, 116}
+var rawKeyPathFooGHVBMOPI []byte = []byte{102, 111, 111}
 var rawKeyIntTest6EL7Z26T []byte = []byte{105, 110, 116, 84, 101, 115, 116}
 
 // [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}]
@@ -375,6 +377,10 @@ var rawKeyFloatTest6HBUR6Y4 []byte = []byte{102, 108, 111, 97, 116, 84, 101, 115
 
 // StringKeys
 
+// [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}]
+
+var rawKeyBarJ5QX3LJC []byte = []byte{98, 97, 114}
+
 // [{[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ} {[]  Lemon6RSNPVY4 rawKeyLemonOOQMMOLL} {[]  EscapetestFCG3PUHP rawKeyEscapetestJJG6R4JP}]
 
 var rawKeyAbcdeBKDYOUYQ []byte = []byte{97, 98, 99, 100, 101}
@@ -389,12 +395,6 @@ var rawKeyDrinkN2MSLU22 []byte = []byte{68, 114, 105, 110, 107}
 var rawKeyPathAlphaPRCRSEA2 []byte = []byte{97, 108, 112, 104, 97}
 var rawKeyALG3VE3OW []byte = []byte{97}
 var rawKeyCL6SSH2Y4 []byte = []byte{99}
-
-// [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}]
-
-var rawKeyPathMint5D4JJ2ZC []byte = []byte{109, 105, 110, 116}
-var rawKeyPathFooGHVBMOPI []byte = []byte{102, 111, 111}
-var rawKeyBarJ5QX3LJC []byte = []byte{98, 97, 114}
 
 // BoolKeys
 
@@ -454,6 +454,17 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetFlo
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetString(KeyPath [][]byte, RawKey []byte, value string) {
 	KeyPathlen := len(KeyPath)
 
+	if KeyPathlen == 2 {
+
+		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}
+		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyBarJ5QX3LJC, RawKey) {
+			obj.Mint3RXRPO7M.Foo7WMB5NDO.BarAARINFMS = value
+			return
+		}
+
+		return
+	}
+
 	if KeyPathlen == 0 {
 
 		// {[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ}
@@ -500,17 +511,6 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetStr
 		// {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI CE3G3NIX4 rawKeyCL6SSH2Y4}
 		if bytes.Equal(rawKeyPathAlphaPRCRSEA2, KeyPath[0]) && bytes.Equal(rawKeyCL6SSH2Y4, RawKey) {
 			obj.AlphaR3J7NLLI.CE3G3NIX4 = value
-			return
-		}
-
-		return
-	}
-
-	if KeyPathlen == 2 {
-
-		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}
-		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyBarJ5QX3LJC, RawKey) {
-			obj.Mint3RXRPO7M.Foo7WMB5NDO.BarAARINFMS = value
 			return
 		}
 
@@ -593,6 +593,16 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetFlo
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetString(KeyPath [][]byte, RawKey []byte) string {
 	KeyPathlen := len(KeyPath)
 
+	if KeyPathlen == 2 {
+
+		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}
+		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyBarJ5QX3LJC, RawKey) {
+			return obj.Mint3RXRPO7M.Foo7WMB5NDO.BarAARINFMS
+		}
+
+		return ""
+	}
+
 	if KeyPathlen == 0 {
 
 		// {[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ}
@@ -633,16 +643,6 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetStr
 		// {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI CE3G3NIX4 rawKeyCL6SSH2Y4}
 		if bytes.Equal(rawKeyPathAlphaPRCRSEA2, KeyPath[0]) && bytes.Equal(rawKeyCL6SSH2Y4, RawKey) {
 			return obj.AlphaR3J7NLLI.CE3G3NIX4
-		}
-
-		return ""
-	}
-
-	if KeyPathlen == 2 {
-
-		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}
-		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyBarJ5QX3LJC, RawKey) {
-			return obj.Mint3RXRPO7M.Foo7WMB5NDO.BarAARINFMS
 		}
 
 		return ""
