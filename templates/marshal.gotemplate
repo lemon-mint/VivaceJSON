@@ -35,4 +35,8 @@ func (obj *{{ .StructName }})pack(w io.Writer) {
     w.Write(JSON_TOKEN_CLOSE)
 }
 
-
+func (obj *{{ .StructName }})Marshal() []byte {
+    buf := new(bytes.Buffer)
+    obj.pack(buf)
+    return buf.Bytes()
+}
