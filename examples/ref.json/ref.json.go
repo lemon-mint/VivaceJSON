@@ -12,7 +12,7 @@ import (
 )
 /*
  <Object> <String>abcde</String> :: <String>fg</String>  <String>lemon</String> :: <String>mint</String>  <String>mint</String> :: <Object> <String>choco</String> :: <String>delicious</String>  <String>Drink</String> :: <String>delicious</String>  <String>foo</String> :: <Object> <String>bar</String> :: <String>foo</String>  <String>floatTest</String> :: <Number>3.14</Number>  <String>intTest</String> :: <Number>1024</Number>  <String>bool</String> :: <Bool>true</Bool>  <String>aa</String> :: <Object> <String>abc</String> :: <Bool>false</Bool>  <String>intt2</String> :: <Number>15</Number> </Object> </Object> </Object>  <String>escape_test</String> :: <String>a\"\\\\\"aa</String>  <String>alpha</String> :: <Object> <String>a</String> :: <String>b</String>  <String>c</String> :: <String>d</String> </Object> </Object> 
-0 0 469 469 0 0
+0 0 446 446 0 0
   abcde : fg
   lemon : mint
   mint : [[109 105 110 116]]
@@ -127,16 +127,6 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 func (obj *MintDKBZPDCQ) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
-	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 111, 111}) //foo
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.Foo7WMB5NDO.pack(w)
-
-	w.Write(JSON_TOKEN_SEP)
-
 	// Field(KeyPath=[mint], Key=[choco], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
 	w.Write([]byte{99, 104, 111, 99, 111}) //choco
@@ -159,18 +149,28 @@ func (obj *MintDKBZPDCQ) pack(w io.Writer) {
 	escapeStr(w, obj.DrinkX4GHDGGP)
 	w.Write(JSON_TOKEN_STRING)
 
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	w.Write([]byte{102, 111, 111}) //foo
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Foo7WMB5NDO.pack(w)
+
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
 
 type MintDKBZPDCQ struct {
-	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
 	// Field(KeyPath=[mint], Key=[choco], Type=[String])
 	// Field(KeyPath=[mint], Key=[Drink], Type=[String])
+	// Field(KeyPath=[mint], Key=[foo], Type=[Object])
 
-	Foo7WMB5NDO   Foo6V47CVXY `json:"foo"`
 	ChocoKGDKVVTW string      `json:"choco"`
 	DrinkX4GHDGGP string      `json:"Drink"`
+	Foo7WMB5NDO   Foo6V47CVXY `json:"foo"`
 }
 
 
@@ -330,15 +330,11 @@ type AlphaCMSVNBNU struct {
 	CE3G3NIX4 string `json:"c"`
 }
 
-// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}] [{[105 110 116 84 101 115 116] rawKeyIntTest6EL7Z26T}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}] [{[109 105 110 116] rawKeyPathMintRB2TD3EA} {[102 111 111] rawKeyPathFooNMWRXXHG} {[97 97] rawKeyPathAaC4C5NY6G} {[105 110 116 116 50] rawKeyIntt6RBFR6FA}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO FloatTest6PH2QOTM rawKeyFloatTest6HBUR6Y4}] [{[102 108 111 97 116 84 101 115 116] rawKeyFloatTest6HBUR6Y4}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO Bool5GMNVIFN rawKeyBoolWFAMSTIB}] [{[98 111 111 108] rawKeyBoolWFAMSTIB}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y AbcV366M2TD rawKeyAbcKIHD2Z2I}] [{[97 98 99] rawKeyAbcKIHD2Z2I}]}] [{0 [{[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ} {[]  Lemon6RSNPVY4 rawKeyLemonOOQMMOLL} {[]  EscapetestFCG3PUHP rawKeyEscapetestJJG6R4JP}] [{[97 98 99 100 101] rawKeyAbcdeBKDYOUYQ} {[108 101 109 111 110] rawKeyLemonOOQMMOLL} {[101 115 99 97 112 101 95 116 101 115 116] rawKeyEscapetestJJG6R4JP}]} {1 [{[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M ChocoKGDKVVTW rawKeyChocoWRJ3KBCN} {[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M DrinkX4GHDGGP rawKeyDrinkN2MSLU22} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI AFGS2DQZF rawKeyALG3VE3OW} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI CE3G3NIX4 rawKeyCL6SSH2Y4}] [{[109 105 110 116] rawKeyPathMintVCB2BUTA} {[99 104 111 99 111] rawKeyChocoWRJ3KBCN} {[68 114 105 110 107] rawKeyDrinkN2MSLU22} {[97 108 112 104 97] rawKeyPathAlphaPRCRSEA2} {[97] rawKeyALG3VE3OW} {[99] rawKeyCL6SSH2Y4}]} {2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}] [{[109 105 110 116] rawKeyPathMint5D4JJ2ZC} {[102 111 111] rawKeyPathFooGHVBMOPI} {[98 97 114] rawKeyBarJ5QX3LJC}]}]}
+// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}] [{[109 105 110 116] rawKeyPathMintRB2TD3EA} {[102 111 111] rawKeyPathFooNMWRXXHG} {[97 97] rawKeyPathAaC4C5NY6G} {[105 110 116 116 50] rawKeyIntt6RBFR6FA}]} {2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}] [{[105 110 116 84 101 115 116] rawKeyIntTest6EL7Z26T}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO FloatTest6PH2QOTM rawKeyFloatTest6HBUR6Y4}] [{[102 108 111 97 116 84 101 115 116] rawKeyFloatTest6HBUR6Y4}]}] [{2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO Bool5GMNVIFN rawKeyBoolWFAMSTIB}] [{[98 111 111 108] rawKeyBoolWFAMSTIB}]} {3 [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y AbcV366M2TD rawKeyAbcKIHD2Z2I}] [{[97 98 99] rawKeyAbcKIHD2Z2I}]}] [{0 [{[]  AbcdeG256KDWZ rawKeyAbcdeBKDYOUYQ} {[]  Lemon6RSNPVY4 rawKeyLemonOOQMMOLL} {[]  EscapetestFCG3PUHP rawKeyEscapetestJJG6R4JP}] [{[97 98 99 100 101] rawKeyAbcdeBKDYOUYQ} {[108 101 109 111 110] rawKeyLemonOOQMMOLL} {[101 115 99 97 112 101 95 116 101 115 116] rawKeyEscapetestJJG6R4JP}]} {1 [{[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M ChocoKGDKVVTW rawKeyChocoWRJ3KBCN} {[{rawKeyPathMintVCB2BUTA 0}] .Mint3RXRPO7M DrinkX4GHDGGP rawKeyDrinkN2MSLU22} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI AFGS2DQZF rawKeyALG3VE3OW} {[{rawKeyPathAlphaPRCRSEA2 0}] .AlphaR3J7NLLI CE3G3NIX4 rawKeyCL6SSH2Y4}] [{[109 105 110 116] rawKeyPathMintVCB2BUTA} {[99 104 111 99 111] rawKeyChocoWRJ3KBCN} {[68 114 105 110 107] rawKeyDrinkN2MSLU22} {[97 108 112 104 97] rawKeyPathAlphaPRCRSEA2} {[97] rawKeyALG3VE3OW} {[99] rawKeyCL6SSH2Y4}]} {2 [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO BarAARINFMS rawKeyBarJ5QX3LJC}] [{[109 105 110 116] rawKeyPathMint5D4JJ2ZC} {[102 111 111] rawKeyPathFooGHVBMOPI} {[98 97 114] rawKeyBarJ5QX3LJC}]}]}
 
 // KeyPaths
 
 // IntKeys
-
-// [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}]
-
-var rawKeyIntTest6EL7Z26T []byte = []byte{105, 110, 116, 84, 101, 115, 116}
 
 // [{[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}]
 
@@ -346,6 +342,10 @@ var rawKeyPathMintRB2TD3EA []byte = []byte{109, 105, 110, 116}
 var rawKeyPathFooNMWRXXHG []byte = []byte{102, 111, 111}
 var rawKeyPathAaC4C5NY6G []byte = []byte{97, 97}
 var rawKeyIntt6RBFR6FA []byte = []byte{105, 110, 116, 116, 50}
+
+// [{[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}]
+
+var rawKeyIntTest6EL7Z26T []byte = []byte{105, 110, 116, 84, 101, 115, 116}
 
 // FloatKeys
 
@@ -391,22 +391,22 @@ var rawKeyAbcKIHD2Z2I []byte = []byte{97, 98, 99}
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetInt(KeyPath [][]byte, RawKey []byte, value int) {
 	KeyPathlen := len(KeyPath)
 
-	if KeyPathlen == 2 {
+	if KeyPathlen == 3 {
 
-		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}
-		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyIntTest6EL7Z26T, RawKey) {
-			obj.Mint3RXRPO7M.Foo7WMB5NDO.IntTestUY74FP2E = value
+		// {[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}
+		if bytes.Equal(rawKeyPathMintRB2TD3EA, KeyPath[0]) && bytes.Equal(rawKeyPathFooNMWRXXHG, KeyPath[1]) && bytes.Equal(rawKeyPathAaC4C5NY6G, KeyPath[2]) && bytes.Equal(rawKeyIntt6RBFR6FA, RawKey) {
+			obj.Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y.InttLNPPK4MG = value
 			return
 		}
 
 		return
 	}
 
-	if KeyPathlen == 3 {
+	if KeyPathlen == 2 {
 
-		// {[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}
-		if bytes.Equal(rawKeyPathMintRB2TD3EA, KeyPath[0]) && bytes.Equal(rawKeyPathFooNMWRXXHG, KeyPath[1]) && bytes.Equal(rawKeyPathAaC4C5NY6G, KeyPath[2]) && bytes.Equal(rawKeyIntt6RBFR6FA, RawKey) {
-			obj.Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y.InttLNPPK4MG = value
+		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}
+		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyIntTest6EL7Z26T, RawKey) {
+			obj.Mint3RXRPO7M.Foo7WMB5NDO.IntTestUY74FP2E = value
 			return
 		}
 
@@ -531,21 +531,21 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetBoo
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetInt(KeyPath [][]byte, RawKey []byte) int {
 	KeyPathlen := len(KeyPath)
 
-	if KeyPathlen == 2 {
-
-		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}
-		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyIntTest6EL7Z26T, RawKey) {
-			return obj.Mint3RXRPO7M.Foo7WMB5NDO.IntTestUY74FP2E
-		}
-
-		return 0
-	}
-
 	if KeyPathlen == 3 {
 
 		// {[{rawKeyPathMintRB2TD3EA 0} {rawKeyPathFooNMWRXXHG 1} {rawKeyPathAaC4C5NY6G 2}] .Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y InttLNPPK4MG rawKeyIntt6RBFR6FA}
 		if bytes.Equal(rawKeyPathMintRB2TD3EA, KeyPath[0]) && bytes.Equal(rawKeyPathFooNMWRXXHG, KeyPath[1]) && bytes.Equal(rawKeyPathAaC4C5NY6G, KeyPath[2]) && bytes.Equal(rawKeyIntt6RBFR6FA, RawKey) {
 			return obj.Mint3RXRPO7M.Foo7WMB5NDO.AaDKIS6D4Y.InttLNPPK4MG
+		}
+
+		return 0
+	}
+
+	if KeyPathlen == 2 {
+
+		// {[{rawKeyPathMint5D4JJ2ZC 0} {rawKeyPathFooGHVBMOPI 1}] .Mint3RXRPO7M.Foo7WMB5NDO IntTestUY74FP2E rawKeyIntTest6EL7Z26T}
+		if bytes.Equal(rawKeyPathMint5D4JJ2ZC, KeyPath[0]) && bytes.Equal(rawKeyPathFooGHVBMOPI, KeyPath[1]) && bytes.Equal(rawKeyIntTest6EL7Z26T, RawKey) {
+			return obj.Mint3RXRPO7M.Foo7WMB5NDO.IntTestUY74FP2E
 		}
 
 		return 0
