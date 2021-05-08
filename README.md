@@ -7,5 +7,6 @@
 - [x] generate struct
 - [x] generate (keypath+key) to struct Value Mapping Function (Set)
 - [x] generate (keypath+key) to struct Value Mapping Function (Get)
-- [ ] generate struct to JSON Marshalling Function
+- [x] generate struct to JSON Marshalling Function
+- [ ] optimize Marshalling Function
 - [ ] generate struct to JSON UnMarshalling Function
