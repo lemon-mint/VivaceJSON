@@ -129,3 +129,10 @@ func (obj *{{.ObjectName}}){{.BoolName}}_GetBool(KeyPath [][]byte, RawKey []byte
 {{end}}
     return false
 }
+
+func __dummy() {
+	_ = strconv.Itoa
+	_ = fmt.Fprintf
+	_ = io.ReadFull
+	_ = bytes.NewBuffer
+}
