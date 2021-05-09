@@ -71,6 +71,22 @@ func calcString(a []byte) int {
 }
 
 {{if .UseUnsafe}}
+func string2ByteSlice(a string) []byte {
+	stringHead := (*struct {
+		Data uintptr
+		Len  int
+	})(unsafe.Pointer(&a))
+	sliceHead := &struct {
+		Data uintptr
+		Len  int
+		Cap  int
+	}{
+		Data: stringHead.Data,
+		Len:  stringHead.Len,
+		Cap:  stringHead.Len,
+	}
+	return *(*[]byte)(unsafe.Pointer(sliceHead))
+}
 
 func escapeStr(w io.Writer, input string) {
     stringHead := (*struct {
@@ -106,8 +122,11 @@ func writeStr(w io.Writer, a string) {
 	}
 	w.Write(*(*[]byte)(unsafe.Pointer(sliceHead)))
 }
-
 {{else}}
+
+func string2ByteSlice(a string) []byte {
+	return []byte(a)
+}
 
 func escapeStr(w io.Writer, input string) {
     a := []byte(input)

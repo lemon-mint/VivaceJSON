@@ -27,6 +27,43 @@
     {{if .IsLast}}{{else}}w.Write(JSON_TOKEN_SEP){{end}}
 {{end}}
 
+{{define "write_calc"}}
+    // {{.}}
+    //JSON_TOKEN_STRING
+    jsonLength += {{len .Key}} // jsonLength += len("{{.RawName}}")
+    //JSON_TOKEN_STRING
+    //JSON_TOKEN_KVSEP
+    jsonLength += 4
+    {{if eq .GoType "string"}}
+        jsonLength += 2
+        // JSON_TOKEN_STRING
+        jsonLength += calcString(string2ByteSlice(obj.{{.GoName}}))
+        // JSON_TOKEN_STRING
+    {{else if eq .GoType "int"}}
+        {{.GoName}}_s := strconv.Itoa(obj.{{.GoName}})
+        jsonLength += len({{.GoName}}_s)
+    {{else if eq .GoType "bool"}}
+        if obj.{{.GoName}} {
+            jsonLength += 4
+        } else {
+            jsonLength += 5
+        }
+    {{else if eq .GoType "float64"}}
+        jsonLength += len(fmt.Sprintf("%f", obj.{{.GoName}}))
+    {{else}}
+        jsonLength += obj.{{.GoName}}.calc()
+    {{end}}
+
+    {{if .IsLast}}{{else}}jsonLength += 2{{end}}
+{{end}}
+
+func (obj {{ .StructName }})calc() int {
+    var jsonLength int = 2
+    // JSON_TOKEN_OPEN
+    {{range .Locals}}{{ template "write_calc" . }}{{end}}
+    // JSON_TOKEN_CLOSE
+    return jsonLength
+}
 
 func (obj {{ .StructName }})pack(w io.Writer) {
     w.Write(JSON_TOKEN_OPEN)
