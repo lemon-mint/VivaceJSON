@@ -96,7 +96,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[obj_t], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116}) //obj_t
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 , }) //obj_t
+	w.Write(marshalKeyObjtZZS4K5QU) //obj_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -104,19 +105,10 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116, 50}) //obj_t2
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.ObjtNGTYENNZ.pack(w)
-
-	w.Write(JSON_TOKEN_SEP)
-
 	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116, 51}) //obj_t3
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,51 , }) //obj_t3
+	w.Write(marshalKeyObjtVDME7SUH) //obj_t3
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -124,9 +116,43 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	w.Write(JSON_TOKEN_SEP)
 
+	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,52 , }) //obj_t4
+	w.Write(marshalKeyObjt5CVDOK6X) //obj_t4
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Objt7MOZGQGZ.pack(w)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,50 , }) //obj_t2
+	w.Write(marshalKeyObjtAO4E3ZE2) //obj_t2
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.ObjtNGTYENNZ.pack(w)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[], Key=[beta], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
+	w.Write(marshalKeyBetaCZOF6HU7) //beta
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Beta6RHGJZ27.pack(w)
+
+	w.Write(JSON_TOKEN_SEP)
+
 	// Field(KeyPath=[], Key=[string_t], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{115, 116, 114, 105, 110, 103, 95, 116}) //string_t
+	//w.Write([]byte{ 115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 , }) //string_t
+	w.Write(marshalKeyStringtZYUVMJSJ) //string_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -138,7 +164,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[int_t], Type=[Int])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{105, 110, 116, 95, 116}) //int_t
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 , }) //int_t
+	w.Write(marshalKeyIntt6E7L5WV5) //int_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -149,7 +176,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[float_t], Type=[Float])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 108, 111, 97, 116, 95, 116}) //float_t
+	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 , }) //float_t
+	w.Write(marshalKeyFloatt2RG6IYAU) //float_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -159,7 +187,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[bool_t], Type=[Bool])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 111, 111, 108, 95, 116}) //bool_t
+	//w.Write([]byte{ 98 ,111 ,111 ,108 ,95 ,116 , }) //bool_t
+	w.Write(marshalKeyBooltYDI5MIG4) //bool_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -173,7 +202,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[bool_t0], Type=[Bool])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 111, 111, 108, 95, 116, 48}) //bool_t0
+	//w.Write([]byte{ 98 ,111 ,111 ,108 ,95 ,116 ,48 , }) //bool_t0
+	w.Write(marshalKeyBooltOFA5QC44) //bool_t0
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -187,7 +217,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[foo], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 111, 111}) //foo
+	//w.Write([]byte{ 102 ,111 ,111 , }) //foo
+	w.Write(marshalKeyFooB2IPMVWJ) //foo
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -199,7 +230,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[bool_t2], Type=[Bool])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 111, 111, 108, 95, 116, 50}) //bool_t2
+	//w.Write([]byte{ 98 ,111 ,111 ,108 ,95 ,116 ,50 , }) //bool_t2
+	w.Write(marshalKeyBooltU2L4YZC6) //bool_t2
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -213,7 +245,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[bool_t1], Type=[Bool])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 111, 111, 108, 95, 116, 49}) //bool_t1
+	//w.Write([]byte{ 98 ,111 ,111 ,108 ,95 ,116 ,49 , }) //bool_t1
+	w.Write(marshalKeyBooltGJTABSFP) //bool_t1
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -227,7 +260,8 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[alpha], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{97, 108, 112, 104, 97}) //alpha
+	//w.Write([]byte{ 97 ,108 ,112 ,104 ,97 , }) //alpha
+	w.Write(marshalKeyAlphaVERCQUTG) //alpha
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -239,33 +273,14 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	// Field(KeyPath=[], Key=[escape_string_t], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}) //escape_string_t
+	//w.Write([]byte{ 101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 , }) //escape_string_t
+	w.Write(marshalKeyEscapestringtSALJW6ZJ) //escape_string_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
 	w.Write(JSON_TOKEN_STRING)
 	escapeStr(w, obj.EscapestringtD6MRMKVB)
 	w.Write(JSON_TOKEN_STRING)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116, 52}) //obj_t4
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.Objt7MOZGQGZ.pack(w)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[], Key=[beta], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 101, 116, 97}) //beta
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.Beta6RHGJZ27.pack(w)
 
 	w.Write(JSON_TOKEN_CLOSE)
 }
@@ -277,8 +292,10 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) Marshal() []byte {
 }
 type ExamplesrefjsonrefjsonOOGNTX2B struct {
 	// Field(KeyPath=[], Key=[obj_t], Type=[Object])
-	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
 	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
+	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
+	// Field(KeyPath=[], Key=[beta], Type=[Object])
 	// Field(KeyPath=[], Key=[string_t], Type=[String])
 	// Field(KeyPath=[], Key=[int_t], Type=[Int])
 	// Field(KeyPath=[], Key=[float_t], Type=[Float])
@@ -289,12 +306,12 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 	// Field(KeyPath=[], Key=[bool_t1], Type=[Bool])
 	// Field(KeyPath=[], Key=[alpha], Type=[String])
 	// Field(KeyPath=[], Key=[escape_string_t], Type=[String])
-	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
-	// Field(KeyPath=[], Key=[beta], Type=[Object])
 
 	ObjtSCA3VMUZ          ObjtD6YGBJP3 `json:"obj_t"`
-	ObjtNGTYENNZ          ObjtGWG4J47E `json:"obj_t2"`
 	ObjtIMXYPXTM          ObjtV4N27AQH `json:"obj_t3"`
+	Objt7MOZGQGZ          ObjtOLBDHOP4 `json:"obj_t4"`
+	ObjtNGTYENNZ          ObjtGWG4J47E `json:"obj_t2"`
+	Beta6RHGJZ27          BetaK26ALX7I `json:"beta"`
 	StringtKJVFXNQP       string       `json:"string_t"`
 	InttESAYQXOJ          int          `json:"int_t"`
 	FloattNDJR3LLH        float64      `json:"float_t"`
@@ -305,8 +322,6 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 	BooltCW3QOV5W         bool         `json:"bool_t1"`
 	AlphaR3J7NLLI         string       `json:"alpha"`
 	EscapestringtD6MRMKVB string       `json:"escape_string_t"`
-	Objt7MOZGQGZ          ObjtOLBDHOP4 `json:"obj_t4"`
-	Beta6RHGJZ27          BetaK26ALX7I `json:"beta"`
 }
 
 
@@ -314,19 +329,21 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
-	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116, 52}) //obj_t4
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,51 , }) //obj_t3
+	w.Write(marshalKeyObjtE3JBUAVE) //obj_t3
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	obj.ObjtMSNUS234.pack(w)
+	obj.Objt2XEWC4EQ.pack(w)
 
 	w.Write(JSON_TOKEN_SEP)
 
 	// Field(KeyPath=[obj_t], Key=[foo], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 111, 111}) //foo
+	//w.Write([]byte{ 102 ,111 ,111 , }) //foo
+	w.Write(marshalKeyFooBR63COO4) //foo
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -338,7 +355,8 @@ func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t], Key=[bool_t2], Type=[Bool])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 111, 111, 108, 95, 116, 50}) //bool_t2
+	//w.Write([]byte{ 98 ,111 ,111 ,108 ,95 ,116 ,50 , }) //bool_t2
+	w.Write(marshalKeyBooltKK773BLN) //bool_t2
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -352,7 +370,8 @@ func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t], Key=[bool_t1], Type=[Bool])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 111, 111, 108, 95, 116, 49}) //bool_t1
+	//w.Write([]byte{ 98 ,111 ,111 ,108 ,95 ,116 ,49 , }) //bool_t1
+	w.Write(marshalKeyBooltHL3K74QU) //bool_t1
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -366,7 +385,8 @@ func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t], Key=[obj_t2], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116, 50}) //obj_t2
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,50 , }) //obj_t2
+	w.Write(marshalKeyObjtEXY6G5SL) //obj_t2
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -374,13 +394,14 @@ func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{111, 98, 106, 95, 116, 51}) //obj_t3
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,52 , }) //obj_t4
+	w.Write(marshalKeyObjtS4UMEWRS) //obj_t4
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	obj.Objt2XEWC4EQ.pack(w)
+	obj.ObjtMSNUS234.pack(w)
 
 	w.Write(JSON_TOKEN_CLOSE)
 }
@@ -391,116 +412,61 @@ func (obj ObjtD6YGBJP3) Marshal() []byte {
 	return buf.Bytes()
 }
 type ObjtD6YGBJP3 struct {
-	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
 	// Field(KeyPath=[obj_t], Key=[foo], Type=[String])
 	// Field(KeyPath=[obj_t], Key=[bool_t2], Type=[Bool])
 	// Field(KeyPath=[obj_t], Key=[bool_t1], Type=[Bool])
 	// Field(KeyPath=[obj_t], Key=[obj_t2], Type=[Object])
-	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
 
-	ObjtMSNUS234  ObjtHL2HEHYE `json:"obj_t4"`
+	Objt2XEWC4EQ  ObjtFLXKGTGR `json:"obj_t3"`
 	Foo63OIHM6N   string       `json:"foo"`
 	BooltK3OAI2UC bool         `json:"bool_t2"`
 	Boolt3K3L6ATQ bool         `json:"bool_t1"`
 	Objt5GSIG2DL  ObjtY5YGJJNW `json:"obj_t2"`
-	Objt2XEWC4EQ  ObjtFLXKGTGR `json:"obj_t3"`
+	ObjtMSNUS234  ObjtHL2HEHYE `json:"obj_t4"`
 }
 
 
 
-func (obj ObjtHL2HEHYE) pack(w io.Writer) {
+func (obj ObjtFLXKGTGR) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
-	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
+	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 101, 116, 97}) //beta
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,48 , }) //int_t0
+	w.Write(marshalKeyInttHZKTEQ7C) //int_t0
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	obj.Beta2LUXNN67.pack(w)
+	InttCFMPVSR3_s := strconv.Itoa(obj.InttCFMPVSR3)
+	writeStr(w, InttCFMPVSR3_s)
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
+	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{97, 108, 112, 104, 97}) //alpha
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.AlphaOXOKS46P)
-	w.Write(JSON_TOKEN_STRING)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[obj_t > obj_t4], Key=[escape_string_t], Type=[String])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}) //escape_string_t
+	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 , }) //float_t0
+	w.Write(marshalKeyFloattFLR73I72) //float_t0
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.EscapestringtGHA5ISBS)
-	w.Write(JSON_TOKEN_STRING)
+	fmt.Fprintf(w, "%f", obj.FloattS3DUOR74)
 
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj ObjtHL2HEHYE) Marshal() []byte {
+func (obj ObjtFLXKGTGR) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
 }
-type ObjtHL2HEHYE struct {
-	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
-	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
-	// Field(KeyPath=[obj_t > obj_t4], Key=[escape_string_t], Type=[String])
+type ObjtFLXKGTGR struct {
+	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
+	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
 
-	Beta2LUXNN67          Beta3FKW7N43 `json:"beta"`
-	AlphaOXOKS46P         string       `json:"alpha"`
-	EscapestringtGHA5ISBS string       `json:"escape_string_t"`
-}
-
-
-
-func (obj Beta3FKW7N43) pack(w io.Writer) {
-	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[delta], Type=[String])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{100, 101, 108, 116, 97}) //delta
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.DeltaFUC6KEP5)
-	w.Write(JSON_TOKEN_STRING)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[int_t1], Type=[Int])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{105, 110, 116, 95, 116, 49}) //int_t1
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	Intt7WLCFP3F_s := strconv.Itoa(obj.Intt7WLCFP3F)
-	writeStr(w, Intt7WLCFP3F_s)
-
-	w.Write(JSON_TOKEN_CLOSE)
-}
-
-func (obj Beta3FKW7N43) Marshal() []byte {
-	buf := new(bytes.Buffer)
-	obj.pack(buf)
-	return buf.Bytes()
-}
-type Beta3FKW7N43 struct {
-	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[delta], Type=[String])
-	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[int_t1], Type=[Int])
-
-	DeltaFUC6KEP5 string `json:"delta"`
-	Intt7WLCFP3F  int    `json:"int_t1"`
+	InttCFMPVSR3   int     `json:"int_t0"`
+	FloattS3DUOR74 float64 `json:"float_t0"`
 }
 
 
@@ -510,7 +476,8 @@ func (obj ObjtY5YGJJNW) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t > obj_t2], Key=[abc], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{97, 98, 99}) //abc
+	//w.Write([]byte{ 97 ,98 ,99 , }) //abc
+	w.Write(marshalKeyAbcOZNLZMC7) //abc
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -522,7 +489,8 @@ func (obj ObjtY5YGJJNW) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t > obj_t2], Key=[lemon], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{108, 101, 109, 111, 110}) //lemon
+	//w.Write([]byte{ 108 ,101 ,109 ,111 ,110 , }) //lemon
+	w.Write(marshalKeyLemonGPTEO6LV) //lemon
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -548,85 +516,104 @@ type ObjtY5YGJJNW struct {
 
 
 
-func (obj ObjtFLXKGTGR) pack(w io.Writer) {
+func (obj ObjtHL2HEHYE) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
-	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
+	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{105, 110, 116, 95, 116, 48}) //int_t0
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	InttCFMPVSR3_s := strconv.Itoa(obj.InttCFMPVSR3)
-	writeStr(w, InttCFMPVSR3_s)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 108, 111, 97, 116, 95, 116, 48}) //float_t0
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	fmt.Fprintf(w, "%f", obj.FloattS3DUOR74)
-
-	w.Write(JSON_TOKEN_CLOSE)
-}
-
-func (obj ObjtFLXKGTGR) Marshal() []byte {
-	buf := new(bytes.Buffer)
-	obj.pack(buf)
-	return buf.Bytes()
-}
-type ObjtFLXKGTGR struct {
-	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
-	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
-
-	InttCFMPVSR3   int     `json:"int_t0"`
-	FloattS3DUOR74 float64 `json:"float_t0"`
-}
-
-
-
-func (obj ObjtGWG4J47E) pack(w io.Writer) {
-	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{97, 98, 99}) //abc
+	//w.Write([]byte{ 97 ,108 ,112 ,104 ,97 , }) //alpha
+	w.Write(marshalKeyAlphaOCVGAJTS) //alpha
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
 	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.AbcALEJUDHF)
+	escapeStr(w, obj.AlphaOXOKS46P)
 	w.Write(JSON_TOKEN_STRING)
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
+	// Field(KeyPath=[obj_t > obj_t4], Key=[escape_string_t], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{108, 101, 109, 111, 110}) //lemon
+	//w.Write([]byte{ 101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 , }) //escape_string_t
+	w.Write(marshalKeyEscapestringtXXT2Z34T) //escape_string_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
 	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.LemonBNXX4WMR)
+	escapeStr(w, obj.EscapestringtGHA5ISBS)
 	w.Write(JSON_TOKEN_STRING)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
+	w.Write(marshalKeyBetaOFX4PY2H) //beta
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Beta2LUXNN67.pack(w)
 
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj ObjtGWG4J47E) Marshal() []byte {
+func (obj ObjtHL2HEHYE) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
 }
-type ObjtGWG4J47E struct {
-	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
-	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
+type ObjtHL2HEHYE struct {
+	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
+	// Field(KeyPath=[obj_t > obj_t4], Key=[escape_string_t], Type=[String])
+	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
 
-	AbcALEJUDHF   string `json:"abc"`
-	LemonBNXX4WMR string `json:"lemon"`
+	AlphaOXOKS46P         string       `json:"alpha"`
+	EscapestringtGHA5ISBS string       `json:"escape_string_t"`
+	Beta2LUXNN67          Beta3FKW7N43 `json:"beta"`
+}
+
+
+
+func (obj Beta3FKW7N43) pack(w io.Writer) {
+	w.Write(JSON_TOKEN_OPEN)
+
+	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[delta], Type=[String])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 100 ,101 ,108 ,116 ,97 , }) //delta
+	w.Write(marshalKeyDeltaPAOREE52) //delta
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	w.Write(JSON_TOKEN_STRING)
+	escapeStr(w, obj.DeltaFUC6KEP5)
+	w.Write(JSON_TOKEN_STRING)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[int_t1], Type=[Int])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,49 , }) //int_t1
+	w.Write(marshalKeyInttS23WIQEK) //int_t1
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	Intt7WLCFP3F_s := strconv.Itoa(obj.Intt7WLCFP3F)
+	writeStr(w, Intt7WLCFP3F_s)
+
+	w.Write(JSON_TOKEN_CLOSE)
+}
+
+func (obj Beta3FKW7N43) Marshal() []byte {
+	buf := new(bytes.Buffer)
+	obj.pack(buf)
+	return buf.Bytes()
+}
+type Beta3FKW7N43 struct {
+	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[delta], Type=[String])
+	// Field(KeyPath=[obj_t > obj_t4 > beta], Key=[int_t1], Type=[Int])
+
+	DeltaFUC6KEP5 string `json:"delta"`
+	Intt7WLCFP3F  int    `json:"int_t1"`
 }
 
 
@@ -636,7 +623,8 @@ func (obj ObjtV4N27AQH) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{105, 110, 116, 95, 116, 48}) //int_t0
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,48 , }) //int_t0
+	w.Write(marshalKeyIntt2TKNGDCJ) //int_t0
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -647,7 +635,8 @@ func (obj ObjtV4N27AQH) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{102, 108, 111, 97, 116, 95, 116, 48}) //float_t0
+	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 , }) //float_t0
+	w.Write(marshalKeyFloattGCSD4FY6) //float_t0
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -674,9 +663,21 @@ type ObjtV4N27AQH struct {
 func (obj ObjtOLBDHOP4) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
+	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
+	w.Write(marshalKeyBetaZSD2E3R3) //beta
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.BetaIW6DCBEB.pack(w)
+
+	w.Write(JSON_TOKEN_SEP)
+
 	// Field(KeyPath=[obj_t4], Key=[alpha], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{97, 108, 112, 104, 97}) //alpha
+	//w.Write([]byte{ 97 ,108 ,112 ,104 ,97 , }) //alpha
+	w.Write(marshalKeyAlphaG4LLDOOV) //alpha
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -688,23 +689,14 @@ func (obj ObjtOLBDHOP4) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t4], Key=[escape_string_t], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}) //escape_string_t
+	//w.Write([]byte{ 101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 , }) //escape_string_t
+	w.Write(marshalKeyEscapestringtAQ55PISW) //escape_string_t
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
 	w.Write(JSON_TOKEN_STRING)
 	escapeStr(w, obj.EscapestringtWYQPC32V)
 	w.Write(JSON_TOKEN_STRING)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{98, 101, 116, 97}) //beta
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.BetaIW6DCBEB.pack(w)
 
 	w.Write(JSON_TOKEN_CLOSE)
 }
@@ -715,13 +707,13 @@ func (obj ObjtOLBDHOP4) Marshal() []byte {
 	return buf.Bytes()
 }
 type ObjtOLBDHOP4 struct {
+	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
 	// Field(KeyPath=[obj_t4], Key=[alpha], Type=[String])
 	// Field(KeyPath=[obj_t4], Key=[escape_string_t], Type=[String])
-	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
 
+	BetaIW6DCBEB          BetaO7M46NBJ `json:"beta"`
 	AlphaIJIZ2ZXR         string       `json:"alpha"`
 	EscapestringtWYQPC32V string       `json:"escape_string_t"`
-	BetaIW6DCBEB          BetaO7M46NBJ `json:"beta"`
 }
 
 
@@ -731,7 +723,8 @@ func (obj BetaO7M46NBJ) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t4 > beta], Key=[delta], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{100, 101, 108, 116, 97}) //delta
+	//w.Write([]byte{ 100 ,101 ,108 ,116 ,97 , }) //delta
+	w.Write(marshalKeyDeltaD34Y7KE7) //delta
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -743,7 +736,8 @@ func (obj BetaO7M46NBJ) pack(w io.Writer) {
 
 	// Field(KeyPath=[obj_t4 > beta], Key=[int_t1], Type=[Int])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{105, 110, 116, 95, 116, 49}) //int_t1
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,49 , }) //int_t1
+	w.Write(marshalKeyInttSGQXLY6Q) //int_t1
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -768,12 +762,58 @@ type BetaO7M46NBJ struct {
 
 
 
+func (obj ObjtGWG4J47E) pack(w io.Writer) {
+	w.Write(JSON_TOKEN_OPEN)
+
+	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 97 ,98 ,99 , }) //abc
+	w.Write(marshalKeyAbc5UH3IVOG) //abc
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	w.Write(JSON_TOKEN_STRING)
+	escapeStr(w, obj.AbcALEJUDHF)
+	w.Write(JSON_TOKEN_STRING)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 108 ,101 ,109 ,111 ,110 , }) //lemon
+	w.Write(marshalKeyLemonJLLSZBNZ) //lemon
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	w.Write(JSON_TOKEN_STRING)
+	escapeStr(w, obj.LemonBNXX4WMR)
+	w.Write(JSON_TOKEN_STRING)
+
+	w.Write(JSON_TOKEN_CLOSE)
+}
+
+func (obj ObjtGWG4J47E) Marshal() []byte {
+	buf := new(bytes.Buffer)
+	obj.pack(buf)
+	return buf.Bytes()
+}
+type ObjtGWG4J47E struct {
+	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
+	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
+
+	AbcALEJUDHF   string `json:"abc"`
+	LemonBNXX4WMR string `json:"lemon"`
+}
+
+
+
 func (obj BetaK26ALX7I) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
 	// Field(KeyPath=[beta], Key=[delta], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{100, 101, 108, 116, 97}) //delta
+	//w.Write([]byte{ 100 ,101 ,108 ,116 ,97 , }) //delta
+	w.Write(marshalKeyDeltaOTFYEYJD) //delta
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -785,7 +825,8 @@ func (obj BetaK26ALX7I) pack(w io.Writer) {
 
 	// Field(KeyPath=[beta], Key=[int_t1], Type=[Int])
 	w.Write(JSON_TOKEN_STRING)
-	w.Write([]byte{105, 110, 116, 95, 116, 49}) //int_t1
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,49 , }) //int_t1
+	w.Write(marshalKeyInttKLANW3W5) //int_t1
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
@@ -808,7 +849,7 @@ type BetaK26ALX7I struct {
 	InttQDXD4F3P  int    `json:"int_t1"`
 }
 
-// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{0 [{[]  InttESAYQXOJ rawKeyInttK5PCKPBF}] [{[105 110 116 95 116] rawKeyInttK5PCKPBF}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ InttCFMPVSR3 rawKeyInttWTIK3VJJ} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB InttHSHUQAIW rawKeyInttYXXRRICP}] [{[111 98 106 95 116] rawKeyPathObjtVYHAWXFP} {[111 98 106 95 116 51] rawKeyPathObjtX5RCYU2L} {[105 110 116 95 116 48] rawKeyInttWTIK3VJJ} {[105 110 116 95 116 49] rawKeyInttYXXRRICP}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}] [{[105 110 116 95 116 49] rawKeyIntt2E7WEG6H}]} {1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}] [{[111 98 106 95 116 51] rawKeyPathObjtY6YM47D2} {[105 110 116 95 116 48] rawKeyIntt5FVORX5J} {[105 110 116 95 116 49] rawKeyIntt3OA4VVXW}]}] [{0 [{[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}] [{[102 108 111 97 116 95 116] rawKeyFloatt6FQKJ3CE}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ FloattS3DUOR74 rawKeyFloatt3UISF55R}] [{[102 108 111 97 116 95 116 48] rawKeyFloatt3UISF55R}]} {1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}] [{[102 108 111 97 116 95 116 48] rawKeyFloattGHYXKMNW}]}] [{0 [{[]  BooltO5EIGOAU rawKeyBoolt5PN6O537} {[]  BooltN4U4T2TN rawKeyBooltRIIBGP4U} {[]  BooltBSAVIV66 rawKeyBooltBO4BQXBY} {[]  BooltCW3QOV5W rawKeyBooltPNPOR645}] [{[98 111 111 108 95 116] rawKeyBoolt5PN6O537} {[98 111 111 108 95 116 48] rawKeyBooltRIIBGP4U} {[98 111 111 108 95 116 50] rawKeyBooltBO4BQXBY} {[98 111 111 108 95 116 49] rawKeyBooltPNPOR645}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ BooltK3OAI2UC rawKeyBooltEVJUTHLT} {[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Boolt3K3L6ATQ rawKeyBoolt55JSY6AS}] [{[98 111 111 108 95 116 50] rawKeyBooltEVJUTHLT} {[98 111 111 108 95 116 49] rawKeyBoolt55JSY6AS}]}] [{1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Foo63OIHM6N rawKeyFooLB7MSJC4} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ AbcALEJUDHF rawKeyAbcGTY33LS5} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ LemonBNXX4WMR rawKeyLemonFBM23DTJ} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ AlphaIJIZ2ZXR rawKeyAlphaYEDU2GJK} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ EscapestringtWYQPC32V rawKeyEscapestringtHOZXQIMV} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 Delta7SMF4OFE rawKeyDeltaSUHSLJUZ}] [{[111 98 106 95 116] rawKeyPathObjtTVYYPODH} {[102 111 111] rawKeyFooLB7MSJC4} {[111 98 106 95 116 50] rawKeyPathObjtFQ7NAMEW} {[97 98 99] rawKeyAbcGTY33LS5} {[108 101 109 111 110] rawKeyLemonFBM23DTJ} {[111 98 106 95 116 52] rawKeyPathObjtKRRUMBDP} {[97 108 112 104 97] rawKeyAlphaYEDU2GJK} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtHOZXQIMV} {[98 101 116 97] rawKeyPathBetaPVMY5CWB} {[100 101 108 116 97] rawKeyDeltaSUHSLJUZ}]} {2 [{[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL AbcM52GY4W7 rawKeyAbcK25SVZ53} {[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL LemonPTPTTQJH rawKeyLemonTFD6F54Y} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 AlphaOXOKS46P rawKeyAlpha2N36N5YO} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 EscapestringtGHA5ISBS rawKeyEscapestringtNETKGOMA} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB Delta2BP6SMAT rawKeyDeltaVKBDFTXL}] [{[111 98 106 95 116] rawKeyPathObjtIGPE4VUX} {[111 98 106 95 116 50] rawKeyPathObjtZJDIBJZG} {[97 98 99] rawKeyAbcK25SVZ53} {[108 101 109 111 110] rawKeyLemonTFD6F54Y} {[111 98 106 95 116] rawKeyPathObjtXGZ2QYFP} {[111 98 106 95 116 52] rawKeyPathObjt5EAT6VZ7} {[97 108 112 104 97] rawKeyAlpha2N36N5YO} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtNETKGOMA} {[111 98 106 95 116 52] rawKeyPathObjtJQMHAYSR} {[98 101 116 97] rawKeyPathBetaTF7BXNRE} {[100 101 108 116 97] rawKeyDeltaVKBDFTXL}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 DeltaFUC6KEP5 rawKeyDeltaMTVP5KUA}] [{[111 98 106 95 116] rawKeyPathObjtYCRRIKP3} {[111 98 106 95 116 52] rawKeyPathObjtRU7NY3AW} {[98 101 116 97] rawKeyPathBeta35CU66WA} {[100 101 108 116 97] rawKeyDeltaMTVP5KUA}]} {0 [{[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ} {[]  FooFQTLI23I rawKeyFooIEXZYHGT} {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE} {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}] [{[115 116 114 105 110 103 95 116] rawKeyStringtFBJITRYQ} {[102 111 111] rawKeyFooIEXZYHGT} {[97 108 112 104 97] rawKeyAlphaFBGNYTGE} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtYS7EX4HZ}]}]}
+// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{0 [{[]  InttESAYQXOJ rawKeyInttK5PCKPBF}] [{[105 110 116 95 116] rawKeyInttK5PCKPBF}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ InttCFMPVSR3 rawKeyInttWTIK3VJJ} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB InttHSHUQAIW rawKeyInttYXXRRICP}] [{[105 110 116 95 116 48] rawKeyInttWTIK3VJJ} {[105 110 116 95 116 49] rawKeyInttYXXRRICP}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}] [{[105 110 116 95 116 49] rawKeyIntt2E7WEG6H}]} {1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}] [{[105 110 116 95 116 48] rawKeyIntt5FVORX5J} {[105 110 116 95 116 49] rawKeyIntt3OA4VVXW}]}] [{1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}] [{[111 98 106 95 116 51] rawKeyPathObjtY6YM47D2} {[102 108 111 97 116 95 116 48] rawKeyFloattGHYXKMNW}]} {0 [{[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}] [{[102 108 111 97 116 95 116] rawKeyFloatt6FQKJ3CE}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ FloattS3DUOR74 rawKeyFloatt3UISF55R}] [{[111 98 106 95 116] rawKeyPathObjtVYHAWXFP} {[111 98 106 95 116 51] rawKeyPathObjtX5RCYU2L} {[102 108 111 97 116 95 116 48] rawKeyFloatt3UISF55R}]}] [{0 [{[]  BooltO5EIGOAU rawKeyBoolt5PN6O537} {[]  BooltN4U4T2TN rawKeyBooltRIIBGP4U} {[]  BooltBSAVIV66 rawKeyBooltBO4BQXBY} {[]  BooltCW3QOV5W rawKeyBooltPNPOR645}] [{[98 111 111 108 95 116] rawKeyBoolt5PN6O537} {[98 111 111 108 95 116 48] rawKeyBooltRIIBGP4U} {[98 111 111 108 95 116 50] rawKeyBooltBO4BQXBY} {[98 111 111 108 95 116 49] rawKeyBooltPNPOR645}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ BooltK3OAI2UC rawKeyBooltEVJUTHLT} {[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Boolt3K3L6ATQ rawKeyBoolt55JSY6AS}] [{[111 98 106 95 116] rawKeyPathObjtTVYYPODH} {[98 111 111 108 95 116 50] rawKeyBooltEVJUTHLT} {[98 111 111 108 95 116 49] rawKeyBoolt55JSY6AS}]}] [{0 [{[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ} {[]  FooFQTLI23I rawKeyFooIEXZYHGT} {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE} {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}] [{[115 116 114 105 110 103 95 116] rawKeyStringtFBJITRYQ} {[102 111 111] rawKeyFooIEXZYHGT} {[97 108 112 104 97] rawKeyAlphaFBGNYTGE} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtYS7EX4HZ}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Foo63OIHM6N rawKeyFooLB7MSJC4} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ AbcALEJUDHF rawKeyAbcGTY33LS5} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ LemonBNXX4WMR rawKeyLemonFBM23DTJ} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ AlphaIJIZ2ZXR rawKeyAlphaYEDU2GJK} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ EscapestringtWYQPC32V rawKeyEscapestringtHOZXQIMV} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 Delta7SMF4OFE rawKeyDeltaSUHSLJUZ}] [{[102 111 111] rawKeyFooLB7MSJC4} {[111 98 106 95 116 50] rawKeyPathObjtFQ7NAMEW} {[97 98 99] rawKeyAbcGTY33LS5} {[108 101 109 111 110] rawKeyLemonFBM23DTJ} {[111 98 106 95 116 52] rawKeyPathObjtKRRUMBDP} {[97 108 112 104 97] rawKeyAlphaYEDU2GJK} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtHOZXQIMV} {[98 101 116 97] rawKeyPathBetaPVMY5CWB} {[100 101 108 116 97] rawKeyDeltaSUHSLJUZ}]} {2 [{[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL AbcM52GY4W7 rawKeyAbcK25SVZ53} {[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL LemonPTPTTQJH rawKeyLemonTFD6F54Y} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 AlphaOXOKS46P rawKeyAlpha2N36N5YO} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 EscapestringtGHA5ISBS rawKeyEscapestringtNETKGOMA} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB Delta2BP6SMAT rawKeyDeltaVKBDFTXL}] [{[111 98 106 95 116] rawKeyPathObjtIGPE4VUX} {[111 98 106 95 116 50] rawKeyPathObjtZJDIBJZG} {[97 98 99] rawKeyAbcK25SVZ53} {[108 101 109 111 110] rawKeyLemonTFD6F54Y} {[111 98 106 95 116] rawKeyPathObjtXGZ2QYFP} {[111 98 106 95 116 52] rawKeyPathObjt5EAT6VZ7} {[97 108 112 104 97] rawKeyAlpha2N36N5YO} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtNETKGOMA} {[111 98 106 95 116 52] rawKeyPathObjtJQMHAYSR} {[98 101 116 97] rawKeyPathBetaTF7BXNRE} {[100 101 108 116 97] rawKeyDeltaVKBDFTXL}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 DeltaFUC6KEP5 rawKeyDeltaMTVP5KUA}] [{[111 98 106 95 116] rawKeyPathObjtYCRRIKP3} {[111 98 106 95 116 52] rawKeyPathObjtRU7NY3AW} {[98 101 116 97] rawKeyPathBeta35CU66WA} {[100 101 108 116 97] rawKeyDeltaMTVP5KUA}]}]}
 
 // KeyPaths
 
@@ -820,8 +861,6 @@ var rawKeyInttK5PCKPBF []byte = []byte{105, 110, 116, 95, 116}
 
 // [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ InttCFMPVSR3 rawKeyInttWTIK3VJJ} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB InttHSHUQAIW rawKeyInttYXXRRICP}]
 
-var rawKeyPathObjtVYHAWXFP []byte = []byte{111, 98, 106, 95, 116}
-var rawKeyPathObjtX5RCYU2L []byte = []byte{111, 98, 106, 95, 116, 51}
 var rawKeyInttWTIK3VJJ []byte = []byte{105, 110, 116, 95, 116, 48}
 var rawKeyInttYXXRRICP []byte = []byte{105, 110, 116, 95, 116, 49}
 
@@ -831,11 +870,15 @@ var rawKeyIntt2E7WEG6H []byte = []byte{105, 110, 116, 95, 116, 49}
 
 // [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}]
 
-var rawKeyPathObjtY6YM47D2 []byte = []byte{111, 98, 106, 95, 116, 51}
 var rawKeyIntt5FVORX5J []byte = []byte{105, 110, 116, 95, 116, 48}
 var rawKeyIntt3OA4VVXW []byte = []byte{105, 110, 116, 95, 116, 49}
 
 // FloatKeys
+
+// [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}]
+
+var rawKeyPathObjtY6YM47D2 []byte = []byte{111, 98, 106, 95, 116, 51}
+var rawKeyFloattGHYXKMNW []byte = []byte{102, 108, 111, 97, 116, 95, 116, 48}
 
 // [{[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}]
 
@@ -843,17 +886,21 @@ var rawKeyFloatt6FQKJ3CE []byte = []byte{102, 108, 111, 97, 116, 95, 116}
 
 // [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ FloattS3DUOR74 rawKeyFloatt3UISF55R}]
 
+var rawKeyPathObjtVYHAWXFP []byte = []byte{111, 98, 106, 95, 116}
+var rawKeyPathObjtX5RCYU2L []byte = []byte{111, 98, 106, 95, 116, 51}
 var rawKeyFloatt3UISF55R []byte = []byte{102, 108, 111, 97, 116, 95, 116, 48}
-
-// [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}]
-
-var rawKeyFloattGHYXKMNW []byte = []byte{102, 108, 111, 97, 116, 95, 116, 48}
 
 // StringKeys
 
+// [{[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ} {[]  FooFQTLI23I rawKeyFooIEXZYHGT} {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE} {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}]
+
+var rawKeyStringtFBJITRYQ []byte = []byte{115, 116, 114, 105, 110, 103, 95, 116}
+var rawKeyFooIEXZYHGT []byte = []byte{102, 111, 111}
+var rawKeyAlphaFBGNYTGE []byte = []byte{97, 108, 112, 104, 97}
+var rawKeyEscapestringtYS7EX4HZ []byte = []byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}
+
 // [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Foo63OIHM6N rawKeyFooLB7MSJC4} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ AbcALEJUDHF rawKeyAbcGTY33LS5} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ LemonBNXX4WMR rawKeyLemonFBM23DTJ} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ AlphaIJIZ2ZXR rawKeyAlphaYEDU2GJK} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ EscapestringtWYQPC32V rawKeyEscapestringtHOZXQIMV} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 Delta7SMF4OFE rawKeyDeltaSUHSLJUZ}]
 
-var rawKeyPathObjtTVYYPODH []byte = []byte{111, 98, 106, 95, 116}
 var rawKeyFooLB7MSJC4 []byte = []byte{102, 111, 111}
 var rawKeyPathObjtFQ7NAMEW []byte = []byte{111, 98, 106, 95, 116, 50}
 var rawKeyAbcGTY33LS5 []byte = []byte{97, 98, 99}
@@ -885,13 +932,6 @@ var rawKeyPathObjtRU7NY3AW []byte = []byte{111, 98, 106, 95, 116, 52}
 var rawKeyPathBeta35CU66WA []byte = []byte{98, 101, 116, 97}
 var rawKeyDeltaMTVP5KUA []byte = []byte{100, 101, 108, 116, 97}
 
-// [{[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ} {[]  FooFQTLI23I rawKeyFooIEXZYHGT} {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE} {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}]
-
-var rawKeyStringtFBJITRYQ []byte = []byte{115, 116, 114, 105, 110, 103, 95, 116}
-var rawKeyFooIEXZYHGT []byte = []byte{102, 111, 111}
-var rawKeyAlphaFBGNYTGE []byte = []byte{97, 108, 112, 104, 97}
-var rawKeyEscapestringtYS7EX4HZ []byte = []byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}
-
 // BoolKeys
 
 // [{[]  BooltO5EIGOAU rawKeyBoolt5PN6O537} {[]  BooltN4U4T2TN rawKeyBooltRIIBGP4U} {[]  BooltBSAVIV66 rawKeyBooltBO4BQXBY} {[]  BooltCW3QOV5W rawKeyBooltPNPOR645}]
@@ -903,6 +943,7 @@ var rawKeyBooltPNPOR645 []byte = []byte{98, 111, 111, 108, 95, 116, 49}
 
 // [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ BooltK3OAI2UC rawKeyBooltEVJUTHLT} {[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Boolt3K3L6ATQ rawKeyBoolt55JSY6AS}]
 
+var rawKeyPathObjtTVYYPODH []byte = []byte{111, 98, 106, 95, 116}
 var rawKeyBooltEVJUTHLT []byte = []byte{98, 111, 111, 108, 95, 116, 50}
 var rawKeyBoolt55JSY6AS []byte = []byte{98, 111, 111, 108, 95, 116, 49}
 
@@ -972,6 +1013,17 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetInt
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetFloat(KeyPath [][]byte, RawKey []byte, value float64) {
 	KeyPathlen := len(KeyPath)
 
+	if KeyPathlen == 1 {
+
+		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}
+		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyFloattGHYXKMNW, RawKey) {
+			obj.ObjtIMXYPXTM.FloattI6NY5ZGY = value
+			return
+		}
+
+		return
+	}
+
 	if KeyPathlen == 0 {
 
 		// {[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}
@@ -994,21 +1046,39 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetFlo
 		return
 	}
 
-	if KeyPathlen == 1 {
+}
 
-		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}
-		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyFloattGHYXKMNW, RawKey) {
-			obj.ObjtIMXYPXTM.FloattI6NY5ZGY = value
+func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetString(KeyPath [][]byte, RawKey []byte, value string) {
+	KeyPathlen := len(KeyPath)
+
+	if KeyPathlen == 0 {
+
+		// {[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ}
+		if bytes.Equal(rawKeyStringtFBJITRYQ, RawKey) {
+			obj.StringtKJVFXNQP = value
+			return
+		}
+
+		// {[]  FooFQTLI23I rawKeyFooIEXZYHGT}
+		if bytes.Equal(rawKeyFooIEXZYHGT, RawKey) {
+			obj.FooFQTLI23I = value
+			return
+		}
+
+		// {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE}
+		if bytes.Equal(rawKeyAlphaFBGNYTGE, RawKey) {
+			obj.AlphaR3J7NLLI = value
+			return
+		}
+
+		// {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}
+		if bytes.Equal(rawKeyEscapestringtYS7EX4HZ, RawKey) {
+			obj.EscapestringtD6MRMKVB = value
 			return
 		}
 
 		return
 	}
-
-}
-
-func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetString(KeyPath [][]byte, RawKey []byte, value string) {
-	KeyPathlen := len(KeyPath)
 
 	if KeyPathlen == 1 {
 
@@ -1091,35 +1161,6 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetStr
 		// {[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 DeltaFUC6KEP5 rawKeyDeltaMTVP5KUA}
 		if bytes.Equal(rawKeyPathObjtYCRRIKP3, KeyPath[0]) && bytes.Equal(rawKeyPathObjtRU7NY3AW, KeyPath[1]) && bytes.Equal(rawKeyPathBeta35CU66WA, KeyPath[2]) && bytes.Equal(rawKeyDeltaMTVP5KUA, RawKey) {
 			obj.ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67.DeltaFUC6KEP5 = value
-			return
-		}
-
-		return
-	}
-
-	if KeyPathlen == 0 {
-
-		// {[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ}
-		if bytes.Equal(rawKeyStringtFBJITRYQ, RawKey) {
-			obj.StringtKJVFXNQP = value
-			return
-		}
-
-		// {[]  FooFQTLI23I rawKeyFooIEXZYHGT}
-		if bytes.Equal(rawKeyFooIEXZYHGT, RawKey) {
-			obj.FooFQTLI23I = value
-			return
-		}
-
-		// {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE}
-		if bytes.Equal(rawKeyAlphaFBGNYTGE, RawKey) {
-			obj.AlphaR3J7NLLI = value
-			return
-		}
-
-		// {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}
-		if bytes.Equal(rawKeyEscapestringtYS7EX4HZ, RawKey) {
-			obj.EscapestringtD6MRMKVB = value
 			return
 		}
 
@@ -1240,6 +1281,16 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetInt
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetFloat(KeyPath [][]byte, RawKey []byte) float64 {
 	KeyPathlen := len(KeyPath)
 
+	if KeyPathlen == 1 {
+
+		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}
+		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyFloattGHYXKMNW, RawKey) {
+			return obj.ObjtIMXYPXTM.FloattI6NY5ZGY
+		}
+
+		return 0
+	}
+
 	if KeyPathlen == 0 {
 
 		// {[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}
@@ -1260,21 +1311,36 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetFlo
 		return 0
 	}
 
-	if KeyPathlen == 1 {
-
-		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}
-		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyFloattGHYXKMNW, RawKey) {
-			return obj.ObjtIMXYPXTM.FloattI6NY5ZGY
-		}
-
-		return 0
-	}
-
 	return 0
 }
 
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetString(KeyPath [][]byte, RawKey []byte) string {
 	KeyPathlen := len(KeyPath)
+
+	if KeyPathlen == 0 {
+
+		// {[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ}
+		if bytes.Equal(rawKeyStringtFBJITRYQ, RawKey) {
+			return obj.StringtKJVFXNQP
+		}
+
+		// {[]  FooFQTLI23I rawKeyFooIEXZYHGT}
+		if bytes.Equal(rawKeyFooIEXZYHGT, RawKey) {
+			return obj.FooFQTLI23I
+		}
+
+		// {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE}
+		if bytes.Equal(rawKeyAlphaFBGNYTGE, RawKey) {
+			return obj.AlphaR3J7NLLI
+		}
+
+		// {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}
+		if bytes.Equal(rawKeyEscapestringtYS7EX4HZ, RawKey) {
+			return obj.EscapestringtD6MRMKVB
+		}
+
+		return ""
+	}
 
 	if KeyPathlen == 1 {
 
@@ -1351,31 +1417,6 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetStr
 		return ""
 	}
 
-	if KeyPathlen == 0 {
-
-		// {[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ}
-		if bytes.Equal(rawKeyStringtFBJITRYQ, RawKey) {
-			return obj.StringtKJVFXNQP
-		}
-
-		// {[]  FooFQTLI23I rawKeyFooIEXZYHGT}
-		if bytes.Equal(rawKeyFooIEXZYHGT, RawKey) {
-			return obj.FooFQTLI23I
-		}
-
-		// {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE}
-		if bytes.Equal(rawKeyAlphaFBGNYTGE, RawKey) {
-			return obj.AlphaR3J7NLLI
-		}
-
-		// {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}
-		if bytes.Equal(rawKeyEscapestringtYS7EX4HZ, RawKey) {
-			return obj.EscapestringtD6MRMKVB
-		}
-
-		return ""
-	}
-
 	return ""
 }
 
@@ -1431,6 +1472,90 @@ func __dummy() {
 	_ = io.ReadFull
 	_ = bytes.NewBuffer
 }
+
+
+// marshalKeyObjtZZS4K5QU: obj_t
+var marshalKeyObjtZZS4K5QU []byte = []byte{111 ,98 ,106 ,95 ,116 ,}
+// marshalKeyObjtVDME7SUH: obj_t3
+var marshalKeyObjtVDME7SUH []byte = []byte{111 ,98 ,106 ,95 ,116 ,51 ,}
+// marshalKeyObjt5CVDOK6X: obj_t4
+var marshalKeyObjt5CVDOK6X []byte = []byte{111 ,98 ,106 ,95 ,116 ,52 ,}
+// marshalKeyObjtAO4E3ZE2: obj_t2
+var marshalKeyObjtAO4E3ZE2 []byte = []byte{111 ,98 ,106 ,95 ,116 ,50 ,}
+// marshalKeyBetaCZOF6HU7: beta
+var marshalKeyBetaCZOF6HU7 []byte = []byte{98 ,101 ,116 ,97 ,}
+// marshalKeyStringtZYUVMJSJ: string_t
+var marshalKeyStringtZYUVMJSJ []byte = []byte{115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
+// marshalKeyIntt6E7L5WV5: int_t
+var marshalKeyIntt6E7L5WV5 []byte = []byte{105 ,110 ,116 ,95 ,116 ,}
+// marshalKeyFloatt2RG6IYAU: float_t
+var marshalKeyFloatt2RG6IYAU []byte = []byte{102 ,108 ,111 ,97 ,116 ,95 ,116 ,}
+// marshalKeyBooltYDI5MIG4: bool_t
+var marshalKeyBooltYDI5MIG4 []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,}
+// marshalKeyBooltOFA5QC44: bool_t0
+var marshalKeyBooltOFA5QC44 []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,48 ,}
+// marshalKeyFooB2IPMVWJ: foo
+var marshalKeyFooB2IPMVWJ []byte = []byte{102 ,111 ,111 ,}
+// marshalKeyBooltU2L4YZC6: bool_t2
+var marshalKeyBooltU2L4YZC6 []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,50 ,}
+// marshalKeyBooltGJTABSFP: bool_t1
+var marshalKeyBooltGJTABSFP []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,49 ,}
+// marshalKeyAlphaVERCQUTG: alpha
+var marshalKeyAlphaVERCQUTG []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
+// marshalKeyEscapestringtSALJW6ZJ: escape_string_t
+var marshalKeyEscapestringtSALJW6ZJ []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
+// marshalKeyObjtE3JBUAVE: obj_t3
+var marshalKeyObjtE3JBUAVE []byte = []byte{111 ,98 ,106 ,95 ,116 ,51 ,}
+// marshalKeyFooBR63COO4: foo
+var marshalKeyFooBR63COO4 []byte = []byte{102 ,111 ,111 ,}
+// marshalKeyBooltKK773BLN: bool_t2
+var marshalKeyBooltKK773BLN []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,50 ,}
+// marshalKeyBooltHL3K74QU: bool_t1
+var marshalKeyBooltHL3K74QU []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,49 ,}
+// marshalKeyObjtEXY6G5SL: obj_t2
+var marshalKeyObjtEXY6G5SL []byte = []byte{111 ,98 ,106 ,95 ,116 ,50 ,}
+// marshalKeyObjtS4UMEWRS: obj_t4
+var marshalKeyObjtS4UMEWRS []byte = []byte{111 ,98 ,106 ,95 ,116 ,52 ,}
+// marshalKeyInttHZKTEQ7C: int_t0
+var marshalKeyInttHZKTEQ7C []byte = []byte{105 ,110 ,116 ,95 ,116 ,48 ,}
+// marshalKeyFloattFLR73I72: float_t0
+var marshalKeyFloattFLR73I72 []byte = []byte{102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 ,}
+// marshalKeyAbcOZNLZMC7: abc
+var marshalKeyAbcOZNLZMC7 []byte = []byte{97 ,98 ,99 ,}
+// marshalKeyLemonGPTEO6LV: lemon
+var marshalKeyLemonGPTEO6LV []byte = []byte{108 ,101 ,109 ,111 ,110 ,}
+// marshalKeyAlphaOCVGAJTS: alpha
+var marshalKeyAlphaOCVGAJTS []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
+// marshalKeyEscapestringtXXT2Z34T: escape_string_t
+var marshalKeyEscapestringtXXT2Z34T []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
+// marshalKeyBetaOFX4PY2H: beta
+var marshalKeyBetaOFX4PY2H []byte = []byte{98 ,101 ,116 ,97 ,}
+// marshalKeyDeltaPAOREE52: delta
+var marshalKeyDeltaPAOREE52 []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
+// marshalKeyInttS23WIQEK: int_t1
+var marshalKeyInttS23WIQEK []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
+// marshalKeyIntt2TKNGDCJ: int_t0
+var marshalKeyIntt2TKNGDCJ []byte = []byte{105 ,110 ,116 ,95 ,116 ,48 ,}
+// marshalKeyFloattGCSD4FY6: float_t0
+var marshalKeyFloattGCSD4FY6 []byte = []byte{102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 ,}
+// marshalKeyBetaZSD2E3R3: beta
+var marshalKeyBetaZSD2E3R3 []byte = []byte{98 ,101 ,116 ,97 ,}
+// marshalKeyAlphaG4LLDOOV: alpha
+var marshalKeyAlphaG4LLDOOV []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
+// marshalKeyEscapestringtAQ55PISW: escape_string_t
+var marshalKeyEscapestringtAQ55PISW []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
+// marshalKeyDeltaD34Y7KE7: delta
+var marshalKeyDeltaD34Y7KE7 []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
+// marshalKeyInttSGQXLY6Q: int_t1
+var marshalKeyInttSGQXLY6Q []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
+// marshalKeyAbc5UH3IVOG: abc
+var marshalKeyAbc5UH3IVOG []byte = []byte{97 ,98 ,99 ,}
+// marshalKeyLemonJLLSZBNZ: lemon
+var marshalKeyLemonJLLSZBNZ []byte = []byte{108 ,101 ,109 ,111 ,110 ,}
+// marshalKeyDeltaOTFYEYJD: delta
+var marshalKeyDeltaOTFYEYJD []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
+// marshalKeyInttKLANW3W5: int_t1
+var marshalKeyInttKLANW3W5 []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
 
 
 
@@ -1516,263 +1641,518 @@ func writeStr(w io.Writer, a string) {
 }
 
 
-// {jsonUnicodeEscapeChar [[92 117 48 48 48 48] [92 117 48 48 48 49] [92 117 48 48 48 50] [92 117 48 48 48 51] [92 117 48 48 48 52] [92 117 48 48 48 53] [92 117 48 48 48 54] [92 117 48 48 48 55] [92 117 48 48 48 56] [92 117 48 48 48 57] [92 117 48 48 48 97] [92 117 48 48 48 98] [92 117 48 48 48 99] [92 117 48 48 48 100] [92 117 48 48 48 101] [92 117 48 48 48 102] [92 117 48 48 49 48] [92 117 48 48 49 49] [92 117 48 48 49 50] [92 117 48 48 49 51] [92 117 48 48 49 52] [92 117 48 48 49 53] [92 117 48 48 49 54] [92 117 48 48 49 55] [92 117 48 48 49 56] [92 117 48 48 49 57] [92 117 48 48 49 97] [92 117 48 48 49 98] [92 117 48 48 49 99] [92 117 48 48 49 100] [92 117 48 48 49 101] [92 117 48 48 49 102] [92 117 48 48 50 48] [92 117 48 48 50 49] [92 117 48 48 50 50] [92 117 48 48 50 51] [92 117 48 48 50 52] [92 117 48 48 50 53] [92 117 48 48 50 54] [92 117 48 48 50 55] [92 117 48 48 50 56] [92 117 48 48 50 57] [92 117 48 48 50 97] [92 117 48 48 50 98] [92 117 48 48 50 99] [92 117 48 48 50 100] [92 117 48 48 50 101] [92 117 48 48 50 102] [92 117 48 48 51 48] [92 117 48 48 51 49] [92 117 48 48 51 50] [92 117 48 48 51 51] [92 117 48 48 51 52] [92 117 48 48 51 53] [92 117 48 48 51 54] [92 117 48 48 51 55] [92 117 48 48 51 56] [92 117 48 48 51 57] [92 117 48 48 51 97] [92 117 48 48 51 98] [92 117 48 48 51 99] [92 117 48 48 51 100] [92 117 48 48 51 101] [92 117 48 48 51 102] [92 117 48 48 52 48] [92 117 48 48 52 49] [92 117 48 48 52 50] [92 117 48 48 52 51] [92 117 48 48 52 52] [92 117 48 48 52 53] [92 117 48 48 52 54] [92 117 48 48 52 55] [92 117 48 48 52 56] [92 117 48 48 52 57] [92 117 48 48 52 97] [92 117 48 48 52 98] [92 117 48 48 52 99] [92 117 48 48 52 100] [92 117 48 48 52 101] [92 117 48 48 52 102] [92 117 48 48 53 48] [92 117 48 48 53 49] [92 117 48 48 53 50] [92 117 48 48 53 51] [92 117 48 48 53 52] [92 117 48 48 53 53] [92 117 48 48 53 54] [92 117 48 48 53 55] [92 117 48 48 53 56] [92 117 48 48 53 57] [92 117 48 48 53 97] [92 117 48 48 53 98] [92 117 48 48 53 99] [92 117 48 48 53 100] [92 117 48 48 53 101] [92 117 48 48 53 102] [92 117 48 48 54 48] [92 117 48 48 54 49] [92 117 48 48 54 50] [92 117 48 48 54 51] [92 117 48 48 54 52] [92 117 48 48 54 53] [92 117 48 48 54 54] [92 117 48 48 54 55] [92 117 48 48 54 56] [92 117 48 48 54 57] [92 117 48 48 54 97] [92 117 48 48 54 98] [92 117 48 48 54 99] [92 117 48 48 54 100] [92 117 48 48 54 101] [92 117 48 48 54 102] [92 117 48 48 55 48] [92 117 48 48 55 49] [92 117 48 48 55 50] [92 117 48 48 55 51] [92 117 48 48 55 52] [92 117 48 48 55 53] [92 117 48 48 55 54] [92 117 48 48 55 55] [92 117 48 48 55 56] [92 117 48 48 55 57] [92 117 48 48 55 97] [92 117 48 48 55 98] [92 117 48 48 55 99] [92 117 48 48 55 100] [92 117 48 48 55 101] [92 117 48 48 55 102] [92 117 48 48 56 48] [92 117 48 48 56 49] [92 117 48 48 56 50] [92 117 48 48 56 51] [92 117 48 48 56 52] [92 117 48 48 56 53] [92 117 48 48 56 54] [92 117 48 48 56 55] [92 117 48 48 56 56] [92 117 48 48 56 57] [92 117 48 48 56 97] [92 117 48 48 56 98] [92 117 48 48 56 99] [92 117 48 48 56 100] [92 117 48 48 56 101] [92 117 48 48 56 102] [92 117 48 48 57 48] [92 117 48 48 57 49] [92 117 48 48 57 50] [92 117 48 48 57 51] [92 117 48 48 57 52] [92 117 48 48 57 53] [92 117 48 48 57 54] [92 117 48 48 57 55] [92 117 48 48 57 56] [92 117 48 48 57 57] [92 117 48 48 57 97] [92 117 48 48 57 98] [92 117 48 48 57 99] [92 117 48 48 57 100] [92 117 48 48 57 101] [92 117 48 48 57 102] [92 117 48 48 97 48] [92 117 48 48 97 49] [92 117 48 48 97 50] [92 117 48 48 97 51] [92 117 48 48 97 52] [92 117 48 48 97 53] [92 117 48 48 97 54] [92 117 48 48 97 55] [92 117 48 48 97 56] [92 117 48 48 97 57] [92 117 48 48 97 97] [92 117 48 48 97 98] [92 117 48 48 97 99] [92 117 48 48 97 100] [92 117 48 48 97 101] [92 117 48 48 97 102] [92 117 48 48 98 48] [92 117 48 48 98 49] [92 117 48 48 98 50] [92 117 48 48 98 51] [92 117 48 48 98 52] [92 117 48 48 98 53] [92 117 48 48 98 54] [92 117 48 48 98 55] [92 117 48 48 98 56] [92 117 48 48 98 57] [92 117 48 48 98 97] [92 117 48 48 98 98] [92 117 48 48 98 99] [92 117 48 48 98 100] [92 117 48 48 98 101] [92 117 48 48 98 102] [92 117 48 48 99 48] [92 117 48 48 99 49] [92 117 48 48 99 50] [92 117 48 48 99 51] [92 117 48 48 99 52] [92 117 48 48 99 53] [92 117 48 48 99 54] [92 117 48 48 99 55] [92 117 48 48 99 56] [92 117 48 48 99 57] [92 117 48 48 99 97] [92 117 48 48 99 98] [92 117 48 48 99 99] [92 117 48 48 99 100] [92 117 48 48 99 101] [92 117 48 48 99 102] [92 117 48 48 100 48] [92 117 48 48 100 49] [92 117 48 48 100 50] [92 117 48 48 100 51] [92 117 48 48 100 52] [92 117 48 48 100 53] [92 117 48 48 100 54] [92 117 48 48 100 55] [92 117 48 48 100 56] [92 117 48 48 100 57] [92 117 48 48 100 97] [92 117 48 48 100 98] [92 117 48 48 100 99] [92 117 48 48 100 100] [92 117 48 48 100 101] [92 117 48 48 100 102] [92 117 48 48 101 48] [92 117 48 48 101 49] [92 117 48 48 101 50] [92 117 48 48 101 51] [92 117 48 48 101 52] [92 117 48 48 101 53] [92 117 48 48 101 54] [92 117 48 48 101 55] [92 117 48 48 101 56] [92 117 48 48 101 57] [92 117 48 48 101 97] [92 117 48 48 101 98] [92 117 48 48 101 99] [92 117 48 48 101 100] [92 117 48 48 101 101] [92 117 48 48 101 102] [92 117 48 48 102 48] [92 117 48 48 102 49] [92 117 48 48 102 50] [92 117 48 48 102 51] [92 117 48 48 102 52] [92 117 48 48 102 53] [92 117 48 48 102 54] [92 117 48 48 102 55] [92 117 48 48 102 56] [92 117 48 48 102 57] [92 117 48 48 102 97] [92 117 48 48 102 98] [92 117 48 48 102 99] [92 117 48 48 102 100] [92 117 48 48 102 101] [92 117 48 48 102 102]]}
 var jsonUnicodeEscapeChar [][]byte = [][]byte{
+    // [92 117 48 48 48 48]
     {92, 117, 48, 48, 48, 48, },
+    // [92 117 48 48 48 49]
     {92, 117, 48, 48, 48, 49, },
+    // [92 117 48 48 48 50]
     {92, 117, 48, 48, 48, 50, },
+    // [92 117 48 48 48 51]
     {92, 117, 48, 48, 48, 51, },
+    // [92 117 48 48 48 52]
     {92, 117, 48, 48, 48, 52, },
+    // [92 117 48 48 48 53]
     {92, 117, 48, 48, 48, 53, },
+    // [92 117 48 48 48 54]
     {92, 117, 48, 48, 48, 54, },
+    // [92 117 48 48 48 55]
     {92, 117, 48, 48, 48, 55, },
+    // [92 117 48 48 48 56]
     {92, 117, 48, 48, 48, 56, },
+    // [92 117 48 48 48 57]
     {92, 117, 48, 48, 48, 57, },
+    // [92 117 48 48 48 97]
     {92, 117, 48, 48, 48, 97, },
+    // [92 117 48 48 48 98]
     {92, 117, 48, 48, 48, 98, },
+    // [92 117 48 48 48 99]
     {92, 117, 48, 48, 48, 99, },
+    // [92 117 48 48 48 100]
     {92, 117, 48, 48, 48, 100, },
+    // [92 117 48 48 48 101]
     {92, 117, 48, 48, 48, 101, },
+    // [92 117 48 48 48 102]
     {92, 117, 48, 48, 48, 102, },
+    // [92 117 48 48 49 48]
     {92, 117, 48, 48, 49, 48, },
+    // [92 117 48 48 49 49]
     {92, 117, 48, 48, 49, 49, },
+    // [92 117 48 48 49 50]
     {92, 117, 48, 48, 49, 50, },
+    // [92 117 48 48 49 51]
     {92, 117, 48, 48, 49, 51, },
+    // [92 117 48 48 49 52]
     {92, 117, 48, 48, 49, 52, },
+    // [92 117 48 48 49 53]
     {92, 117, 48, 48, 49, 53, },
+    // [92 117 48 48 49 54]
     {92, 117, 48, 48, 49, 54, },
+    // [92 117 48 48 49 55]
     {92, 117, 48, 48, 49, 55, },
+    // [92 117 48 48 49 56]
     {92, 117, 48, 48, 49, 56, },
+    // [92 117 48 48 49 57]
     {92, 117, 48, 48, 49, 57, },
+    // [92 117 48 48 49 97]
     {92, 117, 48, 48, 49, 97, },
+    // [92 117 48 48 49 98]
     {92, 117, 48, 48, 49, 98, },
+    // [92 117 48 48 49 99]
     {92, 117, 48, 48, 49, 99, },
+    // [92 117 48 48 49 100]
     {92, 117, 48, 48, 49, 100, },
+    // [92 117 48 48 49 101]
     {92, 117, 48, 48, 49, 101, },
+    // [92 117 48 48 49 102]
     {92, 117, 48, 48, 49, 102, },
+    // [92 117 48 48 50 48]
     {92, 117, 48, 48, 50, 48, },
+    // [92 117 48 48 50 49]
     {92, 117, 48, 48, 50, 49, },
+    // [92 117 48 48 50 50]
     {92, 117, 48, 48, 50, 50, },
+    // [92 117 48 48 50 51]
     {92, 117, 48, 48, 50, 51, },
+    // [92 117 48 48 50 52]
     {92, 117, 48, 48, 50, 52, },
+    // [92 117 48 48 50 53]
     {92, 117, 48, 48, 50, 53, },
+    // [92 117 48 48 50 54]
     {92, 117, 48, 48, 50, 54, },
+    // [92 117 48 48 50 55]
     {92, 117, 48, 48, 50, 55, },
+    // [92 117 48 48 50 56]
     {92, 117, 48, 48, 50, 56, },
+    // [92 117 48 48 50 57]
     {92, 117, 48, 48, 50, 57, },
+    // [92 117 48 48 50 97]
     {92, 117, 48, 48, 50, 97, },
+    // [92 117 48 48 50 98]
     {92, 117, 48, 48, 50, 98, },
+    // [92 117 48 48 50 99]
     {92, 117, 48, 48, 50, 99, },
+    // [92 117 48 48 50 100]
     {92, 117, 48, 48, 50, 100, },
+    // [92 117 48 48 50 101]
     {92, 117, 48, 48, 50, 101, },
+    // [92 117 48 48 50 102]
     {92, 117, 48, 48, 50, 102, },
+    // [92 117 48 48 51 48]
     {92, 117, 48, 48, 51, 48, },
+    // [92 117 48 48 51 49]
     {92, 117, 48, 48, 51, 49, },
+    // [92 117 48 48 51 50]
     {92, 117, 48, 48, 51, 50, },
+    // [92 117 48 48 51 51]
     {92, 117, 48, 48, 51, 51, },
+    // [92 117 48 48 51 52]
     {92, 117, 48, 48, 51, 52, },
+    // [92 117 48 48 51 53]
     {92, 117, 48, 48, 51, 53, },
+    // [92 117 48 48 51 54]
     {92, 117, 48, 48, 51, 54, },
+    // [92 117 48 48 51 55]
     {92, 117, 48, 48, 51, 55, },
+    // [92 117 48 48 51 56]
     {92, 117, 48, 48, 51, 56, },
+    // [92 117 48 48 51 57]
     {92, 117, 48, 48, 51, 57, },
+    // [92 117 48 48 51 97]
     {92, 117, 48, 48, 51, 97, },
+    // [92 117 48 48 51 98]
     {92, 117, 48, 48, 51, 98, },
+    // [92 117 48 48 51 99]
     {92, 117, 48, 48, 51, 99, },
+    // [92 117 48 48 51 100]
     {92, 117, 48, 48, 51, 100, },
+    // [92 117 48 48 51 101]
     {92, 117, 48, 48, 51, 101, },
+    // [92 117 48 48 51 102]
     {92, 117, 48, 48, 51, 102, },
+    // [92 117 48 48 52 48]
     {92, 117, 48, 48, 52, 48, },
+    // [92 117 48 48 52 49]
     {92, 117, 48, 48, 52, 49, },
+    // [92 117 48 48 52 50]
     {92, 117, 48, 48, 52, 50, },
+    // [92 117 48 48 52 51]
     {92, 117, 48, 48, 52, 51, },
+    // [92 117 48 48 52 52]
     {92, 117, 48, 48, 52, 52, },
+    // [92 117 48 48 52 53]
     {92, 117, 48, 48, 52, 53, },
+    // [92 117 48 48 52 54]
     {92, 117, 48, 48, 52, 54, },
+    // [92 117 48 48 52 55]
     {92, 117, 48, 48, 52, 55, },
+    // [92 117 48 48 52 56]
     {92, 117, 48, 48, 52, 56, },
+    // [92 117 48 48 52 57]
     {92, 117, 48, 48, 52, 57, },
+    // [92 117 48 48 52 97]
     {92, 117, 48, 48, 52, 97, },
+    // [92 117 48 48 52 98]
     {92, 117, 48, 48, 52, 98, },
+    // [92 117 48 48 52 99]
     {92, 117, 48, 48, 52, 99, },
+    // [92 117 48 48 52 100]
     {92, 117, 48, 48, 52, 100, },
+    // [92 117 48 48 52 101]
     {92, 117, 48, 48, 52, 101, },
+    // [92 117 48 48 52 102]
     {92, 117, 48, 48, 52, 102, },
+    // [92 117 48 48 53 48]
     {92, 117, 48, 48, 53, 48, },
+    // [92 117 48 48 53 49]
     {92, 117, 48, 48, 53, 49, },
+    // [92 117 48 48 53 50]
     {92, 117, 48, 48, 53, 50, },
+    // [92 117 48 48 53 51]
     {92, 117, 48, 48, 53, 51, },
+    // [92 117 48 48 53 52]
     {92, 117, 48, 48, 53, 52, },
+    // [92 117 48 48 53 53]
     {92, 117, 48, 48, 53, 53, },
+    // [92 117 48 48 53 54]
     {92, 117, 48, 48, 53, 54, },
+    // [92 117 48 48 53 55]
     {92, 117, 48, 48, 53, 55, },
+    // [92 117 48 48 53 56]
     {92, 117, 48, 48, 53, 56, },
+    // [92 117 48 48 53 57]
     {92, 117, 48, 48, 53, 57, },
+    // [92 117 48 48 53 97]
     {92, 117, 48, 48, 53, 97, },
+    // [92 117 48 48 53 98]
     {92, 117, 48, 48, 53, 98, },
+    // [92 117 48 48 53 99]
     {92, 117, 48, 48, 53, 99, },
+    // [92 117 48 48 53 100]
     {92, 117, 48, 48, 53, 100, },
+    // [92 117 48 48 53 101]
     {92, 117, 48, 48, 53, 101, },
+    // [92 117 48 48 53 102]
     {92, 117, 48, 48, 53, 102, },
+    // [92 117 48 48 54 48]
     {92, 117, 48, 48, 54, 48, },
+    // [92 117 48 48 54 49]
     {92, 117, 48, 48, 54, 49, },
+    // [92 117 48 48 54 50]
     {92, 117, 48, 48, 54, 50, },
+    // [92 117 48 48 54 51]
     {92, 117, 48, 48, 54, 51, },
+    // [92 117 48 48 54 52]
     {92, 117, 48, 48, 54, 52, },
+    // [92 117 48 48 54 53]
     {92, 117, 48, 48, 54, 53, },
+    // [92 117 48 48 54 54]
     {92, 117, 48, 48, 54, 54, },
+    // [92 117 48 48 54 55]
     {92, 117, 48, 48, 54, 55, },
+    // [92 117 48 48 54 56]
     {92, 117, 48, 48, 54, 56, },
+    // [92 117 48 48 54 57]
     {92, 117, 48, 48, 54, 57, },
+    // [92 117 48 48 54 97]
     {92, 117, 48, 48, 54, 97, },
+    // [92 117 48 48 54 98]
     {92, 117, 48, 48, 54, 98, },
+    // [92 117 48 48 54 99]
     {92, 117, 48, 48, 54, 99, },
+    // [92 117 48 48 54 100]
     {92, 117, 48, 48, 54, 100, },
+    // [92 117 48 48 54 101]
     {92, 117, 48, 48, 54, 101, },
+    // [92 117 48 48 54 102]
     {92, 117, 48, 48, 54, 102, },
+    // [92 117 48 48 55 48]
     {92, 117, 48, 48, 55, 48, },
+    // [92 117 48 48 55 49]
     {92, 117, 48, 48, 55, 49, },
+    // [92 117 48 48 55 50]
     {92, 117, 48, 48, 55, 50, },
+    // [92 117 48 48 55 51]
     {92, 117, 48, 48, 55, 51, },
+    // [92 117 48 48 55 52]
     {92, 117, 48, 48, 55, 52, },
+    // [92 117 48 48 55 53]
     {92, 117, 48, 48, 55, 53, },
+    // [92 117 48 48 55 54]
     {92, 117, 48, 48, 55, 54, },
+    // [92 117 48 48 55 55]
     {92, 117, 48, 48, 55, 55, },
+    // [92 117 48 48 55 56]
     {92, 117, 48, 48, 55, 56, },
+    // [92 117 48 48 55 57]
     {92, 117, 48, 48, 55, 57, },
+    // [92 117 48 48 55 97]
     {92, 117, 48, 48, 55, 97, },
+    // [92 117 48 48 55 98]
     {92, 117, 48, 48, 55, 98, },
+    // [92 117 48 48 55 99]
     {92, 117, 48, 48, 55, 99, },
+    // [92 117 48 48 55 100]
     {92, 117, 48, 48, 55, 100, },
+    // [92 117 48 48 55 101]
     {92, 117, 48, 48, 55, 101, },
+    // [92 117 48 48 55 102]
     {92, 117, 48, 48, 55, 102, },
+    // [92 117 48 48 56 48]
     {92, 117, 48, 48, 56, 48, },
+    // [92 117 48 48 56 49]
     {92, 117, 48, 48, 56, 49, },
+    // [92 117 48 48 56 50]
     {92, 117, 48, 48, 56, 50, },
+    // [92 117 48 48 56 51]
     {92, 117, 48, 48, 56, 51, },
+    // [92 117 48 48 56 52]
     {92, 117, 48, 48, 56, 52, },
+    // [92 117 48 48 56 53]
     {92, 117, 48, 48, 56, 53, },
+    // [92 117 48 48 56 54]
     {92, 117, 48, 48, 56, 54, },
+    // [92 117 48 48 56 55]
     {92, 117, 48, 48, 56, 55, },
+    // [92 117 48 48 56 56]
     {92, 117, 48, 48, 56, 56, },
+    // [92 117 48 48 56 57]
     {92, 117, 48, 48, 56, 57, },
+    // [92 117 48 48 56 97]
     {92, 117, 48, 48, 56, 97, },
+    // [92 117 48 48 56 98]
     {92, 117, 48, 48, 56, 98, },
+    // [92 117 48 48 56 99]
     {92, 117, 48, 48, 56, 99, },
+    // [92 117 48 48 56 100]
     {92, 117, 48, 48, 56, 100, },
+    // [92 117 48 48 56 101]
     {92, 117, 48, 48, 56, 101, },
+    // [92 117 48 48 56 102]
     {92, 117, 48, 48, 56, 102, },
+    // [92 117 48 48 57 48]
     {92, 117, 48, 48, 57, 48, },
+    // [92 117 48 48 57 49]
     {92, 117, 48, 48, 57, 49, },
+    // [92 117 48 48 57 50]
     {92, 117, 48, 48, 57, 50, },
+    // [92 117 48 48 57 51]
     {92, 117, 48, 48, 57, 51, },
+    // [92 117 48 48 57 52]
     {92, 117, 48, 48, 57, 52, },
+    // [92 117 48 48 57 53]
     {92, 117, 48, 48, 57, 53, },
+    // [92 117 48 48 57 54]
     {92, 117, 48, 48, 57, 54, },
+    // [92 117 48 48 57 55]
     {92, 117, 48, 48, 57, 55, },
+    // [92 117 48 48 57 56]
     {92, 117, 48, 48, 57, 56, },
+    // [92 117 48 48 57 57]
     {92, 117, 48, 48, 57, 57, },
+    // [92 117 48 48 57 97]
     {92, 117, 48, 48, 57, 97, },
+    // [92 117 48 48 57 98]
     {92, 117, 48, 48, 57, 98, },
+    // [92 117 48 48 57 99]
     {92, 117, 48, 48, 57, 99, },
+    // [92 117 48 48 57 100]
     {92, 117, 48, 48, 57, 100, },
+    // [92 117 48 48 57 101]
     {92, 117, 48, 48, 57, 101, },
+    // [92 117 48 48 57 102]
     {92, 117, 48, 48, 57, 102, },
+    // [92 117 48 48 97 48]
     {92, 117, 48, 48, 97, 48, },
+    // [92 117 48 48 97 49]
     {92, 117, 48, 48, 97, 49, },
+    // [92 117 48 48 97 50]
     {92, 117, 48, 48, 97, 50, },
+    // [92 117 48 48 97 51]
     {92, 117, 48, 48, 97, 51, },
+    // [92 117 48 48 97 52]
     {92, 117, 48, 48, 97, 52, },
+    // [92 117 48 48 97 53]
     {92, 117, 48, 48, 97, 53, },
+    // [92 117 48 48 97 54]
     {92, 117, 48, 48, 97, 54, },
+    // [92 117 48 48 97 55]
     {92, 117, 48, 48, 97, 55, },
+    // [92 117 48 48 97 56]
     {92, 117, 48, 48, 97, 56, },
+    // [92 117 48 48 97 57]
     {92, 117, 48, 48, 97, 57, },
+    // [92 117 48 48 97 97]
     {92, 117, 48, 48, 97, 97, },
+    // [92 117 48 48 97 98]
     {92, 117, 48, 48, 97, 98, },
+    // [92 117 48 48 97 99]
     {92, 117, 48, 48, 97, 99, },
+    // [92 117 48 48 97 100]
     {92, 117, 48, 48, 97, 100, },
+    // [92 117 48 48 97 101]
     {92, 117, 48, 48, 97, 101, },
+    // [92 117 48 48 97 102]
     {92, 117, 48, 48, 97, 102, },
+    // [92 117 48 48 98 48]
     {92, 117, 48, 48, 98, 48, },
+    // [92 117 48 48 98 49]
     {92, 117, 48, 48, 98, 49, },
+    // [92 117 48 48 98 50]
     {92, 117, 48, 48, 98, 50, },
+    // [92 117 48 48 98 51]
     {92, 117, 48, 48, 98, 51, },
+    // [92 117 48 48 98 52]
     {92, 117, 48, 48, 98, 52, },
+    // [92 117 48 48 98 53]
     {92, 117, 48, 48, 98, 53, },
+    // [92 117 48 48 98 54]
     {92, 117, 48, 48, 98, 54, },
+    // [92 117 48 48 98 55]
     {92, 117, 48, 48, 98, 55, },
+    // [92 117 48 48 98 56]
     {92, 117, 48, 48, 98, 56, },
+    // [92 117 48 48 98 57]
     {92, 117, 48, 48, 98, 57, },
+    // [92 117 48 48 98 97]
     {92, 117, 48, 48, 98, 97, },
+    // [92 117 48 48 98 98]
     {92, 117, 48, 48, 98, 98, },
+    // [92 117 48 48 98 99]
     {92, 117, 48, 48, 98, 99, },
+    // [92 117 48 48 98 100]
     {92, 117, 48, 48, 98, 100, },
+    // [92 117 48 48 98 101]
     {92, 117, 48, 48, 98, 101, },
+    // [92 117 48 48 98 102]
     {92, 117, 48, 48, 98, 102, },
+    // [92 117 48 48 99 48]
     {92, 117, 48, 48, 99, 48, },
+    // [92 117 48 48 99 49]
     {92, 117, 48, 48, 99, 49, },
+    // [92 117 48 48 99 50]
     {92, 117, 48, 48, 99, 50, },
+    // [92 117 48 48 99 51]
     {92, 117, 48, 48, 99, 51, },
+    // [92 117 48 48 99 52]
     {92, 117, 48, 48, 99, 52, },
+    // [92 117 48 48 99 53]
     {92, 117, 48, 48, 99, 53, },
+    // [92 117 48 48 99 54]
     {92, 117, 48, 48, 99, 54, },
+    // [92 117 48 48 99 55]
     {92, 117, 48, 48, 99, 55, },
+    // [92 117 48 48 99 56]
     {92, 117, 48, 48, 99, 56, },
+    // [92 117 48 48 99 57]
     {92, 117, 48, 48, 99, 57, },
+    // [92 117 48 48 99 97]
     {92, 117, 48, 48, 99, 97, },
+    // [92 117 48 48 99 98]
     {92, 117, 48, 48, 99, 98, },
+    // [92 117 48 48 99 99]
     {92, 117, 48, 48, 99, 99, },
+    // [92 117 48 48 99 100]
     {92, 117, 48, 48, 99, 100, },
+    // [92 117 48 48 99 101]
     {92, 117, 48, 48, 99, 101, },
+    // [92 117 48 48 99 102]
     {92, 117, 48, 48, 99, 102, },
+    // [92 117 48 48 100 48]
     {92, 117, 48, 48, 100, 48, },
+    // [92 117 48 48 100 49]
     {92, 117, 48, 48, 100, 49, },
+    // [92 117 48 48 100 50]
     {92, 117, 48, 48, 100, 50, },
+    // [92 117 48 48 100 51]
     {92, 117, 48, 48, 100, 51, },
+    // [92 117 48 48 100 52]
     {92, 117, 48, 48, 100, 52, },
+    // [92 117 48 48 100 53]
     {92, 117, 48, 48, 100, 53, },
+    // [92 117 48 48 100 54]
     {92, 117, 48, 48, 100, 54, },
+    // [92 117 48 48 100 55]
     {92, 117, 48, 48, 100, 55, },
+    // [92 117 48 48 100 56]
     {92, 117, 48, 48, 100, 56, },
+    // [92 117 48 48 100 57]
     {92, 117, 48, 48, 100, 57, },
+    // [92 117 48 48 100 97]
     {92, 117, 48, 48, 100, 97, },
+    // [92 117 48 48 100 98]
     {92, 117, 48, 48, 100, 98, },
+    // [92 117 48 48 100 99]
     {92, 117, 48, 48, 100, 99, },
+    // [92 117 48 48 100 100]
     {92, 117, 48, 48, 100, 100, },
+    // [92 117 48 48 100 101]
     {92, 117, 48, 48, 100, 101, },
+    // [92 117 48 48 100 102]
     {92, 117, 48, 48, 100, 102, },
+    // [92 117 48 48 101 48]
     {92, 117, 48, 48, 101, 48, },
+    // [92 117 48 48 101 49]
     {92, 117, 48, 48, 101, 49, },
+    // [92 117 48 48 101 50]
     {92, 117, 48, 48, 101, 50, },
+    // [92 117 48 48 101 51]
     {92, 117, 48, 48, 101, 51, },
+    // [92 117 48 48 101 52]
     {92, 117, 48, 48, 101, 52, },
+    // [92 117 48 48 101 53]
     {92, 117, 48, 48, 101, 53, },
+    // [92 117 48 48 101 54]
     {92, 117, 48, 48, 101, 54, },
+    // [92 117 48 48 101 55]
     {92, 117, 48, 48, 101, 55, },
+    // [92 117 48 48 101 56]
     {92, 117, 48, 48, 101, 56, },
+    // [92 117 48 48 101 57]
     {92, 117, 48, 48, 101, 57, },
+    // [92 117 48 48 101 97]
     {92, 117, 48, 48, 101, 97, },
+    // [92 117 48 48 101 98]
     {92, 117, 48, 48, 101, 98, },
+    // [92 117 48 48 101 99]
     {92, 117, 48, 48, 101, 99, },
+    // [92 117 48 48 101 100]
     {92, 117, 48, 48, 101, 100, },
+    // [92 117 48 48 101 101]
     {92, 117, 48, 48, 101, 101, },
+    // [92 117 48 48 101 102]
     {92, 117, 48, 48, 101, 102, },
+    // [92 117 48 48 102 48]
     {92, 117, 48, 48, 102, 48, },
+    // [92 117 48 48 102 49]
     {92, 117, 48, 48, 102, 49, },
+    // [92 117 48 48 102 50]
     {92, 117, 48, 48, 102, 50, },
+    // [92 117 48 48 102 51]
     {92, 117, 48, 48, 102, 51, },
+    // [92 117 48 48 102 52]
     {92, 117, 48, 48, 102, 52, },
+    // [92 117 48 48 102 53]
     {92, 117, 48, 48, 102, 53, },
+    // [92 117 48 48 102 54]
     {92, 117, 48, 48, 102, 54, },
+    // [92 117 48 48 102 55]
     {92, 117, 48, 48, 102, 55, },
+    // [92 117 48 48 102 56]
     {92, 117, 48, 48, 102, 56, },
+    // [92 117 48 48 102 57]
     {92, 117, 48, 48, 102, 57, },
+    // [92 117 48 48 102 97]
     {92, 117, 48, 48, 102, 97, },
+    // [92 117 48 48 102 98]
     {92, 117, 48, 48, 102, 98, },
+    // [92 117 48 48 102 99]
     {92, 117, 48, 48, 102, 99, },
+    // [92 117 48 48 102 100]
     {92, 117, 48, 48, 102, 100, },
+    // [92 117 48 48 102 101]
     {92, 117, 48, 48, 102, 101, },
+    // [92 117 48 48 102 102]
     {92, 117, 48, 48, 102, 102, },
 }
 
