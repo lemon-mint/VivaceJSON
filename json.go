@@ -6,13 +6,14 @@ import (
 )
 
 type field struct {
-	Key       []byte
-	ValueType int
-	KeyPath   [][]byte
-	GoName    string
-	GoType    string
-	RawName   string
-	IsLast    bool
+	Key        []byte
+	ValueType  int
+	KeyPath    [][]byte
+	GoName     string
+	GoType     string
+	RawName    string
+	KeyVarName string
+	IsLast     bool
 }
 
 func (f *field) String() string {

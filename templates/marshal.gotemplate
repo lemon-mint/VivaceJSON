@@ -1,7 +1,8 @@
 {{define "write_field"}}
     // {{.}}
     w.Write(JSON_TOKEN_STRING)
-    w.Write([]byte{ {{range .Key}}{{.}} ,{{end}} }) //{{.RawName}}
+    //w.Write([]byte{ {{range .Key}}{{.}} ,{{end}} }) //{{.RawName}}
+    w.Write({{.KeyVarName}}) //{{.RawName}}
     w.Write(JSON_TOKEN_STRING)
     w.Write(JSON_TOKEN_KVSEP)
     {{if eq .GoType "string"}}

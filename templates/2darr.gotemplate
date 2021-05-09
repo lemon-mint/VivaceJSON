@@ -1,5 +1,5 @@
-// {{.}}
 var {{.VarName}} [][]byte = [][]byte{
 {{- range .Data}}
+    // {{.}}
     { {{- range $idx, $value := .}} {{- $value}}, {{end -}} },{{end}}
 }

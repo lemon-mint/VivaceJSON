@@ -145,13 +145,30 @@ func genMixedStruct(StructName string, fields []*field) []byte {
 	}
 	buf := bytes.NewBuffer(nil)
 	RootElement.StructName = StructName
-	RootElement.Print(buf)
+	marshalKeyData := RootElement.Print(buf)
 	buf.WriteRune('\n')
 	buf.Write(generatePath2StructMap(RootElement, fields))
+	buf.WriteRune('\n')
+	tpl.ExecuteTemplate(buf, "genByteArr.gotemplate", marshalKeyData)
 	return buf.Bytes()
 }
 
-func (ts *TempStruct) Print(w io.Writer) {
+type KeyVarName struct {
+	Name string
+	Data []byte
+	Info string
+}
+
+func (ts *TempStruct) Print(w io.Writer) []KeyVarName {
+	t := make([]KeyVarName, len(ts.Locals))
+	for i := range ts.Locals {
+		ts.Locals[i].KeyVarName = "marshalKey" + GetName(ts.Locals[i].Key, ts.Locals[i].KeyPath, "keyvar", "rawKey", "marshalKey")
+		t[i] = KeyVarName{
+			Name: "marshalKey" + GetName(ts.Locals[i].Key, ts.Locals[i].KeyPath, "keyvar", "rawKey", "marshalKey"),
+			Data: ts.Locals[i].Key,
+			Info: string(ts.Locals[i].Key),
+		}
+	}
 	if len(ts.Locals) > 0 {
 		ts.Locals[len(ts.Locals)-1].IsLast = true
 	}
@@ -161,8 +178,9 @@ func (ts *TempStruct) Print(w io.Writer) {
 	w.Write(genStruct(ts.StructName, ts.Locals))
 
 	for i := range ts.Children {
-		ts.Children[i].Print(w)
+		t = append(t, ts.Children[i].Print(w)...)
 	}
+	return t
 }
 
 func KeyPathInOps(a []byte, b [][]byte) (found bool, idx int) {
