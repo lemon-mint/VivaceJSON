@@ -36,7 +36,7 @@ var JSON_TOKEN_KVSEP = []byte(": ")
 var JSON_TOKEN_STRING = []byte(`"`)
 
 var JSON_BOOL_TRUE = []byte("true")
-var JSON_BOOL_FALSE = []byte("true")
+var JSON_BOOL_FALSE = []byte("false")
 
 var json_double_quote = []byte(`\"`)
 var json_backslash = []byte(`\\`)
