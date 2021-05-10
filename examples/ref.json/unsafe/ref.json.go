@@ -108,6 +108,17 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) calc() int {
 
 	jsonLength += 2
 
+	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
+	//JSON_TOKEN_STRING
+	jsonLength += 6 // jsonLength += len("obj_t3")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	jsonLength += obj.ObjtIMXYPXTM.calc()
+
+	jsonLength += 2
+
 	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
 	//JSON_TOKEN_STRING
 	jsonLength += 6 // jsonLength += len("obj_t4")
@@ -119,14 +130,14 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) calc() int {
 
 	jsonLength += 2
 
-	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
 	//JSON_TOKEN_STRING
-	jsonLength += 6 // jsonLength += len("obj_t3")
+	jsonLength += 6 // jsonLength += len("obj_t2")
 	//JSON_TOKEN_STRING
 	//JSON_TOKEN_KVSEP
 	jsonLength += 4
 
-	jsonLength += obj.ObjtIMXYPXTM.calc()
+	jsonLength += obj.ObjtNGTYENNZ.calc()
 
 	jsonLength += 2
 
@@ -278,17 +289,6 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) calc() int {
 	jsonLength += calcString(string2ByteSlice(obj.EscapestringtD6MRMKVB))
 	// JSON_TOKEN_STRING
 
-	jsonLength += 2
-
-	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
-	//JSON_TOKEN_STRING
-	jsonLength += 6 // jsonLength += len("obj_t2")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	jsonLength += obj.ObjtNGTYENNZ.calc()
-
 	// JSON_TOKEN_CLOSE
 	return jsonLength
 }
@@ -307,6 +307,17 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	w.Write(JSON_TOKEN_SEP)
 
+	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,51 , }) //obj_t3
+	w.Write(marshalKeyObjtVDME7SUH) //obj_t3
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.ObjtIMXYPXTM.pack(w)
+
+	w.Write(JSON_TOKEN_SEP)
+
 	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
 	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,52 , }) //obj_t4
@@ -318,14 +329,14 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,51 , }) //obj_t3
-	w.Write(marshalKeyObjtVDME7SUH) //obj_t3
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,50 , }) //obj_t2
+	w.Write(marshalKeyObjtAO4E3ZE2) //obj_t2
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	obj.ObjtIMXYPXTM.pack(w)
+	obj.ObjtNGTYENNZ.pack(w)
 
 	w.Write(JSON_TOKEN_SEP)
 
@@ -473,17 +484,6 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) pack(w io.Writer) {
 	escapeStr(w, obj.EscapestringtD6MRMKVB)
 	w.Write(JSON_TOKEN_STRING)
 
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,50 , }) //obj_t2
-	w.Write(marshalKeyObjtAO4E3ZE2) //obj_t2
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.ObjtNGTYENNZ.pack(w)
-
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
@@ -494,8 +494,9 @@ func (obj ExamplesrefjsonrefjsonOOGNTX2B) Marshal() []byte {
 }
 type ExamplesrefjsonrefjsonOOGNTX2B struct {
 	// Field(KeyPath=[], Key=[obj_t], Type=[Object])
-	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
 	// Field(KeyPath=[], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[], Key=[obj_t4], Type=[Object])
+	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
 	// Field(KeyPath=[], Key=[beta], Type=[Object])
 	// Field(KeyPath=[], Key=[string_t], Type=[String])
 	// Field(KeyPath=[], Key=[int_t], Type=[Int])
@@ -507,11 +508,11 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 	// Field(KeyPath=[], Key=[bool_t1], Type=[Bool])
 	// Field(KeyPath=[], Key=[alpha], Type=[String])
 	// Field(KeyPath=[], Key=[escape_string_t], Type=[String])
-	// Field(KeyPath=[], Key=[obj_t2], Type=[Object])
 
 	ObjtSCA3VMUZ          ObjtD6YGBJP3 `json:"obj_t"`
-	Objt7MOZGQGZ          ObjtOLBDHOP4 `json:"obj_t4"`
 	ObjtIMXYPXTM          ObjtV4N27AQH `json:"obj_t3"`
+	Objt7MOZGQGZ          ObjtOLBDHOP4 `json:"obj_t4"`
+	ObjtNGTYENNZ          ObjtGWG4J47E `json:"obj_t2"`
 	Beta6RHGJZ27          BetaK26ALX7I `json:"beta"`
 	StringtKJVFXNQP       string       `json:"string_t"`
 	InttESAYQXOJ          int          `json:"int_t"`
@@ -523,7 +524,6 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 	BooltCW3QOV5W         bool         `json:"bool_t1"`
 	AlphaR3J7NLLI         string       `json:"alpha"`
 	EscapestringtD6MRMKVB string       `json:"escape_string_t"`
-	ObjtNGTYENNZ          ObjtGWG4J47E `json:"obj_t2"`
 }
 
 
@@ -532,17 +532,6 @@ type ExamplesrefjsonrefjsonOOGNTX2B struct {
 func (obj ObjtD6YGBJP3) calc() int {
 	var jsonLength int = 2
 	// JSON_TOKEN_OPEN
-
-	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
-	//JSON_TOKEN_STRING
-	jsonLength += 6 // jsonLength += len("obj_t4")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	jsonLength += obj.ObjtMSNUS234.calc()
-
-	jsonLength += 2
 
 	// Field(KeyPath=[obj_t], Key=[foo], Type=[String])
 	//JSON_TOKEN_STRING
@@ -588,14 +577,14 @@ func (obj ObjtD6YGBJP3) calc() int {
 
 	jsonLength += 2
 
-	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
 	//JSON_TOKEN_STRING
-	jsonLength += 6 // jsonLength += len("obj_t3")
+	jsonLength += 6 // jsonLength += len("obj_t4")
 	//JSON_TOKEN_STRING
 	//JSON_TOKEN_KVSEP
 	jsonLength += 4
 
-	jsonLength += obj.Objt2XEWC4EQ.calc()
+	jsonLength += obj.ObjtMSNUS234.calc()
 
 	jsonLength += 2
 
@@ -608,23 +597,23 @@ func (obj ObjtD6YGBJP3) calc() int {
 
 	jsonLength += obj.Objt5GSIG2DL.calc()
 
+	jsonLength += 2
+
+	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	//JSON_TOKEN_STRING
+	jsonLength += 6 // jsonLength += len("obj_t3")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	jsonLength += obj.Objt2XEWC4EQ.calc()
+
 	// JSON_TOKEN_CLOSE
 	return jsonLength
 }
 
 func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,52 , }) //obj_t4
-	w.Write(marshalKeyObjtS4UMEWRS) //obj_t4
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.ObjtMSNUS234.pack(w)
-
-	w.Write(JSON_TOKEN_SEP)
 
 	// Field(KeyPath=[obj_t], Key=[foo], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
@@ -669,14 +658,14 @@ func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
 	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,51 , }) //obj_t3
-	w.Write(marshalKeyObjtE3JBUAVE) //obj_t3
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,52 , }) //obj_t4
+	w.Write(marshalKeyObjtS4UMEWRS) //obj_t4
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	obj.Objt2XEWC4EQ.pack(w)
+	obj.ObjtMSNUS234.pack(w)
 
 	w.Write(JSON_TOKEN_SEP)
 
@@ -689,6 +678,17 @@ func (obj ObjtD6YGBJP3) pack(w io.Writer) {
 
 	obj.Objt5GSIG2DL.pack(w)
 
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 111 ,98 ,106 ,95 ,116 ,51 , }) //obj_t3
+	w.Write(marshalKeyObjtE3JBUAVE) //obj_t3
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Objt2XEWC4EQ.pack(w)
+
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
@@ -698,19 +698,19 @@ func (obj ObjtD6YGBJP3) Marshal() []byte {
 	return buf.Bytes()
 }
 type ObjtD6YGBJP3 struct {
-	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
 	// Field(KeyPath=[obj_t], Key=[foo], Type=[String])
 	// Field(KeyPath=[obj_t], Key=[bool_t2], Type=[Bool])
 	// Field(KeyPath=[obj_t], Key=[bool_t1], Type=[Bool])
-	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t4], Type=[Object])
 	// Field(KeyPath=[obj_t], Key=[obj_t2], Type=[Object])
+	// Field(KeyPath=[obj_t], Key=[obj_t3], Type=[Object])
 
-	ObjtMSNUS234  ObjtHL2HEHYE `json:"obj_t4"`
 	Foo63OIHM6N   string       `json:"foo"`
 	BooltK3OAI2UC bool         `json:"bool_t2"`
 	Boolt3K3L6ATQ bool         `json:"bool_t1"`
-	Objt2XEWC4EQ  ObjtFLXKGTGR `json:"obj_t3"`
+	ObjtMSNUS234  ObjtHL2HEHYE `json:"obj_t4"`
 	Objt5GSIG2DL  ObjtY5YGJJNW `json:"obj_t2"`
+	Objt2XEWC4EQ  ObjtFLXKGTGR `json:"obj_t3"`
 }
 
 
@@ -719,17 +719,6 @@ type ObjtD6YGBJP3 struct {
 func (obj ObjtHL2HEHYE) calc() int {
 	var jsonLength int = 2
 	// JSON_TOKEN_OPEN
-
-	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
-	//JSON_TOKEN_STRING
-	jsonLength += 4 // jsonLength += len("beta")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	jsonLength += obj.Beta2LUXNN67.calc()
-
-	jsonLength += 2
 
 	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
 	//JSON_TOKEN_STRING
@@ -757,23 +746,23 @@ func (obj ObjtHL2HEHYE) calc() int {
 	jsonLength += calcString(string2ByteSlice(obj.EscapestringtGHA5ISBS))
 	// JSON_TOKEN_STRING
 
+	jsonLength += 2
+
+	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
+	//JSON_TOKEN_STRING
+	jsonLength += 4 // jsonLength += len("beta")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	jsonLength += obj.Beta2LUXNN67.calc()
+
 	// JSON_TOKEN_CLOSE
 	return jsonLength
 }
 
 func (obj ObjtHL2HEHYE) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
-	w.Write(marshalKeyBetaOFX4PY2H) //beta
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.Beta2LUXNN67.pack(w)
-
-	w.Write(JSON_TOKEN_SEP)
 
 	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
@@ -799,6 +788,17 @@ func (obj ObjtHL2HEHYE) pack(w io.Writer) {
 	escapeStr(w, obj.EscapestringtGHA5ISBS)
 	w.Write(JSON_TOKEN_STRING)
 
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
+	w.Write(marshalKeyBetaOFX4PY2H) //beta
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.Beta2LUXNN67.pack(w)
+
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
@@ -808,13 +808,13 @@ func (obj ObjtHL2HEHYE) Marshal() []byte {
 	return buf.Bytes()
 }
 type ObjtHL2HEHYE struct {
-	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
 	// Field(KeyPath=[obj_t > obj_t4], Key=[alpha], Type=[String])
 	// Field(KeyPath=[obj_t > obj_t4], Key=[escape_string_t], Type=[String])
+	// Field(KeyPath=[obj_t > obj_t4], Key=[beta], Type=[Object])
 
-	Beta2LUXNN67          Beta3FKW7N43 `json:"beta"`
 	AlphaOXOKS46P         string       `json:"alpha"`
 	EscapestringtGHA5ISBS string       `json:"escape_string_t"`
+	Beta2LUXNN67          Beta3FKW7N43 `json:"beta"`
 }
 
 
@@ -892,78 +892,6 @@ type Beta3FKW7N43 struct {
 
 	DeltaFUC6KEP5 string `json:"delta"`
 	Intt7WLCFP3F  int    `json:"int_t1"`
-}
-
-
-
-
-func (obj ObjtFLXKGTGR) calc() int {
-	var jsonLength int = 2
-	// JSON_TOKEN_OPEN
-
-	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
-	//JSON_TOKEN_STRING
-	jsonLength += 6 // jsonLength += len("int_t0")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	InttCFMPVSR3_s := strconv.Itoa(obj.InttCFMPVSR3)
-	jsonLength += len(InttCFMPVSR3_s)
-
-	jsonLength += 2
-
-	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
-	//JSON_TOKEN_STRING
-	jsonLength += 8 // jsonLength += len("float_t0")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	jsonLength += len(fmt.Sprintf("%f", obj.FloattS3DUOR74))
-
-	// JSON_TOKEN_CLOSE
-	return jsonLength
-}
-
-func (obj ObjtFLXKGTGR) pack(w io.Writer) {
-	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,48 , }) //int_t0
-	w.Write(marshalKeyInttHZKTEQ7C) //int_t0
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	InttCFMPVSR3_s := strconv.Itoa(obj.InttCFMPVSR3)
-	writeStr(w, InttCFMPVSR3_s)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 , }) //float_t0
-	w.Write(marshalKeyFloattFLR73I72) //float_t0
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	fmt.Fprintf(w, "%f", obj.FloattS3DUOR74)
-
-	w.Write(JSON_TOKEN_CLOSE)
-}
-
-func (obj ObjtFLXKGTGR) Marshal() []byte {
-	buf := new(bytes.Buffer)
-	obj.pack(buf)
-	return buf.Bytes()
-}
-type ObjtFLXKGTGR struct {
-	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
-	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
-
-	InttCFMPVSR3   int     `json:"int_t0"`
-	FloattS3DUOR74 float64 `json:"float_t0"`
 }
 
 
@@ -1049,20 +977,153 @@ type ObjtY5YGJJNW struct {
 
 
 
-func (obj ObjtOLBDHOP4) calc() int {
+func (obj ObjtFLXKGTGR) calc() int {
 	var jsonLength int = 2
 	// JSON_TOKEN_OPEN
 
-	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
+	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
 	//JSON_TOKEN_STRING
-	jsonLength += 4 // jsonLength += len("beta")
+	jsonLength += 6 // jsonLength += len("int_t0")
 	//JSON_TOKEN_STRING
 	//JSON_TOKEN_KVSEP
 	jsonLength += 4
 
-	jsonLength += obj.BetaIW6DCBEB.calc()
+	InttCFMPVSR3_s := strconv.Itoa(obj.InttCFMPVSR3)
+	jsonLength += len(InttCFMPVSR3_s)
 
 	jsonLength += 2
+
+	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
+	//JSON_TOKEN_STRING
+	jsonLength += 8 // jsonLength += len("float_t0")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	jsonLength += len(fmt.Sprintf("%f", obj.FloattS3DUOR74))
+
+	// JSON_TOKEN_CLOSE
+	return jsonLength
+}
+
+func (obj ObjtFLXKGTGR) pack(w io.Writer) {
+	w.Write(JSON_TOKEN_OPEN)
+
+	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,48 , }) //int_t0
+	w.Write(marshalKeyInttHZKTEQ7C) //int_t0
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	InttCFMPVSR3_s := strconv.Itoa(obj.InttCFMPVSR3)
+	writeStr(w, InttCFMPVSR3_s)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 , }) //float_t0
+	w.Write(marshalKeyFloattFLR73I72) //float_t0
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	fmt.Fprintf(w, "%f", obj.FloattS3DUOR74)
+
+	w.Write(JSON_TOKEN_CLOSE)
+}
+
+func (obj ObjtFLXKGTGR) Marshal() []byte {
+	buf := new(bytes.Buffer)
+	obj.pack(buf)
+	return buf.Bytes()
+}
+type ObjtFLXKGTGR struct {
+	// Field(KeyPath=[obj_t > obj_t3], Key=[int_t0], Type=[Int])
+	// Field(KeyPath=[obj_t > obj_t3], Key=[float_t0], Type=[Float])
+
+	InttCFMPVSR3   int     `json:"int_t0"`
+	FloattS3DUOR74 float64 `json:"float_t0"`
+}
+
+
+
+
+func (obj ObjtV4N27AQH) calc() int {
+	var jsonLength int = 2
+	// JSON_TOKEN_OPEN
+
+	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
+	//JSON_TOKEN_STRING
+	jsonLength += 6 // jsonLength += len("int_t0")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	InttIOHZABLS_s := strconv.Itoa(obj.InttIOHZABLS)
+	jsonLength += len(InttIOHZABLS_s)
+
+	jsonLength += 2
+
+	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
+	//JSON_TOKEN_STRING
+	jsonLength += 8 // jsonLength += len("float_t0")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	jsonLength += len(fmt.Sprintf("%f", obj.FloattI6NY5ZGY))
+
+	// JSON_TOKEN_CLOSE
+	return jsonLength
+}
+
+func (obj ObjtV4N27AQH) pack(w io.Writer) {
+	w.Write(JSON_TOKEN_OPEN)
+
+	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,48 , }) //int_t0
+	w.Write(marshalKeyIntt2TKNGDCJ) //int_t0
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	InttIOHZABLS_s := strconv.Itoa(obj.InttIOHZABLS)
+	writeStr(w, InttIOHZABLS_s)
+
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 , }) //float_t0
+	w.Write(marshalKeyFloattGCSD4FY6) //float_t0
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	fmt.Fprintf(w, "%f", obj.FloattI6NY5ZGY)
+
+	w.Write(JSON_TOKEN_CLOSE)
+}
+
+func (obj ObjtV4N27AQH) Marshal() []byte {
+	buf := new(bytes.Buffer)
+	obj.pack(buf)
+	return buf.Bytes()
+}
+type ObjtV4N27AQH struct {
+	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
+	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
+
+	InttIOHZABLS   int     `json:"int_t0"`
+	FloattI6NY5ZGY float64 `json:"float_t0"`
+}
+
+
+
+
+func (obj ObjtOLBDHOP4) calc() int {
+	var jsonLength int = 2
+	// JSON_TOKEN_OPEN
 
 	// Field(KeyPath=[obj_t4], Key=[alpha], Type=[String])
 	//JSON_TOKEN_STRING
@@ -1090,23 +1151,23 @@ func (obj ObjtOLBDHOP4) calc() int {
 	jsonLength += calcString(string2ByteSlice(obj.EscapestringtWYQPC32V))
 	// JSON_TOKEN_STRING
 
+	jsonLength += 2
+
+	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
+	//JSON_TOKEN_STRING
+	jsonLength += 4 // jsonLength += len("beta")
+	//JSON_TOKEN_STRING
+	//JSON_TOKEN_KVSEP
+	jsonLength += 4
+
+	jsonLength += obj.BetaIW6DCBEB.calc()
+
 	// JSON_TOKEN_CLOSE
 	return jsonLength
 }
 
 func (obj ObjtOLBDHOP4) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
-	w.Write(marshalKeyBetaZSD2E3R3) //beta
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	obj.BetaIW6DCBEB.pack(w)
-
-	w.Write(JSON_TOKEN_SEP)
 
 	// Field(KeyPath=[obj_t4], Key=[alpha], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
@@ -1132,6 +1193,17 @@ func (obj ObjtOLBDHOP4) pack(w io.Writer) {
 	escapeStr(w, obj.EscapestringtWYQPC32V)
 	w.Write(JSON_TOKEN_STRING)
 
+	w.Write(JSON_TOKEN_SEP)
+
+	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
+	w.Write(JSON_TOKEN_STRING)
+	//w.Write([]byte{ 98 ,101 ,116 ,97 , }) //beta
+	w.Write(marshalKeyBetaZSD2E3R3) //beta
+	w.Write(JSON_TOKEN_STRING)
+	w.Write(JSON_TOKEN_KVSEP)
+
+	obj.BetaIW6DCBEB.pack(w)
+
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
@@ -1141,13 +1213,13 @@ func (obj ObjtOLBDHOP4) Marshal() []byte {
 	return buf.Bytes()
 }
 type ObjtOLBDHOP4 struct {
-	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
 	// Field(KeyPath=[obj_t4], Key=[alpha], Type=[String])
 	// Field(KeyPath=[obj_t4], Key=[escape_string_t], Type=[String])
+	// Field(KeyPath=[obj_t4], Key=[beta], Type=[Object])
 
-	BetaIW6DCBEB          BetaO7M46NBJ `json:"beta"`
 	AlphaIJIZ2ZXR         string       `json:"alpha"`
 	EscapestringtWYQPC32V string       `json:"escape_string_t"`
+	BetaIW6DCBEB          BetaO7M46NBJ `json:"beta"`
 }
 
 
@@ -1230,73 +1302,81 @@ type BetaO7M46NBJ struct {
 
 
 
-func (obj ObjtV4N27AQH) calc() int {
+func (obj ObjtGWG4J47E) calc() int {
 	var jsonLength int = 2
 	// JSON_TOKEN_OPEN
 
-	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
+	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
 	//JSON_TOKEN_STRING
-	jsonLength += 6 // jsonLength += len("int_t0")
+	jsonLength += 3 // jsonLength += len("abc")
 	//JSON_TOKEN_STRING
 	//JSON_TOKEN_KVSEP
 	jsonLength += 4
 
-	InttIOHZABLS_s := strconv.Itoa(obj.InttIOHZABLS)
-	jsonLength += len(InttIOHZABLS_s)
+	jsonLength += 2
+	// JSON_TOKEN_STRING
+	jsonLength += calcString(string2ByteSlice(obj.AbcALEJUDHF))
+	// JSON_TOKEN_STRING
 
 	jsonLength += 2
 
-	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
+	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
 	//JSON_TOKEN_STRING
-	jsonLength += 8 // jsonLength += len("float_t0")
+	jsonLength += 5 // jsonLength += len("lemon")
 	//JSON_TOKEN_STRING
 	//JSON_TOKEN_KVSEP
 	jsonLength += 4
 
-	jsonLength += len(fmt.Sprintf("%f", obj.FloattI6NY5ZGY))
+	jsonLength += 2
+	// JSON_TOKEN_STRING
+	jsonLength += calcString(string2ByteSlice(obj.LemonBNXX4WMR))
+	// JSON_TOKEN_STRING
 
 	// JSON_TOKEN_CLOSE
 	return jsonLength
 }
 
-func (obj ObjtV4N27AQH) pack(w io.Writer) {
+func (obj ObjtGWG4J47E) pack(w io.Writer) {
 	w.Write(JSON_TOKEN_OPEN)
 
-	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
+	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 105 ,110 ,116 ,95 ,116 ,48 , }) //int_t0
-	w.Write(marshalKeyIntt2TKNGDCJ) //int_t0
+	//w.Write([]byte{ 97 ,98 ,99 , }) //abc
+	w.Write(marshalKeyAbc5UH3IVOG) //abc
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	InttIOHZABLS_s := strconv.Itoa(obj.InttIOHZABLS)
-	writeStr(w, InttIOHZABLS_s)
+	w.Write(JSON_TOKEN_STRING)
+	escapeStr(w, obj.AbcALEJUDHF)
+	w.Write(JSON_TOKEN_STRING)
 
 	w.Write(JSON_TOKEN_SEP)
 
-	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
+	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
 	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 , }) //float_t0
-	w.Write(marshalKeyFloattGCSD4FY6) //float_t0
+	//w.Write([]byte{ 108 ,101 ,109 ,111 ,110 , }) //lemon
+	w.Write(marshalKeyLemonJLLSZBNZ) //lemon
 	w.Write(JSON_TOKEN_STRING)
 	w.Write(JSON_TOKEN_KVSEP)
 
-	fmt.Fprintf(w, "%f", obj.FloattI6NY5ZGY)
+	w.Write(JSON_TOKEN_STRING)
+	escapeStr(w, obj.LemonBNXX4WMR)
+	w.Write(JSON_TOKEN_STRING)
 
 	w.Write(JSON_TOKEN_CLOSE)
 }
 
-func (obj ObjtV4N27AQH) Marshal() []byte {
+func (obj ObjtGWG4J47E) Marshal() []byte {
 	buf := new(bytes.Buffer)
 	obj.pack(buf)
 	return buf.Bytes()
 }
-type ObjtV4N27AQH struct {
-	// Field(KeyPath=[obj_t3], Key=[int_t0], Type=[Int])
-	// Field(KeyPath=[obj_t3], Key=[float_t0], Type=[Float])
+type ObjtGWG4J47E struct {
+	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
+	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
 
-	InttIOHZABLS   int     `json:"int_t0"`
-	FloattI6NY5ZGY float64 `json:"float_t0"`
+	AbcALEJUDHF   string `json:"abc"`
+	LemonBNXX4WMR string `json:"lemon"`
 }
 
 
@@ -1376,97 +1456,11 @@ type BetaK26ALX7I struct {
 	InttQDXD4F3P  int    `json:"int_t1"`
 }
 
-
-
-
-func (obj ObjtGWG4J47E) calc() int {
-	var jsonLength int = 2
-	// JSON_TOKEN_OPEN
-
-	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
-	//JSON_TOKEN_STRING
-	jsonLength += 3 // jsonLength += len("abc")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	jsonLength += 2
-	// JSON_TOKEN_STRING
-	jsonLength += calcString(string2ByteSlice(obj.AbcALEJUDHF))
-	// JSON_TOKEN_STRING
-
-	jsonLength += 2
-
-	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
-	//JSON_TOKEN_STRING
-	jsonLength += 5 // jsonLength += len("lemon")
-	//JSON_TOKEN_STRING
-	//JSON_TOKEN_KVSEP
-	jsonLength += 4
-
-	jsonLength += 2
-	// JSON_TOKEN_STRING
-	jsonLength += calcString(string2ByteSlice(obj.LemonBNXX4WMR))
-	// JSON_TOKEN_STRING
-
-	// JSON_TOKEN_CLOSE
-	return jsonLength
-}
-
-func (obj ObjtGWG4J47E) pack(w io.Writer) {
-	w.Write(JSON_TOKEN_OPEN)
-
-	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 97 ,98 ,99 , }) //abc
-	w.Write(marshalKeyAbc5UH3IVOG) //abc
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.AbcALEJUDHF)
-	w.Write(JSON_TOKEN_STRING)
-
-	w.Write(JSON_TOKEN_SEP)
-
-	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
-	w.Write(JSON_TOKEN_STRING)
-	//w.Write([]byte{ 108 ,101 ,109 ,111 ,110 , }) //lemon
-	w.Write(marshalKeyLemonJLLSZBNZ) //lemon
-	w.Write(JSON_TOKEN_STRING)
-	w.Write(JSON_TOKEN_KVSEP)
-
-	w.Write(JSON_TOKEN_STRING)
-	escapeStr(w, obj.LemonBNXX4WMR)
-	w.Write(JSON_TOKEN_STRING)
-
-	w.Write(JSON_TOKEN_CLOSE)
-}
-
-func (obj ObjtGWG4J47E) Marshal() []byte {
-	buf := new(bytes.Buffer)
-	obj.pack(buf)
-	return buf.Bytes()
-}
-type ObjtGWG4J47E struct {
-	// Field(KeyPath=[obj_t2], Key=[abc], Type=[String])
-	// Field(KeyPath=[obj_t2], Key=[lemon], Type=[String])
-
-	AbcALEJUDHF   string `json:"abc"`
-	LemonBNXX4WMR string `json:"lemon"`
-}
-
-// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}] [{[111 98 106 95 116 51] rawKeyPathObjtY6YM47D2} {[105 110 116 95 116 48] rawKeyIntt5FVORX5J} {[105 110 116 95 116 49] rawKeyIntt3OA4VVXW}]} {0 [{[]  InttESAYQXOJ rawKeyInttK5PCKPBF}] [{[105 110 116 95 116] rawKeyInttK5PCKPBF}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ InttCFMPVSR3 rawKeyInttWTIK3VJJ} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB InttHSHUQAIW rawKeyInttYXXRRICP}] [{[111 98 106 95 116] rawKeyPathObjtVYHAWXFP} {[111 98 106 95 116 51] rawKeyPathObjtX5RCYU2L} {[105 110 116 95 116 48] rawKeyInttWTIK3VJJ} {[105 110 116 95 116 49] rawKeyInttYXXRRICP}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}] [{[105 110 116 95 116 49] rawKeyIntt2E7WEG6H}]}] [{0 [{[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}] [{[102 108 111 97 116 95 116] rawKeyFloatt6FQKJ3CE}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ FloattS3DUOR74 rawKeyFloatt3UISF55R}] [{[102 108 111 97 116 95 116 48] rawKeyFloatt3UISF55R}]} {1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}] [{[102 108 111 97 116 95 116 48] rawKeyFloattGHYXKMNW}]}] [{0 [{[]  BooltO5EIGOAU rawKeyBoolt5PN6O537} {[]  BooltN4U4T2TN rawKeyBooltRIIBGP4U} {[]  BooltBSAVIV66 rawKeyBooltBO4BQXBY} {[]  BooltCW3QOV5W rawKeyBooltPNPOR645}] [{[98 111 111 108 95 116] rawKeyBoolt5PN6O537} {[98 111 111 108 95 116 48] rawKeyBooltRIIBGP4U} {[98 111 111 108 95 116 50] rawKeyBooltBO4BQXBY} {[98 111 111 108 95 116 49] rawKeyBooltPNPOR645}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ BooltK3OAI2UC rawKeyBooltEVJUTHLT} {[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Boolt3K3L6ATQ rawKeyBoolt55JSY6AS}] [{[98 111 111 108 95 116 50] rawKeyBooltEVJUTHLT} {[98 111 111 108 95 116 49] rawKeyBoolt55JSY6AS}]}] [{0 [{[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ} {[]  FooFQTLI23I rawKeyFooIEXZYHGT} {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE} {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}] [{[115 116 114 105 110 103 95 116] rawKeyStringtFBJITRYQ} {[102 111 111] rawKeyFooIEXZYHGT} {[97 108 112 104 97] rawKeyAlphaFBGNYTGE} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtYS7EX4HZ}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Foo63OIHM6N rawKeyFooLB7MSJC4} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ AbcALEJUDHF rawKeyAbcGTY33LS5} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ LemonBNXX4WMR rawKeyLemonFBM23DTJ} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ AlphaIJIZ2ZXR rawKeyAlphaYEDU2GJK} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ EscapestringtWYQPC32V rawKeyEscapestringtHOZXQIMV} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 Delta7SMF4OFE rawKeyDeltaSUHSLJUZ}] [{[111 98 106 95 116] rawKeyPathObjtTVYYPODH} {[102 111 111] rawKeyFooLB7MSJC4} {[111 98 106 95 116 50] rawKeyPathObjtFQ7NAMEW} {[97 98 99] rawKeyAbcGTY33LS5} {[108 101 109 111 110] rawKeyLemonFBM23DTJ} {[111 98 106 95 116 52] rawKeyPathObjtKRRUMBDP} {[97 108 112 104 97] rawKeyAlphaYEDU2GJK} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtHOZXQIMV} {[98 101 116 97] rawKeyPathBetaPVMY5CWB} {[100 101 108 116 97] rawKeyDeltaSUHSLJUZ}]} {2 [{[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL AbcM52GY4W7 rawKeyAbcK25SVZ53} {[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL LemonPTPTTQJH rawKeyLemonTFD6F54Y} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 AlphaOXOKS46P rawKeyAlpha2N36N5YO} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 EscapestringtGHA5ISBS rawKeyEscapestringtNETKGOMA} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB Delta2BP6SMAT rawKeyDeltaVKBDFTXL}] [{[111 98 106 95 116] rawKeyPathObjtIGPE4VUX} {[111 98 106 95 116 50] rawKeyPathObjtZJDIBJZG} {[97 98 99] rawKeyAbcK25SVZ53} {[108 101 109 111 110] rawKeyLemonTFD6F54Y} {[111 98 106 95 116] rawKeyPathObjtXGZ2QYFP} {[111 98 106 95 116 52] rawKeyPathObjt5EAT6VZ7} {[97 108 112 104 97] rawKeyAlpha2N36N5YO} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtNETKGOMA} {[111 98 106 95 116 52] rawKeyPathObjtJQMHAYSR} {[98 101 116 97] rawKeyPathBetaTF7BXNRE} {[100 101 108 116 97] rawKeyDeltaVKBDFTXL}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 DeltaFUC6KEP5 rawKeyDeltaMTVP5KUA}] [{[111 98 106 95 116] rawKeyPathObjtYCRRIKP3} {[111 98 106 95 116 52] rawKeyPathObjtRU7NY3AW} {[98 101 116 97] rawKeyPathBeta35CU66WA} {[100 101 108 116 97] rawKeyDeltaMTVP5KUA}]}]}
+// {ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B ExamplesrefjsonrefjsonOOGNTX2B [{0 [{[]  InttESAYQXOJ rawKeyInttK5PCKPBF}] [{[105 110 116 95 116] rawKeyInttK5PCKPBF}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ InttCFMPVSR3 rawKeyInttWTIK3VJJ} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB InttHSHUQAIW rawKeyInttYXXRRICP}] [{[111 98 106 95 116] rawKeyPathObjtVYHAWXFP} {[111 98 106 95 116 51] rawKeyPathObjtX5RCYU2L} {[105 110 116 95 116 48] rawKeyInttWTIK3VJJ} {[111 98 106 95 116 52] rawKeyPathObjtJQMHAYSR} {[98 101 116 97] rawKeyPathBetaTF7BXNRE} {[105 110 116 95 116 49] rawKeyInttYXXRRICP}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}] [{[111 98 106 95 116] rawKeyPathObjtYCRRIKP3} {[111 98 106 95 116 52] rawKeyPathObjtRU7NY3AW} {[98 101 116 97] rawKeyPathBeta35CU66WA} {[105 110 116 95 116 49] rawKeyIntt2E7WEG6H}]} {1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}] [{[111 98 106 95 116 51] rawKeyPathObjtY6YM47D2} {[105 110 116 95 116 48] rawKeyIntt5FVORX5J} {[98 101 116 97] rawKeyPathBetaPVMY5CWB} {[105 110 116 95 116 49] rawKeyIntt3OA4VVXW}]}] [{0 [{[]  FloattNDJR3LLH rawKeyFloatt6FQKJ3CE}] [{[102 108 111 97 116 95 116] rawKeyFloatt6FQKJ3CE}]} {2 [{[{rawKeyPathObjtVYHAWXFP 0} {rawKeyPathObjtX5RCYU2L 1}] .ObjtSCA3VMUZ.Objt2XEWC4EQ FloattS3DUOR74 rawKeyFloatt3UISF55R}] [{[102 108 111 97 116 95 116 48] rawKeyFloatt3UISF55R}]} {1 [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM FloattI6NY5ZGY rawKeyFloattGHYXKMNW}] [{[102 108 111 97 116 95 116 48] rawKeyFloattGHYXKMNW}]}] [{0 [{[]  BooltO5EIGOAU rawKeyBoolt5PN6O537} {[]  BooltN4U4T2TN rawKeyBooltRIIBGP4U} {[]  BooltBSAVIV66 rawKeyBooltBO4BQXBY} {[]  BooltCW3QOV5W rawKeyBooltPNPOR645}] [{[98 111 111 108 95 116] rawKeyBoolt5PN6O537} {[98 111 111 108 95 116 48] rawKeyBooltRIIBGP4U} {[98 111 111 108 95 116 50] rawKeyBooltBO4BQXBY} {[98 111 111 108 95 116 49] rawKeyBooltPNPOR645}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ BooltK3OAI2UC rawKeyBooltEVJUTHLT} {[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Boolt3K3L6ATQ rawKeyBoolt55JSY6AS}] [{[111 98 106 95 116] rawKeyPathObjtTVYYPODH} {[98 111 111 108 95 116 50] rawKeyBooltEVJUTHLT} {[98 111 111 108 95 116 49] rawKeyBoolt55JSY6AS}]}] [{0 [{[]  StringtKJVFXNQP rawKeyStringtFBJITRYQ} {[]  FooFQTLI23I rawKeyFooIEXZYHGT} {[]  AlphaR3J7NLLI rawKeyAlphaFBGNYTGE} {[]  EscapestringtD6MRMKVB rawKeyEscapestringtYS7EX4HZ}] [{[115 116 114 105 110 103 95 116] rawKeyStringtFBJITRYQ} {[102 111 111] rawKeyFooIEXZYHGT} {[97 108 112 104 97] rawKeyAlphaFBGNYTGE} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtYS7EX4HZ}]} {1 [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Foo63OIHM6N rawKeyFooLB7MSJC4} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ AbcALEJUDHF rawKeyAbcGTY33LS5} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ LemonBNXX4WMR rawKeyLemonFBM23DTJ} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ AlphaIJIZ2ZXR rawKeyAlphaYEDU2GJK} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ EscapestringtWYQPC32V rawKeyEscapestringtHOZXQIMV} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 Delta7SMF4OFE rawKeyDeltaSUHSLJUZ}] [{[102 111 111] rawKeyFooLB7MSJC4} {[111 98 106 95 116 50] rawKeyPathObjtFQ7NAMEW} {[97 98 99] rawKeyAbcGTY33LS5} {[108 101 109 111 110] rawKeyLemonFBM23DTJ} {[111 98 106 95 116 52] rawKeyPathObjtKRRUMBDP} {[97 108 112 104 97] rawKeyAlphaYEDU2GJK} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtHOZXQIMV} {[100 101 108 116 97] rawKeyDeltaSUHSLJUZ}]} {2 [{[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL AbcM52GY4W7 rawKeyAbcK25SVZ53} {[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL LemonPTPTTQJH rawKeyLemonTFD6F54Y} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 AlphaOXOKS46P rawKeyAlpha2N36N5YO} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 EscapestringtGHA5ISBS rawKeyEscapestringtNETKGOMA} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB Delta2BP6SMAT rawKeyDeltaVKBDFTXL}] [{[111 98 106 95 116] rawKeyPathObjtIGPE4VUX} {[111 98 106 95 116 50] rawKeyPathObjtZJDIBJZG} {[97 98 99] rawKeyAbcK25SVZ53} {[108 101 109 111 110] rawKeyLemonTFD6F54Y} {[111 98 106 95 116] rawKeyPathObjtXGZ2QYFP} {[111 98 106 95 116 52] rawKeyPathObjt5EAT6VZ7} {[97 108 112 104 97] rawKeyAlpha2N36N5YO} {[101 115 99 97 112 101 95 115 116 114 105 110 103 95 116] rawKeyEscapestringtNETKGOMA} {[100 101 108 116 97] rawKeyDeltaVKBDFTXL}]} {3 [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 DeltaFUC6KEP5 rawKeyDeltaMTVP5KUA}] [{[100 101 108 116 97] rawKeyDeltaMTVP5KUA}]}]}
 
 // KeyPaths
 
 // IntKeys
-
-// [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}]
-
-var rawKeyPathObjtY6YM47D2 []byte = []byte{111, 98, 106, 95, 116, 51}
-var rawKeyIntt5FVORX5J []byte = []byte{105, 110, 116, 95, 116, 48}
-var rawKeyIntt3OA4VVXW []byte = []byte{105, 110, 116, 95, 116, 49}
 
 // [{[]  InttESAYQXOJ rawKeyInttK5PCKPBF}]
 
@@ -1477,11 +1471,23 @@ var rawKeyInttK5PCKPBF []byte = []byte{105, 110, 116, 95, 116}
 var rawKeyPathObjtVYHAWXFP []byte = []byte{111, 98, 106, 95, 116}
 var rawKeyPathObjtX5RCYU2L []byte = []byte{111, 98, 106, 95, 116, 51}
 var rawKeyInttWTIK3VJJ []byte = []byte{105, 110, 116, 95, 116, 48}
+var rawKeyPathObjtJQMHAYSR []byte = []byte{111, 98, 106, 95, 116, 52}
+var rawKeyPathBetaTF7BXNRE []byte = []byte{98, 101, 116, 97}
 var rawKeyInttYXXRRICP []byte = []byte{105, 110, 116, 95, 116, 49}
 
 // [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}]
 
+var rawKeyPathObjtYCRRIKP3 []byte = []byte{111, 98, 106, 95, 116}
+var rawKeyPathObjtRU7NY3AW []byte = []byte{111, 98, 106, 95, 116, 52}
+var rawKeyPathBeta35CU66WA []byte = []byte{98, 101, 116, 97}
 var rawKeyIntt2E7WEG6H []byte = []byte{105, 110, 116, 95, 116, 49}
+
+// [{[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}]
+
+var rawKeyPathObjtY6YM47D2 []byte = []byte{111, 98, 106, 95, 116, 51}
+var rawKeyIntt5FVORX5J []byte = []byte{105, 110, 116, 95, 116, 48}
+var rawKeyPathBetaPVMY5CWB []byte = []byte{98, 101, 116, 97}
+var rawKeyIntt3OA4VVXW []byte = []byte{105, 110, 116, 95, 116, 49}
 
 // FloatKeys
 
@@ -1508,7 +1514,6 @@ var rawKeyEscapestringtYS7EX4HZ []byte = []byte{101, 115, 99, 97, 112, 101, 95, 
 
 // [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Foo63OIHM6N rawKeyFooLB7MSJC4} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ AbcALEJUDHF rawKeyAbcGTY33LS5} {[{rawKeyPathObjtFQ7NAMEW 0}] .ObjtNGTYENNZ LemonBNXX4WMR rawKeyLemonFBM23DTJ} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ AlphaIJIZ2ZXR rawKeyAlphaYEDU2GJK} {[{rawKeyPathObjtKRRUMBDP 0}] .Objt7MOZGQGZ EscapestringtWYQPC32V rawKeyEscapestringtHOZXQIMV} {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 Delta7SMF4OFE rawKeyDeltaSUHSLJUZ}]
 
-var rawKeyPathObjtTVYYPODH []byte = []byte{111, 98, 106, 95, 116}
 var rawKeyFooLB7MSJC4 []byte = []byte{102, 111, 111}
 var rawKeyPathObjtFQ7NAMEW []byte = []byte{111, 98, 106, 95, 116, 50}
 var rawKeyAbcGTY33LS5 []byte = []byte{97, 98, 99}
@@ -1516,7 +1521,6 @@ var rawKeyLemonFBM23DTJ []byte = []byte{108, 101, 109, 111, 110}
 var rawKeyPathObjtKRRUMBDP []byte = []byte{111, 98, 106, 95, 116, 52}
 var rawKeyAlphaYEDU2GJK []byte = []byte{97, 108, 112, 104, 97}
 var rawKeyEscapestringtHOZXQIMV []byte = []byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}
-var rawKeyPathBetaPVMY5CWB []byte = []byte{98, 101, 116, 97}
 var rawKeyDeltaSUHSLJUZ []byte = []byte{100, 101, 108, 116, 97}
 
 // [{[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL AbcM52GY4W7 rawKeyAbcK25SVZ53} {[{rawKeyPathObjtIGPE4VUX 0} {rawKeyPathObjtZJDIBJZG 1}] .ObjtSCA3VMUZ.Objt5GSIG2DL LemonPTPTTQJH rawKeyLemonTFD6F54Y} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 AlphaOXOKS46P rawKeyAlpha2N36N5YO} {[{rawKeyPathObjtXGZ2QYFP 0} {rawKeyPathObjt5EAT6VZ7 1}] .ObjtSCA3VMUZ.ObjtMSNUS234 EscapestringtGHA5ISBS rawKeyEscapestringtNETKGOMA} {[{rawKeyPathObjtJQMHAYSR 0} {rawKeyPathBetaTF7BXNRE 1}] .Objt7MOZGQGZ.BetaIW6DCBEB Delta2BP6SMAT rawKeyDeltaVKBDFTXL}]
@@ -1529,15 +1533,10 @@ var rawKeyPathObjtXGZ2QYFP []byte = []byte{111, 98, 106, 95, 116}
 var rawKeyPathObjt5EAT6VZ7 []byte = []byte{111, 98, 106, 95, 116, 52}
 var rawKeyAlpha2N36N5YO []byte = []byte{97, 108, 112, 104, 97}
 var rawKeyEscapestringtNETKGOMA []byte = []byte{101, 115, 99, 97, 112, 101, 95, 115, 116, 114, 105, 110, 103, 95, 116}
-var rawKeyPathObjtJQMHAYSR []byte = []byte{111, 98, 106, 95, 116, 52}
-var rawKeyPathBetaTF7BXNRE []byte = []byte{98, 101, 116, 97}
 var rawKeyDeltaVKBDFTXL []byte = []byte{100, 101, 108, 116, 97}
 
 // [{[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 DeltaFUC6KEP5 rawKeyDeltaMTVP5KUA}]
 
-var rawKeyPathObjtYCRRIKP3 []byte = []byte{111, 98, 106, 95, 116}
-var rawKeyPathObjtRU7NY3AW []byte = []byte{111, 98, 106, 95, 116, 52}
-var rawKeyPathBeta35CU66WA []byte = []byte{98, 101, 116, 97}
 var rawKeyDeltaMTVP5KUA []byte = []byte{100, 101, 108, 116, 97}
 
 // BoolKeys
@@ -1551,6 +1550,7 @@ var rawKeyBooltPNPOR645 []byte = []byte{98, 111, 111, 108, 95, 116, 49}
 
 // [{[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ BooltK3OAI2UC rawKeyBooltEVJUTHLT} {[{rawKeyPathObjtTVYYPODH 0}] .ObjtSCA3VMUZ Boolt3K3L6ATQ rawKeyBoolt55JSY6AS}]
 
+var rawKeyPathObjtTVYYPODH []byte = []byte{111, 98, 106, 95, 116}
 var rawKeyBooltEVJUTHLT []byte = []byte{98, 111, 111, 108, 95, 116, 50}
 var rawKeyBoolt55JSY6AS []byte = []byte{98, 111, 111, 108, 95, 116, 49}
 
@@ -1558,23 +1558,6 @@ var rawKeyBoolt55JSY6AS []byte = []byte{98, 111, 111, 108, 95, 116, 49}
 
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetInt(KeyPath [][]byte, RawKey []byte, value int) {
 	KeyPathlen := len(KeyPath)
-
-	if KeyPathlen == 1 {
-
-		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J}
-		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyIntt5FVORX5J, RawKey) {
-			obj.ObjtIMXYPXTM.InttIOHZABLS = value
-			return
-		}
-
-		// {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}
-		if bytes.Equal(rawKeyPathBetaPVMY5CWB, KeyPath[0]) && bytes.Equal(rawKeyIntt3OA4VVXW, RawKey) {
-			obj.Beta6RHGJZ27.InttQDXD4F3P = value
-			return
-		}
-
-		return
-	}
 
 	if KeyPathlen == 0 {
 
@@ -1609,6 +1592,23 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetInt
 		// {[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}
 		if bytes.Equal(rawKeyPathObjtYCRRIKP3, KeyPath[0]) && bytes.Equal(rawKeyPathObjtRU7NY3AW, KeyPath[1]) && bytes.Equal(rawKeyPathBeta35CU66WA, KeyPath[2]) && bytes.Equal(rawKeyIntt2E7WEG6H, RawKey) {
 			obj.ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67.Intt7WLCFP3F = value
+			return
+		}
+
+		return
+	}
+
+	if KeyPathlen == 1 {
+
+		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J}
+		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyIntt5FVORX5J, RawKey) {
+			obj.ObjtIMXYPXTM.InttIOHZABLS = value
+			return
+		}
+
+		// {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}
+		if bytes.Equal(rawKeyPathBetaPVMY5CWB, KeyPath[0]) && bytes.Equal(rawKeyIntt3OA4VVXW, RawKey) {
+			obj.Beta6RHGJZ27.InttQDXD4F3P = value
 			return
 		}
 
@@ -1832,21 +1832,6 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_SetBoo
 func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetInt(KeyPath [][]byte, RawKey []byte) int {
 	KeyPathlen := len(KeyPath)
 
-	if KeyPathlen == 1 {
-
-		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J}
-		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyIntt5FVORX5J, RawKey) {
-			return obj.ObjtIMXYPXTM.InttIOHZABLS
-		}
-
-		// {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}
-		if bytes.Equal(rawKeyPathBetaPVMY5CWB, KeyPath[0]) && bytes.Equal(rawKeyIntt3OA4VVXW, RawKey) {
-			return obj.Beta6RHGJZ27.InttQDXD4F3P
-		}
-
-		return 0
-	}
-
 	if KeyPathlen == 0 {
 
 		// {[]  InttESAYQXOJ rawKeyInttK5PCKPBF}
@@ -1877,6 +1862,21 @@ func (obj *ExamplesrefjsonrefjsonOOGNTX2B) ExamplesrefjsonrefjsonOOGNTX2B_GetInt
 		// {[{rawKeyPathObjtYCRRIKP3 0} {rawKeyPathObjtRU7NY3AW 1} {rawKeyPathBeta35CU66WA 2}] .ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67 Intt7WLCFP3F rawKeyIntt2E7WEG6H}
 		if bytes.Equal(rawKeyPathObjtYCRRIKP3, KeyPath[0]) && bytes.Equal(rawKeyPathObjtRU7NY3AW, KeyPath[1]) && bytes.Equal(rawKeyPathBeta35CU66WA, KeyPath[2]) && bytes.Equal(rawKeyIntt2E7WEG6H, RawKey) {
 			return obj.ObjtSCA3VMUZ.ObjtMSNUS234.Beta2LUXNN67.Intt7WLCFP3F
+		}
+
+		return 0
+	}
+
+	if KeyPathlen == 1 {
+
+		// {[{rawKeyPathObjtY6YM47D2 0}] .ObjtIMXYPXTM InttIOHZABLS rawKeyIntt5FVORX5J}
+		if bytes.Equal(rawKeyPathObjtY6YM47D2, KeyPath[0]) && bytes.Equal(rawKeyIntt5FVORX5J, RawKey) {
+			return obj.ObjtIMXYPXTM.InttIOHZABLS
+		}
+
+		// {[{rawKeyPathBetaPVMY5CWB 0}] .Beta6RHGJZ27 InttQDXD4F3P rawKeyIntt3OA4VVXW}
+		if bytes.Equal(rawKeyPathBetaPVMY5CWB, KeyPath[0]) && bytes.Equal(rawKeyIntt3OA4VVXW, RawKey) {
+			return obj.Beta6RHGJZ27.InttQDXD4F3P
 		}
 
 		return 0
@@ -2083,10 +2083,12 @@ func __dummy() {
 
 // marshalKeyObjtZZS4K5QU: obj_t
 var marshalKeyObjtZZS4K5QU []byte = []byte{111 ,98 ,106 ,95 ,116 ,}
-// marshalKeyObjt5CVDOK6X: obj_t4
-var marshalKeyObjt5CVDOK6X []byte = []byte{111 ,98 ,106 ,95 ,116 ,52 ,}
 // marshalKeyObjtVDME7SUH: obj_t3
 var marshalKeyObjtVDME7SUH []byte = []byte{111 ,98 ,106 ,95 ,116 ,51 ,}
+// marshalKeyObjt5CVDOK6X: obj_t4
+var marshalKeyObjt5CVDOK6X []byte = []byte{111 ,98 ,106 ,95 ,116 ,52 ,}
+// marshalKeyObjtAO4E3ZE2: obj_t2
+var marshalKeyObjtAO4E3ZE2 []byte = []byte{111 ,98 ,106 ,95 ,116 ,50 ,}
 // marshalKeyBetaCZOF6HU7: beta
 var marshalKeyBetaCZOF6HU7 []byte = []byte{98 ,101 ,116 ,97 ,}
 // marshalKeyStringtZYUVMJSJ: string_t
@@ -2109,60 +2111,58 @@ var marshalKeyBooltGJTABSFP []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,49 ,}
 var marshalKeyAlphaVERCQUTG []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
 // marshalKeyEscapestringtSALJW6ZJ: escape_string_t
 var marshalKeyEscapestringtSALJW6ZJ []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
-// marshalKeyObjtAO4E3ZE2: obj_t2
-var marshalKeyObjtAO4E3ZE2 []byte = []byte{111 ,98 ,106 ,95 ,116 ,50 ,}
-// marshalKeyObjtS4UMEWRS: obj_t4
-var marshalKeyObjtS4UMEWRS []byte = []byte{111 ,98 ,106 ,95 ,116 ,52 ,}
 // marshalKeyFooBR63COO4: foo
 var marshalKeyFooBR63COO4 []byte = []byte{102 ,111 ,111 ,}
 // marshalKeyBooltKK773BLN: bool_t2
 var marshalKeyBooltKK773BLN []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,50 ,}
 // marshalKeyBooltHL3K74QU: bool_t1
 var marshalKeyBooltHL3K74QU []byte = []byte{98 ,111 ,111 ,108 ,95 ,116 ,49 ,}
-// marshalKeyObjtE3JBUAVE: obj_t3
-var marshalKeyObjtE3JBUAVE []byte = []byte{111 ,98 ,106 ,95 ,116 ,51 ,}
+// marshalKeyObjtS4UMEWRS: obj_t4
+var marshalKeyObjtS4UMEWRS []byte = []byte{111 ,98 ,106 ,95 ,116 ,52 ,}
 // marshalKeyObjtEXY6G5SL: obj_t2
 var marshalKeyObjtEXY6G5SL []byte = []byte{111 ,98 ,106 ,95 ,116 ,50 ,}
-// marshalKeyBetaOFX4PY2H: beta
-var marshalKeyBetaOFX4PY2H []byte = []byte{98 ,101 ,116 ,97 ,}
+// marshalKeyObjtE3JBUAVE: obj_t3
+var marshalKeyObjtE3JBUAVE []byte = []byte{111 ,98 ,106 ,95 ,116 ,51 ,}
 // marshalKeyAlphaOCVGAJTS: alpha
 var marshalKeyAlphaOCVGAJTS []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
 // marshalKeyEscapestringtXXT2Z34T: escape_string_t
 var marshalKeyEscapestringtXXT2Z34T []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
+// marshalKeyBetaOFX4PY2H: beta
+var marshalKeyBetaOFX4PY2H []byte = []byte{98 ,101 ,116 ,97 ,}
 // marshalKeyDeltaPAOREE52: delta
 var marshalKeyDeltaPAOREE52 []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
 // marshalKeyInttS23WIQEK: int_t1
 var marshalKeyInttS23WIQEK []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
-// marshalKeyInttHZKTEQ7C: int_t0
-var marshalKeyInttHZKTEQ7C []byte = []byte{105 ,110 ,116 ,95 ,116 ,48 ,}
-// marshalKeyFloattFLR73I72: float_t0
-var marshalKeyFloattFLR73I72 []byte = []byte{102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 ,}
 // marshalKeyAbcOZNLZMC7: abc
 var marshalKeyAbcOZNLZMC7 []byte = []byte{97 ,98 ,99 ,}
 // marshalKeyLemonGPTEO6LV: lemon
 var marshalKeyLemonGPTEO6LV []byte = []byte{108 ,101 ,109 ,111 ,110 ,}
-// marshalKeyBetaZSD2E3R3: beta
-var marshalKeyBetaZSD2E3R3 []byte = []byte{98 ,101 ,116 ,97 ,}
-// marshalKeyAlphaG4LLDOOV: alpha
-var marshalKeyAlphaG4LLDOOV []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
-// marshalKeyEscapestringtAQ55PISW: escape_string_t
-var marshalKeyEscapestringtAQ55PISW []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
-// marshalKeyDeltaD34Y7KE7: delta
-var marshalKeyDeltaD34Y7KE7 []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
-// marshalKeyInttSGQXLY6Q: int_t1
-var marshalKeyInttSGQXLY6Q []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
+// marshalKeyInttHZKTEQ7C: int_t0
+var marshalKeyInttHZKTEQ7C []byte = []byte{105 ,110 ,116 ,95 ,116 ,48 ,}
+// marshalKeyFloattFLR73I72: float_t0
+var marshalKeyFloattFLR73I72 []byte = []byte{102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 ,}
 // marshalKeyIntt2TKNGDCJ: int_t0
 var marshalKeyIntt2TKNGDCJ []byte = []byte{105 ,110 ,116 ,95 ,116 ,48 ,}
 // marshalKeyFloattGCSD4FY6: float_t0
 var marshalKeyFloattGCSD4FY6 []byte = []byte{102 ,108 ,111 ,97 ,116 ,95 ,116 ,48 ,}
-// marshalKeyDeltaOTFYEYJD: delta
-var marshalKeyDeltaOTFYEYJD []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
-// marshalKeyInttKLANW3W5: int_t1
-var marshalKeyInttKLANW3W5 []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
+// marshalKeyAlphaG4LLDOOV: alpha
+var marshalKeyAlphaG4LLDOOV []byte = []byte{97 ,108 ,112 ,104 ,97 ,}
+// marshalKeyEscapestringtAQ55PISW: escape_string_t
+var marshalKeyEscapestringtAQ55PISW []byte = []byte{101 ,115 ,99 ,97 ,112 ,101 ,95 ,115 ,116 ,114 ,105 ,110 ,103 ,95 ,116 ,}
+// marshalKeyBetaZSD2E3R3: beta
+var marshalKeyBetaZSD2E3R3 []byte = []byte{98 ,101 ,116 ,97 ,}
+// marshalKeyDeltaD34Y7KE7: delta
+var marshalKeyDeltaD34Y7KE7 []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
+// marshalKeyInttSGQXLY6Q: int_t1
+var marshalKeyInttSGQXLY6Q []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
 // marshalKeyAbc5UH3IVOG: abc
 var marshalKeyAbc5UH3IVOG []byte = []byte{97 ,98 ,99 ,}
 // marshalKeyLemonJLLSZBNZ: lemon
 var marshalKeyLemonJLLSZBNZ []byte = []byte{108 ,101 ,109 ,111 ,110 ,}
+// marshalKeyDeltaOTFYEYJD: delta
+var marshalKeyDeltaOTFYEYJD []byte = []byte{100 ,101 ,108 ,116 ,97 ,}
+// marshalKeyInttKLANW3W5: int_t1
+var marshalKeyInttKLANW3W5 []byte = []byte{105 ,110 ,116 ,95 ,116 ,49 ,}
 
 
 
@@ -2174,7 +2174,7 @@ var JSON_TOKEN_KVSEP = []byte(": ")
 var JSON_TOKEN_STRING = []byte(`"`)
 
 var JSON_BOOL_TRUE = []byte("true")
-var JSON_BOOL_FALSE = []byte("true")
+var JSON_BOOL_FALSE = []byte("false")
 
 var json_double_quote = []byte(`\"`)
 var json_backslash = []byte(`\\`)
