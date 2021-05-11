@@ -19,9 +19,11 @@ for i := range a {
 		case a[i] < 32:
 			// => \u00XX
 			w.Write(jsonUnicodeEscapeChar[a[i]])
+		/*
 		case 128 <= a[i] && 160 >= a[i]:
 			// => \u00XX
 			w.Write(jsonUnicodeEscapeChar[a[i]])
+		*/
 		default:
             w.Write([]byte{a[i]})
 		}
